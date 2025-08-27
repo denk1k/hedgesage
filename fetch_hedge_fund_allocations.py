@@ -6,6 +6,32 @@ import json
 import time
 import os
 
+def fetch_cusip_on_fmp(cusip: str):
+    api_key = os.environ.get("FMP_API_KEY")
+    if not api_key:
+        print("Error: FMP_API_KEY environment variable not set.")
+        return "STOP"
+
+    url = f"https://financialmodelingprep.com/api/v3/cusip/{cusip}?apikey={api_key}"
+    try:
+        response = requests.get(url)
+        if response.status_code == 429:
+            print("Rate limit hit. There is no point in proceeding of CUSIP fetching via FMP.")
+            return "STOP" # this usually means that the free allowment of 250 requests per day had been hit, so continuing is pointless.
+        response.raise_for_status()
+        data = response.json()
+        if data and isinstance(data, list) and data[0].get("ticker"):
+            print(f"Found ticker for {cusip}: {data[0]['ticker']}")
+            return data[0]["ticker"]
+        else:
+            print(f"Error: Ticker not found for CUSIP {cusip}.")
+            return "N/A"
+    except requests.exceptions.RequestException as e:
+        print(f"Error fetching data for CUSIP {cusip}: {e}")
+        return "N/A"
+    except IndexError:
+        print(f"Error: Empty response for CUSIP {cusip}.")
+        return "N/A"
 
 def load_cusip_ct():
     path = './sec/cusip_conversion_table.json'
@@ -85,59 +111,74 @@ def parse_13f_holdings(xml_url):
         return pd.DataFrame()
 
 def get_tickers_from_cusips(cusips_to_find, max_retries=8, bf=1.0):
-    api_url = 'https://api.openfigi.com/v3/mapping'
+    api_url = 'https://api.openfigi.com/v3/mapping' #openfigi has issues though - not all cusips are found. For that the function financialmodelingprep API is used to fill in the missing values.
     headers = {'Content-Type': 'application/json'}
     batch_size = 10
 
     # Load existing conversion table and identify which CUSIPs are new
     existing_map = load_cusip_ct()
     new_cusips = [c for c in cusips_to_find if c not in existing_map]
+    cusips_with_na = [c for c in cusips_to_find if c in existing_map and existing_map[c] == "N/A"]
 
-    if not new_cusips:
+    if not (new_cusips or cusips_with_na):
         print("All CUSIPs found in local cache. No API calls needed.")
         return existing_map
+    # elif new_cusips:
+    #     print("New cusips available")
+    # elif cusips_with_na:
+    #     print("Cusips with n/a available")
 
-    print(f"Found {len(existing_map)} cached CUSIPs. Fetching tickers for {len(new_cusips)} new unique CUSIPs...")
+    print(f"Found {len(existing_map)} cached CUSIPs. Fetching tickers for {len(new_cusips)} new unique CUSIPs and filling {len(cusips_with_na)} CUSIPs containing N/As...")
+    if new_cusips:
+        newly_fetched_tickers = {}
+        for i in range(0, len(new_cusips), batch_size):
+            batch_cusips = new_cusips[i:i + batch_size]
+            jobs = [{'idType': 'ID_CUSIP', 'idValue': cusip} for cusip in batch_cusips]
 
-    newly_fetched_tickers = {}
-    for i in range(0, len(new_cusips), batch_size):
-        batch_cusips = new_cusips[i:i + batch_size]
-        jobs = [{'idType': 'ID_CUSIP', 'idValue': cusip} for cusip in batch_cusips]
+            retries = 0
+            while retries <= max_retries:
+                try:
+                    response = requests.post(api_url, headers=headers, data=json.dumps(jobs))
+                    if response.status_code == 429:
+                        wt = bf * (2 ** retries)
+                        print(f"Rate limit hit. Waiting {wt:.2f}s before retry {retries + 1}/{max_retries}...")
+                        time.sleep(wt)
+                        retries += 1
+                        continue
 
-        retries = 0
-        while retries <= max_retries:
-            try:
-                response = requests.post(api_url, headers=headers, data=json.dumps(jobs))
-                if response.status_code == 429:
-                    wt = bf * (2 ** retries)
-                    print(f"Rate limit hit. Waiting {wt:.2f}s before retry {retries + 1}/{max_retries}...")
-                    time.sleep(wt)
-                    retries += 1
-                    continue
+                    response.raise_for_status()
+                    mapping_results = response.json()
+                    for idx, result in enumerate(mapping_results):
+                        original_cusip = batch_cusips[idx]
+                        if 'data' in result and result['data']:
+                            newly_fetched_tickers[original_cusip] = result['data'][0].get('ticker', 'N/A')
+                        else:
+                            newly_fetched_tickers[original_cusip] = 'N/A'
+                    break
+                except requests.exceptions.RequestException as e:
+                    print(f"error occurred for batch starting at index {i}: {e}")
+                    for cusip in batch_cusips:
+                        newly_fetched_tickers[cusip] = 'Error'
 
-                response.raise_for_status()
-                mapping_results = response.json()
-                for idx, result in enumerate(mapping_results):
-                    original_cusip = batch_cusips[idx]
-                    if 'data' in result and result['data']:
-                        newly_fetched_tickers[original_cusip] = result['data'][0].get('ticker', 'N/A')
-                    else:
-                        newly_fetched_tickers[original_cusip] = 'N/A'
-                break
-            except requests.exceptions.RequestException as e:
-                print(f"error occurred for batch starting at index {i}: {e}")
+            if retries > max_retries:
+                print(f"Max retries exceeded for batch starting at {i}. Marking as Error.")
                 for cusip in batch_cusips:
                     newly_fetched_tickers[cusip] = 'Error'
 
-        if retries > max_retries:
-            print(f"Max retries exceeded for batch starting at {i}. Marking as Error.")
-            for cusip in batch_cusips:
-                newly_fetched_tickers[cusip] = 'Error'
-
-        time.sleep(1)
-    existing_map.update(newly_fetched_tickers)
+            time.sleep(1)
+        existing_map.update(newly_fetched_tickers)
+    updated_count = 0
+    for cusip, ticker in existing_map.items():
+        if ticker == "N/A":
+            new_ticker = fetch_cusip_on_fmp(cusip)
+            if new_ticker == "STOP":
+                break
+            if new_ticker != "N/A":
+                existing_map[cusip] = new_ticker
+                updated_count += 1
+            time.sleep(0.5)
     save_cusip_ct(existing_map)
-
+    print("Updated", updated_count, "via the financial modeling prep API.")
     return existing_map
 
 def generate_investment_allocations(cik):
