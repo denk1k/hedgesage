@@ -27,6 +27,8 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
     - name: Run script
+      env:
+        FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
       run: python fetch_hedge_fund_allocations.py
 
     - name: Commit and push changes
