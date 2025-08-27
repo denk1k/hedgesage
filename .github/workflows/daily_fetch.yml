@@ -3,6 +3,9 @@ name: Daily Fetch Hedge Fund Allocations
 on:
   schedule:
     - cron: "0 0 * * *" # Runs every day at midnight UTC
+  push:
+    branches:
+      - main
 
 jobs:
   build:
