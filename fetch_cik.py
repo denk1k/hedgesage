@@ -29,6 +29,8 @@ def get_cik_by_comp_name(company_name):
         return None
 
 if __name__ == "__main__":
-    hedge_fund_name = "RENAISSANCE TECHNOLOGIES LLC"
+    # hedge_fund_name = "RENAISSANCE TECHNOLOGIES LLC"
+    # cik = get_cik_by_comp_name(hedge_fund_name)
+    hedge_fund_name = "APPALOOSA MANAGEMENT"
     cik = get_cik_by_comp_name(hedge_fund_name)
     print(cik)
