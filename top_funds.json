@@ -2712,10 +2712,31 @@
     },
     "0001389875": {
         "name": "NEWBROOK CAPITAL ADVISORS LP",
-        "earliest_filing_date": "2006-12-31"
+        "earliest_filing_date": "2006-12-31",
+        "backtest_results": {
+            "final_portfolio_value_copy": 4832129.82785626,
+            "total_return_copy": 3.83212982785626,
+            "annualized_return_copy": 0.1398036027174967,
+            "sharpe_ratio_copy": 0.7996507322035444,
+            "max_drawdown_copy": -0.33551909884985026,
+            "calmar_ratio_copy": 0.41667852350801904,
+            "final_portfolio_value_copy_scaled": 5966448.572530851,
+            "total_return_copy_scaled": 4.966448572530851,
+            "annualized_return_copy_scaled": 0.1599443911206253,
+            "sharpe_ratio_copy_scaled": 0.8333538930763391,
+            "max_drawdown_copy_scaled": -0.35206861213216084,
+            "calmar_ratio_copy_scaled": 0.4542989224514703,
+            "final_portfolio_value_fund": 5972025.184747345,
+            "total_return_fund": 4.972025184747345,
+            "annualized_return_fund": 0.15832949644725325,
+            "sharpe_ratio_fund": 0.879106785417966,
+            "max_drawdown_fund": -0.33228782361861475,
+            "calmar_ratio_fund": 0.4764829921332803
+        }
     },
     "0001079736": {
-        "name": "WASHINGTON TRUST COMPANY"
+        "name": "WASHINGTON TRUST COMPANY",
+        "earliest_filing_date": "1999-03-31"
     },
     "0001251567": {
         "name": "WYNNEFIELD CAPITAL INC"
@@ -2994,5 +3015,1412 @@
             "max_drawdown_fund": -0.3327660973834702,
             "calmar_ratio_fund": 0.29579588926775263
         }
+    },
+    "0001134621": {
+        "name": "RBF CAPITAL, LLC"
+    },
+    "0000889232": {
+        "name": "INVESTOR AB"
+    },
+    "0001112520": {
+        "name": "AKRE CAPITAL MANAGEMENT LLC"
+    },
+    "0001218199": {
+        "name": "KING STREET CAPITAL MANAGEMENT, L.P."
+    },
+    "0001410830": {
+        "name": "MATRIX CAPITAL MANAGEMENT COMPANY, LP"
+    },
+    "0001056581": {
+        "name": "GENDELL JEFFREY L"
+    },
+    "0001106500": {
+        "name": "JOHO CAPITAL LLC"
+    },
+    "0001058854": {
+        "name": "CANNELL CAPITAL LLC"
+    },
+    "0001454502": {
+        "name": "TRIPLE FROND PARTNERS LLC"
+    },
+    "0001009207": {
+        "name": "D. E. SHAW &amp; COMPANY ., INC."
+    },
+    "0001452689": {
+        "name": "VALIANT CAPITAL MANAGEMENT, L.P."
+    },
+    "0001837309": {
+        "name": "POLAR CAPITAL HOLDINGS PLC"
+    },
+    "0001548836": {
+        "name": "GRAMERCY FUNDS MANAGEMENT LLC"
+    },
+    "0001401388": {
+        "name": "VALINOR MANAGEMENT, L.P."
+    },
+    "0001301050": {
+        "name": "SHANNON RIVER FUND MANAGEMENT LLC"
+    },
+    "0001313978": {
+        "name": "PERMIT CAPITAL, LLC"
+    },
+    "0001026710": {
+        "name": "GRANAHAN INVESTMENT MANAGEMENT, LLC"
+    },
+    "0001088875": {
+        "name": "BAILLIE GIFFORD &amp; COMPANY"
+    },
+    "0001385702": {
+        "name": "MAK CAPITAL ONE LLC"
+    },
+    "0001080374": {
+        "name": "JAG CAPITAL MANAGEMENT, LLC"
+    },
+    "0000050863": {
+        "name": "INTEL CORP"
+    },
+    "0000902464": {
+        "name": "GILDER GAGNON HOWE &amp; COMPANY LLC"
+    },
+    "0001135730": {
+        "name": "COATUE MANAGEMENT LLC"
+    },
+    "0001535839": {
+        "name": "DONOR ADVISED CHARITABLE GIVING, INC."
+    },
+    "0001107310": {
+        "name": "EMINENCE CAPITAL, LP"
+    },
+    "0001135121": {
+        "name": "BRANDYWINE MANAGERS, LLC"
+    },
+    "0001276918": {
+        "name": "ZEVENBERGEN CAPITAL INVESTMENTS LLC"
+    },
+    "0001446194": {
+        "name": "SUSQUEHANNA INTERNATIONAL GROUP, LLP"
+    },
+    "0001387818": {
+        "name": "BARTON INVESTMENT MANAGEMENT"
+    },
+    "0001279030": {
+        "name": "BRANT POINT INVESTMENT MANAGEMENT LLC"
+    },
+    "0001061165": {
+        "name": "LONE PINE CAPITAL LLC"
+    },
+    "0000943719": {
+        "name": "AMERICAN FINANCIAL GROUP INC 401(K) RETIREMENT &amp; SAVINGS PLAN"
+    },
+    "0001051359": {
+        "name": "PAR CAPITAL MANAGEMENT INC"
+    },
+    "0001020066": {
+        "name": "SANDS CAPITAL MANAGEMENT, LLC"
+    },
+    "0001316507": {
+        "name": "CALAMOS ADVISORS LLC"
+    },
+    "0001105838": {
+        "name": "ROBOTTI ROBERT"
+    },
+    "0001453620": {
+        "name": "COHEN KLINGENSTEIN LLC"
+    },
+    "0001167483": {
+        "name": "TIGER GLOBAL MANAGEMENT LLC"
+    },
+    "0001112325": {
+        "name": "RIVERBRIDGE PARTNERS LLC"
+    },
+    "0001449434": {
+        "name": "APOLLO MANAGEMENT HOLDINGS, L.P."
+    },
+    "0001998597": {
+        "name": "JANA PARTNERS MANAGEMENT, LP"
+    },
+    "0001731029": {
+        "name": "GREENCAPE CAPITAL PTY LTD"
+    },
+    "0001230239": {
+        "name": "ALKEON CAPITAL MANAGEMENT LLC"
+    },
+    "0000316011": {
+        "name": "LILLY ENDOWMENT INC"
+    },
+    "0001218710": {
+        "name": "BALYASNY ASSET MANAGEMENT L.P."
+    },
+    "0001569395": {
+        "name": "MIRAE ASSET GLOBAL INVESTMENTS COMPANY ., LTD."
+    },
+    "0001278387": {
+        "name": "BROADWOOD CAPITAL INC"
+    },
+    "0001505961": {
+        "name": "DECATUR CAPITAL MANAGEMENT, INC."
+    },
+    "0001332342": {
+        "name": "TEXAS YALE CAPITAL CORP."
+    },
+    "0001455258": {
+        "name": "CALAMOS WEALTH MANAGEMENT LLC"
+    },
+    "0001301396": {
+        "name": "CONTEXT CAPITAL MANAGEMENT, LLC"
+    },
+    "0001511291": {
+        "name": "M3F, INC."
+    },
+    "0001456670": {
+        "name": "DNB ASSET MANAGEMENT AS"
+    },
+    "0001056527": {
+        "name": "CIBC WORLD MARKETS CORP"
+    },
+    "0001082917": {
+        "name": "GW&amp;K INVESTMENT MANAGEMENT, LLC"
+    },
+    "0001041885": {
+        "name": "INGALLS &amp; SNYDER LLC"
+    },
+    "0001033225": {
+        "name": "MCDONALD CAPITAL INVESTORS INC"
+    },
+    "0001455452": {
+        "name": "TIPTREE ADVISORS, LLC"
+    },
+    "0001559706": {
+        "name": "SLATE PATH CAPITAL LP"
+    },
+    "0000877338": {
+        "name": "WS MANAGEMENT LLLP"
+    },
+    "0000860561": {
+        "name": "EDGEWOOD MANAGEMENT LLC"
+    },
+    "0001596452": {
+        "name": "SIVIK GLOBAL HEALTHCARE LLC"
+    },
+    "0001323645": {
+        "name": "CAPITAL FUND MANAGEMENT S.A."
+    },
+    "0001110646": {
+        "name": "NETEASE, INC."
+    },
+    "0001034524": {
+        "name": "POLEN CAPITAL MANAGEMENT LLC"
+    },
+    "0001406484": {
+        "name": "HARVEY PARTNERS, LLC"
+    },
+    "0001017918": {
+        "name": "BAMCO INC"
+    },
+    "0000914208": {
+        "name": "INVESCO LTD."
+    },
+    "0001353312": {
+        "name": "TREMBLANT CAPITAL GROUP"
+    },
+    "0001691827": {
+        "name": "GLENVIEW TRUST COMPANY"
+    },
+    "0001039765": {
+        "name": "ING GROEP NV"
+    },
+    "0001104186": {
+        "name": "MASTERS CAPITAL MANAGEMENT LLC"
+    },
+    "0000003520": {
+        "name": "FRED ALGER MANAGEMENT, LLC"
+    },
+    "0001056807": {
+        "name": "BVF INC"
+    },
+    "0001387508": {
+        "name": "PRELUDE CAPITAL MANAGEMENT, LLC"
+    },
+    "0001214822": {
+        "name": "STEADFAST CAPITAL MANAGEMENT LP"
+    },
+    "0001454424": {
+        "name": "ARCHON PARTNERS LLC"
+    },
+    "0000089014": {
+        "name": "SENTRY INVESTMENT MANAGEMENT LLC"
+    },
+    "0001441689": {
+        "name": "KOREA INVESTMENT CORP"
+    },
+    "0001103887": {
+        "name": "NWI MANAGEMENT LP"
+    },
+    "0001445893": {
+        "name": "CTC LLC"
+    },
+    "0001455176": {
+        "name": "BIONDO INVESTMENT ADVISORS, LLC"
+    },
+    "0001276470": {
+        "name": "CORSAIR CAPITAL MANAGEMENT, L.P."
+    },
+    "0000778963": {
+        "name": "AUGUSTINE ASSET MANAGEMENT INC"
+    },
+    "0000080255": {
+        "name": "PRICE T ROWE ASSOCIATES INC"
+    },
+    "0000040417": {
+        "name": "GENERAL AMERICAN INVESTORS COMPANY INC"
+    },
+    "0001352272": {
+        "name": "MIURA GLOBAL MANAGEMENT, LLC"
+    },
+    "0001088950": {
+        "name": "RAYMOND JAMES TRUST N.A."
+    },
+    "0001034886": {
+        "name": "PITTENGER &amp; ANDERSON INC"
+    },
+    "0001010873": {
+        "name": "FRANKLIN STREET ADVISORS INC"
+    },
+    "0001651960": {
+        "name": "ARCUS CAPITAL PARTNERS, LLC"
+    },
+    "0001484043": {
+        "name": "ITHAKA GROUP LLC"
+    },
+    "0001566887": {
+        "name": "RATAN CAPITAL MANAGEMENT LP"
+    },
+    "0000102909": {
+        "name": "VANGUARD GROUP INC"
+    },
+    "0002012383": {
+        "name": "BLACKROCK, INC"
+    },
+    "0000093751": {
+        "name": "STATE STREET CORP"
+    },
+    "0001257442": {
+        "name": "SSGA FUNDS MANAGEMENT INC"
+    },
+    "0001714343": {
+        "name": "STATE STREET GLOBAL ADVISORS TRUST COMPANY"
+    },
+    "0001520010": {
+        "name": "STATE STREET GLOBAL ADVISORS EUROPE LTD"
+    },
+    "0001324602": {
+        "name": "STATE STREET GLOBAL ADVISORS LTD"
+    },
+    "0001324601": {
+        "name": "STATE STREET GLOBAL ADVISORS LTD."
+    },
+    "0001324595": {
+        "name": "STATE STREET GLOBAL ADVISORS, AUSTRALIA"
+    },
+    "0001324598": {
+        "name": "STATE STREET GLOBAL ADVISORS ASIA LTD"
+    },
+    "0001324600": {
+        "name": "STATE STREET GLOBAL ADVISORS (JAPAN) COMPANY ., LTD."
+    },
+    "0001324599": {
+        "name": "STATE STREET GLOBAL ADVISORS SINGAPORE LTD"
+    },
+    "0001006249": {
+        "name": "BLACKROCK FUND ADVISORS"
+    },
+    "0001975354": {
+        "name": "STATE STREET SAUDI ARABIA FINANCIAL SOLUTIONS"
+    },
+    "0000732812": {
+        "name": "CAPITAL GROUP COMPANIES, INC."
+    },
+    "0000315066": {
+        "name": "FMR LLC"
+    },
+    "0000017283": {
+        "name": "CAPITAL RESEARCH &amp; MANAGEMENT COMPANY"
+    },
+    "0000895421": {
+        "name": "MORGAN STANLEY"
+    },
+    "0000019617": {
+        "name": "JPMORGAN CHASE &amp; COMPANY"
+    },
+    "0001214717": {
+        "name": "GEODE CAPITAL MANAGEMENT, LLC"
+    },
+    "0000070858": {
+        "name": "BANK OF AMERICA CORP"
+    },
+    "0000913414": {
+        "name": "BLACKROCK INSTITUTIONAL TRUST COMPANY, N.A."
+    },
+    "0000035368": {
+        "name": "FIDELITY MANAGEMENT &amp; RESEARCH COMPANY LLC"
+    },
+    "0001374170": {
+        "name": "NORGES BANK"
+    },
+    "0001363391": {
+        "name": "J.P. MORGAN INVESTMENT MANAGEMENT INC."
+    },
+    "0000886982": {
+        "name": "GOLDMAN SACHS GROUP INC"
+    },
+    "0000073124": {
+        "name": "NORTHERN TRUST CORP"
+    },
+    "0001446580": {
+        "name": "SUSQUEHANNA SECURITIES, LLC"
+    },
+    "0001422849": {
+        "name": "CAPITAL WORLD INVESTORS"
+    },
+    "0001466170": {
+        "name": "MORGAN STANLEY SMITH BARNEY LLC"
+    },
+    "0000919972": {
+        "name": "NORTHERN TRUST COMPANY"
+    },
+    "0001418660": {
+        "name": "MANAGED ACCOUNT ADVISORS LLC"
+    },
+    "0001562230": {
+        "name": "CAPITAL INTERNATIONAL INVESTORS"
+    },
+    "0000884546": {
+        "name": "CHARLES SCHWAB INVESTMENT MANAGEMENT INC"
+    },
+    "0001610520": {
+        "name": "UBS GROUP AG"
+    },
+    "0001423053": {
+        "name": "CITADEL ADVISORS LLC"
+    },
+    "0001000275": {
+        "name": "ROYAL BANK OF CANADA"
+    },
+    "0000902219": {
+        "name": "WELLINGTON MANAGEMENT GROUP LLP"
+    },
+    "0001390777": {
+        "name": "BANK OF NEW YORK MELLON CORP"
+    },
+    "0001633863": {
+        "name": "WELLINGTON MANAGEMENT COMPANY LLP"
+    },
+    "0001595888": {
+        "name": "JANE STREET GROUP, LLC"
+    },
+    "0000861177": {
+        "name": "UBS AM, A DISTINCT BUSINESS UNIT OF UBS ASSET MANAGEMENT AMERICAS LLC"
+    },
+    "0001721695": {
+        "name": "CITADEL SECURITIES GP LLC"
+    },
+    "0000072971": {
+        "name": "WELLS FARGO &amp; COMPANY"
+    },
+    "0001503309": {
+        "name": "BLACKROCK ASSET MANAGEMENT IRELAND LTD"
+    },
+    "0001256909": {
+        "name": "NORTHERN TRUST INVESTMENTS, INC"
+    },
+    "0001695320": {
+        "name": "PERISCOPE CAPITAL INC."
+    },
+    "0001450709": {
+        "name": "JANE STREET OPTIONS, LLC"
+    },
+    "0000312069": {
+        "name": "BARCLAYS PLC"
+    },
+    "0000354204": {
+        "name": "DIMENSIONAL FUND ADVISORS LP"
+    },
+    "0000820027": {
+        "name": "AMERIPRISE FINANCIAL INC"
+    },
+    "0000764068": {
+        "name": "LEGAL &amp; GENERAL GROUP PLC"
+    },
+    "0000038777": {
+        "name": "FRANKLIN RESOURCES INC"
+    },
+    "0001871926": {
+        "name": "NUVEEN, LLC"
+    },
+    "0001102113": {
+        "name": "BANK OF AMERICA NA"
+    },
+    "0001224696": {
+        "name": "INVESCO CAPITAL MANAGEMENT LLC"
+    },
+    "0001229262": {
+        "name": "GOLDMAN SACHS ASSET MANAGEMENT, L.P."
+    },
+    "0001407543": {
+        "name": "ENVESTNET ASSET MANAGEMENT INC"
+    },
+    "0000932859": {
+        "name": "PARAMETRIC PORTFOLIO ASSOCIATES LLC"
+    },
+    "0000769993": {
+        "name": "GOLDMAN SACHS &amp; COMPANY . LLC"
+    },
+    "0001114446": {
+        "name": "UBS AG"
+    },
+    "0000912938": {
+        "name": "MASSACHUSETTS FINANCIAL SERVICES COMPANY"
+    },
+    "0001109448": {
+        "name": "ALLIANCEBERNSTEIN L.P."
+    },
+    "0000312070": {
+        "name": "BARCLAYS BANK PLC"
+    },
+    "0001403438": {
+        "name": "LPL FINANCIAL LLC"
+    },
+    "0001495115": {
+        "name": "LEGAL &amp; GENERAL INVESTMENT MANAGEMENT LTD"
+    },
+    "0000720005": {
+        "name": "RAYMOND JAMES FINANCIAL INC"
+    },
+    "0001330387": {
+        "name": "AMUNDI"
+    },
+    "0001280690": {
+        "name": "AMUNDI ASSET MANAGEMENT"
+    },
+    "0000948046": {
+        "name": "DEUTSCHE BANK AG"
+    },
+    "0001026420": {
+        "name": "STRATEGIC ADVISERS LLC"
+    },
+    "0000728612": {
+        "name": "MERRILL LYNCH, PIERCE, FENNER &amp; SMITH INC."
+    },
+    "0001417544": {
+        "name": "WELLS FARGO CLEARING SERVICES, LLC"
+    },
+    "0001067983": {
+        "name": "BERKSHIRE HATHAWAY INC"
+    },
+    "0000835271": {
+        "name": "JPMORGAN CHASE BANK, N.A."
+    },
+    "0001233991": {
+        "name": "COLUMBIA MANAGEMENT INVESTMENT ADVISERS, LLC"
+    },
+    "0001362244": {
+        "name": "J.P. MORGAN SECURITIES LLC"
+    },
+    "0000874779": {
+        "name": "MELLON INVESTMENTS CORP"
+    },
+    "0000020430": {
+        "name": "INVESCO ADVISERS, INC."
+    },
+    "0001452861": {
+        "name": "IMC-CHICAGO, LLC"
+    },
+    "0001161787": {
+        "name": "UBS FINANCIAL SERVICES INC"
+    },
+    "0000927971": {
+        "name": "BANK OF MONTREAL"
+    },
+    "0001859606": {
+        "name": "OPTIVER HOLDING B.V."
+    },
+    "0001273087": {
+        "name": "MILLENNIUM MANAGEMENT LLC"
+    },
+    "0000831001": {
+        "name": "CITIGROUP INC"
+    },
+    "0000314943": {
+        "name": "NATIONAL INDEMNITY COMPANY"
+    },
+    "0001126328": {
+        "name": "PRINCIPAL FINANCIAL GROUP INC"
+    },
+    "0000769734": {
+        "name": "PRINCIPAL GLOBAL INVESTORS"
+    },
+    "0001094589": {
+        "name": "PRINCIPAL FINANCIAL SERVICES INC"
+    },
+    "0000052388": {
+        "name": "AMERICAN CENTURY INVESTMENT MANAGEMENT INC"
+    },
+    "0000887793": {
+        "name": "TIAA CREF INVESTMENT MANAGEMENT LLC"
+    },
+    "0000009712": {
+        "name": "PRINCIPAL LIFE INSURANCE COMPANY"
+    },
+    "0001084208": {
+        "name": "RAYMOND JAMES &amp; ASSOCIATES"
+    },
+    "0000200217": {
+        "name": "DODGE &amp; COX"
+    },
+    "0000898420": {
+        "name": "FRANKLIN ADVISERS INC"
+    },
+    "0000812295": {
+        "name": "JANUS HENDERSON INVESTORS US LLC"
+    },
+    "0001488542": {
+        "name": "SIMPLEX TRADING, LLC"
+    },
+    "0001166588": {
+        "name": "BNP PARIBAS FINANCIAL MARKETS"
+    },
+    "0001305227": {
+        "name": "BLACKROCK INVESTMENT MANAGEMENT, LLC"
+    },
+    "0001388402": {
+        "name": "BLACKROCK FUND MANAGERS LTD."
+    },
+    "0001425864": {
+        "name": "NIKKO ASSET MANAGEMENT COMPANY ., LTD."
+    },
+    "0000715091": {
+        "name": "FIDELITY MANAGEMENT TRUST COMPANY"
+    },
+    "0001582202": {
+        "name": "SWISS NATIONAL BANK"
+    },
+    "0000873630": {
+        "name": "HSBC HOLDINGS PLC"
+    },
+    "0001811242": {
+        "name": "VANGUARD GLOBAL ADVISERS, LLC"
+    },
+    "0002026754": {
+        "name": "GEODE CAPITAL MANAGEMENT TRUST COMPANY, LLC"
+    },
+    "0001475365": {
+        "name": "SUMITOMO MITSUI TRUST GROUP, INC."
+    },
+    "0001086363": {
+        "name": "BLACKROCK FINANCIAL MANAGEMENT INC"
+    },
+    "0001897612": {
+        "name": "T. ROWE PRICE INVESTMENT MANAGEMENT, INC."
+    },
+    "0000919079": {
+        "name": "CALIFORNIA PUBLIC EMPLOYEES RETIREMENT SYSTEM"
+    },
+    "0001483526": {
+        "name": "SUMITOMO MITSUI TRUST ASSET MANAGEMENT COMPANY ., LTD."
+    },
+    "0000713676": {
+        "name": "PNC FINANCIAL SERVICES GROUP, INC."
+    },
+    "0001040188": {
+        "name": "VICTORY CAPITAL MANAGEMENT INC"
+    },
+    "0000700691": {
+        "name": "CITIGROUP FINANCIAL PRODUCTS INC."
+    },
+    "0000200245": {
+        "name": "CITIGROUP GLOBAL MARKETS HOLDINGS INC."
+    },
+    "0000939222": {
+        "name": "TEACHERS ADVISORS, LLC"
+    },
+    "0000050916": {
+        "name": "RBC CAPITAL MARKETS, LLC"
+    },
+    "0001164508": {
+        "name": "ARROWSTREET CAPITAL, LIMITED PARTNERSHIP"
+    },
+    "0001009268": {
+        "name": "D. E. SHAW &amp; COMPANY , L.P."
+    },
+    "0001675365": {
+        "name": "BOFA SECURITIES, INC."
+    },
+    "0001141802": {
+        "name": "NORTHWESTERN MUTUAL WEALTH MANAGEMENT COMPANY"
+    },
+    "0001317808": {
+        "name": "RBC DOMINION SECURITIES INC."
+    },
+    "0001257165": {
+        "name": "ORIX CORP EUROPE N.V."
+    },
+    "0001086364": {
+        "name": "BLACKROCK ADVISORS LLC"
+    },
+    "0000815917": {
+        "name": "JONES FINANCIAL COMPANIES LLLP"
+    },
+    "0001498187": {
+        "name": "DWS INVESTMENTS UK LTD"
+    },
+    "0001388399": {
+        "name": "BLACKROCK (NETHERLANDS) B.V."
+    },
+    "0001359291": {
+        "name": "MORGAN STANLEY &amp; COMPANY . LLC"
+    },
+    "0001465109": {
+        "name": "NEUBERGER BERMAN GROUP LLC"
+    },
+    "0001046017": {
+        "name": "SUMITOMO MITSUI TRUST BANK LTD"
+    },
+    "0000315030": {
+        "name": "CITIGROUP GLOBAL MARKETS INC."
+    },
+    "0001512995": {
+        "name": "EDWARD D. JONES &amp; COMPANY ., L.P."
+    },
+    "0000944388": {
+        "name": "1832 ASSET MANAGEMENT L.P."
+    },
+    "0001891397": {
+        "name": "MORGAN STANLEY CAPITAL SERVICES, LLC"
+    },
+    "0001466546": {
+        "name": "MITSUBISHI UFJ ASSET MANAGEMENT COMPANY ., LTD."
+    },
+    "0001125816": {
+        "name": "FIRST TRUST ADVISORS LP"
+    },
+    "0001348883": {
+        "name": "CLEARBRIDGE INVESTMENTS, LLC"
+    },
+    "0001543099": {
+        "name": "AMERIPRISE FINANCIAL SERVICES, LLC"
+    },
+    "0001385495": {
+        "name": "FIAM LLC"
+    },
+    "0000813905": {
+        "name": "BANK OF NEW YORK MELLON"
+    },
+    "0001086619": {
+        "name": "SCHRODER INVESTMENT MANAGEMENT GROUP"
+    },
+    "0001540235": {
+        "name": "CREATIVE PLANNING"
+    },
+    "0000318989": {
+        "name": "FIL LTD"
+    },
+    "0001283718": {
+        "name": "CANADA PENSION PLAN INVESTMENT BOARD"
+    },
+    "0001115418": {
+        "name": "RHUMBLINE ADVISERS"
+    },
+    "0001608046": {
+        "name": "NATIONAL PENSION SERVICE"
+    },
+    "0001364615": {
+        "name": "APERIO GROUP, LLC"
+    },
+    "0000315032": {
+        "name": "STATE FARM MUTUAL AUTOMOBILE INSURANCE COMPANY"
+    },
+    "0001086888": {
+        "name": "MANULIFE FINANCIAL CORP"
+    },
+    "0001542456": {
+        "name": "WOLVERINE HOLDINGS, L.P."
+    },
+    "0001034182": {
+        "name": "MANULIFE INVESTMENT MANAGEMENT (US) LLC"
+    },
+    "0001559265": {
+        "name": "LEGAL &amp; GENERAL INVESTMENT MANAGEMENT AMERICA INC"
+    },
+    "0000926171": {
+        "name": "NATIONAL BANK OF CANADA"
+    },
+    "0001343498": {
+        "name": "MANULIFE INVESTMENT MANAGEMENT LTD"
+    },
+    "0000720672": {
+        "name": "STIFEL FINANCIAL CORP"
+    },
+    "0001418112": {
+        "name": "WELLS FARGO ADVISORS FINANCIAL NETWORK, LLC"
+    },
+    "0002020530": {
+        "name": "NIKKO ASSET MANAGEMENT ASIA LTD"
+    },
+    "0002000219": {
+        "name": "LGIM SINGAPORE PTE LTD"
+    },
+    "0001068837": {
+        "name": "VOYA INVESTMENT MANAGEMENT LLC"
+    },
+    "0001694217": {
+        "name": "DZ BANK AG DEUTSCHE ZENTRAL GENOSSENSCHAFTS BANK, FRANKFURT AM MAIN"
+    },
+    "0000927337": {
+        "name": "WOLVERINE TRADING, LLC"
+    },
+    "0001085635": {
+        "name": "BLACKROCK JAPAN COMPANY . LTD"
+    },
+    "0001729829": {
+        "name": "QUBE RESEARCH &amp; TECHNOLOGIES LTD"
+    },
+    "0001993888": {
+        "name": "PICTET ASSET MANAGEMENT HOLDING SA"
+    },
+    "0001503764": {
+        "name": "J.P. MORGAN PRIVATE INVESTMENTS INC."
+    },
+    "0002064465": {
+        "name": "SQUAREPOINT (DIFC) LTD"
+    },
+    "0001642575": {
+        "name": "SQUAREPOINT OPS LLC"
+    },
+    "0001575710": {
+        "name": "UNION ASSET MANAGEMENT HOLDING AG"
+    },
+    "0001680208": {
+        "name": "VANGUARD ASSET MANAGEMENT, LTD"
+    },
+    "0001948780": {
+        "name": "CORIENT PRIVATE WEALTH LLC"
+    },
+    "0001508208": {
+        "name": "RBC GLOBAL ASSET MANAGEMENT INC."
+    },
+    "0001050459": {
+        "name": "BLACKROCK ASSET MANAGEMENT CANADA LTD"
+    },
+    "0001386060": {
+        "name": "BOSTON PARTNERS"
+    },
+    "0001081019": {
+        "name": "CALIFORNIA STATE TEACHERS RETIREMENT SYSTEM"
+    },
+    "0000946431": {
+        "name": "SWEDBANK AB"
+    },
+    "0001547676": {
+        "name": "SWEDBANK ROBUR FONDER AB"
+    },
+    "0001318757": {
+        "name": "MARSHALL WACE, LLP"
+    },
+    "0000081273": {
+        "name": "PUTNAM INVESTMENT MANAGEMENT LLC"
+    },
+    "0000869178": {
+        "name": "VAN ECK ASSOCIATES CORP"
+    },
+    "0001580862": {
+        "name": "HSBC GLOBAL ASSET MANAGEMENT (UK) LTD"
+    },
+    "0001388401": {
+        "name": "BLACKROCK INVESTMENT MANAGEMENT (UK) LTD."
+    },
+    "0000350894": {
+        "name": "SEI INVESTMENTS COMPANY"
+    },
+    "0001325091": {
+        "name": "MARSHALL WACE NORTH AMERICA L.P."
+    },
+    "0001632341": {
+        "name": "BELVEDERE TRADING LLC"
+    },
+    "0000932540": {
+        "name": "GROUP ONE TRADING LLC"
+    },
+    "0001677044": {
+        "name": "OSAIC HOLDINGS, INC."
+    },
+    "0000837933": {
+        "name": "OSAIC WEALTH, INC."
+    },
+    "0001644493": {
+        "name": "UBS SWITZERLAND AG"
+    },
+    "0001462284": {
+        "name": "RAYMOND JAMES FINANCIAL SERVICES ADVISORS, INC."
+    },
+    "0001533421": {
+        "name": "TOWER RESEARCH CAPITAL LLC (TRC)"
+    },
+    "0001535847": {
+        "name": "CWM, LLC"
+    },
+    "0001450698": {
+        "name": "JANE STREET CAPITAL, LLC"
+    },
+    "0001758720": {
+        "name": "WALLEYE CAPITAL LLC"
+    },
+    "0001388391": {
+        "name": "WALLEYE TRADING LLC"
+    },
+    "0001992825": {
+        "name": "FARTHER FINANCE ADVISORS, LLC"
+    },
+    "0001555170": {
+        "name": "ALLWORTH FINANCIAL LP"
+    },
+    "0001641866": {
+        "name": "IFP ADVISORS, INC"
+    },
+    "0001533423": {
+        "name": "LATOUR TRADING LLC (LATOUR)"
+    },
+    "0001682267": {
+        "name": "OSAIC ADVISORY SERVICES, LLC"
+    },
+    "0001710537": {
+        "name": "EVERSOURCE WEALTH ADVISORS, LLC"
+    },
+    "0000312272": {
+        "name": "COMMONWEALTH EQUITY SERVICES, LLC"
+    },
+    "0000036104": {
+        "name": "US BANCORP DE"
+    },
+    "0001723397": {
+        "name": "STEWARD PARTNERS INVESTMENT ADVISORY, LLC"
+    },
+    "0001851815": {
+        "name": "SBI SECURITIES COMPANY ., LTD."
+    },
+    "0001666741": {
+        "name": "CETERA INVESTMENT ADVISERS"
+    },
+    "0000049205": {
+        "name": "HUNTINGTON NATIONAL BANK"
+    },
+    "0001633516": {
+        "name": "NEWEDGE ADVISORS, LLC"
+    },
+    "0001040197": {
+        "name": "MAI CAPITAL MANAGEMENT"
+    },
+    "0001462245": {
+        "name": "HIGHTOWER ADVISORS, LLC"
+    },
+    "0001692234": {
+        "name": "RUSSELL INVESTMENTS GROUP, LTD."
+    },
+    "0001454027": {
+        "name": "VERITION FUND MANAGEMENT LLC"
+    },
+    "0000012600": {
+        "name": "PRINCIPAL SECURITIES, INC."
+    },
+    "0002010235": {
+        "name": "GAMMA INVESTING LLC"
+    },
+    "0000830013": {
+        "name": "US BANK NATIONAL ASSOCIATION"
+    },
+    "0000740906": {
+        "name": "WELLS FARGO BANK N A"
+    },
+    "0000923093": {
+        "name": "TUDOR INVESTMENT CORP ET AL"
+    },
+    "0000901541": {
+        "name": "COMERICA BANK"
+    },
+    "0001475597": {
+        "name": "HRT FINANCIAL LP"
+    },
+    "0001749744": {
+        "name": "GLOBAL RETIREMENT PARTNERS, LLC"
+    },
+    "0001419186": {
+        "name": "CAMBRIDGE INVESTMENT RESEARCH ADVISORS, INC."
+    },
+    "0001313360": {
+        "name": "SG AMERICAS SECURITIES, LLC"
+    },
+    "0000810121": {
+        "name": "HARBOUR INVESTMENTS, INC."
+    },
+    "0001690010": {
+        "name": "PARALLEL ADVISORS, LLC"
+    },
+    "0001373442": {
+        "name": "MARINER, LLC"
+    },
+    "0001336397": {
+        "name": "CITICORP LLC"
+    },
+    "0000036684": {
+        "name": "CITIBANK, N.A."
+    },
+    "0001179392": {
+        "name": "TWO SIGMA INVESTMENTS, LP"
+    },
+    "0001603465": {
+        "name": "CUBIST SYSTEMATIC STRATEGIES, LLC"
+    },
+    "0001415227": {
+        "name": "RUSSELL INVESTMENT MANAGEMENT, LLC"
+    },
+    "0000851376": {
+        "name": "BARCLAYS CAPITAL INC."
+    },
+    "0001389958": {
+        "name": "PEAK6 LLC"
+    },
+    "0001082339": {
+        "name": "COLDSTREAM CAPITAL MANAGEMENT INC"
+    },
+    "0001731061": {
+        "name": "LARSON FINANCIAL GROUP LLC"
+    },
+    "0001632972": {
+        "name": "WEALTH ENHANCEMENT ADVISORY SERVICES, LLC"
+    },
+    "0001456048": {
+        "name": "SIGNATUREFD, LLC"
+    },
+    "0001765064": {
+        "name": "CITIGROUP GLOBAL MARKETS HOLDINGS BAHAMAS LTD"
+    },
+    "0001012467": {
+        "name": "CITIGROUP GLOBAL MARKETS LTD"
+    },
+    "0001795705": {
+        "name": "BROOKLYN INVESTMENT GROUP"
+    },
+    "0000948905": {
+        "name": "STIFEL NICOLAUS & COMPANY INC MO"
+    },
+    "0001828301": {
+        "name": "XTX TOPCO LTD"
+    },
+    "0000810265": {
+        "name": "NEW YORK STATE COMMON RETIREMENT FUND"
+    },
+    "0001298088": {
+        "name": "CIBC PRIVATE WEALTH GROUP LLC"
+    },
+    "0001902501": {
+        "name": "CORECAP ADVISORS, LLC"
+    },
+    "0001705339": {
+        "name": "MIRAE ASSET GLOBAL ETFS HOLDINGS LTD."
+    },
+    "0002040686": {
+        "name": "POLICE & FIREMENS RETIREMENT SYSTEM OF NEW JERSEY"
+    },
+    "0001764754": {
+        "name": "GENEOS WEALTH MANAGEMENT INC."
+    },
+    "0000085338": {
+        "name": "ROTHSCHILD INVESTMENT LLC"
+    },
+    "0001586767": {
+        "name": "ARAX ADVISORY PARTNERS"
+    },
+    "0000919192": {
+        "name": "AMALGAMATED BANK"
+    },
+    "0000933478": {
+        "name": "VANGUARD FIDUCIARY TRUST COMPANY"
+    },
+    "0001344551": {
+        "name": "ASSETMARK, INC"
+    },
+    "0000937615": {
+        "name": "NISA INVESTMENT ADVISORS, LLC"
+    },
+    "0001076598": {
+        "name": "EATON VANCE MANAGEMENT"
+    },
+    "0001939738": {
+        "name": "DIMENSIONAL IRELAND LTD"
+    },
+    "0001179124": {
+        "name": "DWS INVESTMENT MANAGEMENT AMERICAS, INC"
+    },
+    "0000216543": {
+        "name": "BNY MELLON N.A."
+    },
+    "0001455267": {
+        "name": "PARKSIDE FINANCIAL BANK & TRUST"
+    },
+    "0001569605": {
+        "name": "TOWER RESEARCH CAPITAL INVESTMENTS LLC"
+    },
+    "0001830819": {
+        "name": "KESTRA ADVISORY SERVICES, LLC"
+    },
+    "0001889539": {
+        "name": "COREBRIDGE FINANCIAL, INC."
+    },
+    "0002010393": {
+        "name": "SMARTLEAF ASSET MANAGEMENT LLC"
+    },
+    "0001529735": {
+        "name": "METLIFE INVESTMENT MANAGEMENT, LLC"
+    },
+    "0001432354": {
+        "name": "GLOBAL X MANAGEMENT COMPANY LLC"
+    },
+    "0001579960": {
+        "name": "GLOBAL X MANAGEMENT COMPANY, INC."
+    },
+    "0001909846": {
+        "name": "COVESTOR LTD"
+    },
+    "0001463225": {
+        "name": "DIMENSIONAL FUND ADVISORS LTD."
+    },
+    "0000842775": {
+        "name": "CLEARSTEAD ADVISORS, LLC"
+    },
+    "0000701059": {
+        "name": "MML INVESTORS SERVICES, LLC"
+    },
+    "0001480532": {
+        "name": "YORK CAPITAL MANAGEMENT GLOBAL ADVISORS, LLC"
+    },
+    "0001502287": {
+        "name": "STEPSTONE GROUP LP"
+    },
+    "0000924223": {
+        "name": "BB BIOTECH AG"
+    },
+    "0000860176": {
+        "name": "MARK ASSET MANAGEMENT LP"
+    },
+    "0000919489": {
+        "name": "ALLEN HOLDING INC"
+    },
+    "0001383838": {
+        "name": "SHAH CAPITAL MANAGEMENT"
+    },
+    "0001080171": {
+        "name": "ARISTEIA CAPITAL, L.L.C."
+    },
+    "0001388551": {
+        "name": "CAXTON CORP"
+    },
+    "0000943712": {
+        "name": "WASHINGTON STATE INVESTMENT BOARD"
+    },
+    "0001632813": {
+        "name": "CMT CAPITAL MARKETS TRADING GMBH"
+    },
+    "0001635236": {
+        "name": "NINE TEN CAPITAL MANAGEMENT LLC"
+    },
+    "0001586986": {
+        "name": "ELECTRON CAPITAL PARTNERS, LLC"
+    },
+    "0001537530": {
+        "name": "SCGE MANAGEMENT, L.P."
+    },
+    "0001633603": {
+        "name": "ALL-STARS INVESTMENT LTD"
+    },
+    "0001511881": {
+        "name": "THELEME PARTNERS LLP"
+    },
+    "0001047859": {
+        "name": "PARAGON ASSOCIATES & PARAGON ASSOCIATES II JOINT VENTURE"
+    },
+    "0000852933": {
+        "name": "COMMERZBANK AKTIENGESELLSCHAFT"
+    },
+    "0001107314": {
+        "name": "OREGON PUBLIC EMPLOYEES RETIREMENT FUND"
+    },
+    "0001619844": {
+        "name": "HYPERION ASSET MANAGEMENT LTD"
+    },
+    "0001609074": {
+        "name": "HAWK RIDGE CAPITAL MANAGEMENT LP"
+    },
+    "0001080386": {
+        "name": "JUPITER INVESTMENT MANAGEMENT LTD"
+    },
+    "0001599814": {
+        "name": "KOPERNIK GLOBAL INVESTORS, LLC"
+    },
+    "0001550660": {
+        "name": "OAKTOP CAPITAL MANAGEMENT II, L.P."
+    },
+    "0000844150": {
+        "name": "NATWEST GROUP PLC"
+    },
+    "0001791786": {
+        "name": "ELLIOTT INVESTMENT MANAGEMENT L.P."
+    },
+    "0001133939": {
+        "name": "MEDIATEL PARTNERS"
+    },
+    "0001387921": {
+        "name": "HARBER ASSET MANAGEMENT LLC"
+    },
+    "0001409765": {
+        "name": "GUINNESS ATKINSON ASSET MANAGEMENT INC"
+    },
+    "0001081198": {
+        "name": "CYPRESS FUNDS LLC"
+    },
+    "0002059321": {
+        "name": "PKO INVESTMENT MANAGEMENT JOINT-STOCK COMPANY"
+    },
+    "0001409888": {
+        "name": "STANDARD GENERAL L.P."
+    },
+    "0001583672": {
+        "name": "CENTRAL ASSET INVESTMENTS & MANAGEMENT HOLDINGS (HK) LTD"
+    },
+    "0001595880": {
+        "name": "JUNTO CAPITAL MANAGEMENT LP"
+    },
+    "0000067088": {
+        "name": "MITSUBISHI UFJ FINANCIAL GROUP INC"
+    },
+    "0001620220": {
+        "name": "ENGINEERS GATE MANAGER LP"
+    },
+    "0001535588": {
+        "name": "TWIN TREE MANAGEMENT, LP"
+    },
+    "0001134152": {
+        "name": "ADELL HARRIMAN & CARPENTER INC"
+    },
+    "0001532262": {
+        "name": "GREENBRIER PARTNERS CAPITAL MANAGEMENT, LLC"
+    },
+    "0001570284": {
+        "name": "GATOR CAPITAL MANAGEMENT, LLC"
+    },
+    "0001512173": {
+        "name": "MAPLELANE CAPITAL, LLC"
+    },
+    "0001616034": {
+        "name": "HIGHPOINT ADVISOR GROUP LLC"
+    },
+    "0001611519": {
+        "name": "PARUS FINANCE (UK) LTD"
+    },
+    "0001469026": {
+        "name": "HMI CAPITAL MANAGEMENT, L.P."
+    },
+    "0001527570": {
+        "name": "LINGOHR ASSET MANAGEMENT GMBH"
+    },
+    "0001566030": {
+        "name": "INVESTMENT HOUSE LLC"
+    },
+    "0001539041": {
+        "name": "PICTON MAHONEY ASSET MANAGEMENT"
+    },
+    "0001573575": {
+        "name": "CONSTELLATION INVESTMENTS, INC."
+    },
+    "0001536411": {
+        "name": "DUQUESNE FAMILY OFFICE LLC"
+    },
+    "0000884423": {
+        "name": "SALEM INVESTMENT COUNSELORS INC"
+    },
+    "0001326389": {
+        "name": "POLAR ASSET MANAGEMENT PARTNERS INC."
+    },
+    "0001354821": {
+        "name": "LEVIN CAPITAL STRATEGIES, L.P."
+    },
+    "0000086312": {
+        "name": "TRAVELERS COMPANIES, INC."
+    },
+    "0001126735": {
+        "name": "MOGY JOEL R INVESTMENT COUNSEL INC"
+    },
+    "0000924171": {
+        "name": "OAKMONT CORP"
+    },
+    "0001418427": {
+        "name": "ROBECO SCHWEIZ AG"
+    },
+    "0000315014": {
+        "name": "PITCAIRN COMPANY"
+    },
+    "0001519964": {
+        "name": "MARSHALL WACE ASIA LTD"
+    },
+    "0001352662": {
+        "name": "GRANTHAM, MAYO, VAN OTTERLOO & COMPANY . LLC"
+    },
+    "0001543170": {
+        "name": "SPRUCE HOUSE INVESTMENT MANAGEMENT LLC"
+    },
+    "0000911270": {
+        "name": "GLYNN CAPITAL MANAGEMENT LLC"
+    },
+    "0001525234": {
+        "name": "JERICHO CAPITAL ASSET MANAGEMENT L.P."
+    },
+    "0001631014": {
+        "name": "ALTAROCK PARTNERS LP"
+    },
+    "0001590531": {
+        "name": "FOXHAVEN ASSET MANAGEMENT, LP"
+    },
+    "0001548882": {
+        "name": "EOS MANAGEMENT, L.P."
+    },
+    "0001520354": {
+        "name": "BNP PARIBAS ASSET MANAGEMENT HOLDING S.A."
+    },
+    "0001598245": {
+        "name": "LODGE HILL CAPITAL, LLC"
+    },
+    "0001542161": {
+        "name": "GLAXIS CAPITAL MANAGEMENT, LLC"
+    },
+    "0001439805": {
+        "name": "GREENWICH WEALTH MANAGEMENT LLC"
+    },
+    "0001389544": {
+        "name": "ALLEN OPERATIONS LLC"
+    },
+    "0001054074": {
+        "name": "BESSEMER GROUP INC"
+    },
+    "0001442641": {
+        "name": "LEGATO CAPITAL MANAGEMENT LLC"
+    },
+    "0001692252": {
+        "name": "ARTHUR M. COHEN & ASSOCIATES, LLC"
+    },
+    "0001543568": {
+        "name": "CONNECTIVE CAPITAL MANAGEMENT, LLC"
+    },
+    "0001478735": {
+        "name": "TWO SIGMA ADVISERS, LP"
+    },
+    "0000945625": {
+        "name": "HARTLINE INVESTMENT CORP/"
+    },
+    "0001599383": {
+        "name": "WINDACRE PARTNERSHIP LLC"
+    },
+    "0001540880": {
+        "name": "FJARDE AP-FONDEN /FOURTH SWEDISH NATIONAL PENSION FUND"
+    },
+    "0001597823": {
+        "name": "PARKWOOD LLC"
+    },
+    "0001504169": {
+        "name": "TOKIO MARINE ASSET MANAGEMENT COMPANY LTD"
+    },
+    "0001877822": {
+        "name": "HFR WEALTH MANAGEMENT, LLC"
+    },
+    "0001579254": {
+        "name": "EAST COAST ASSET MANAGEMENT, LLC."
+    },
+    "0001634255": {
+        "name": "CHARLES-LIM CAPITAL LTD"
+    },
+    "0001138532": {
+        "name": "JB CAPITAL PARTNERS LP"
+    },
+    "0001542927": {
+        "name": "NATIONAL MUTUAL INSURANCE FEDERATION OF AGRICULTURAL COOPERATIVES"
+    },
+    "0001607636": {
+        "name": "EAGLECLAW CAPITAL MANAGMENT, LLC"
+    },
+    "0001598843": {
+        "name": "TENSILE CAPITAL MANAGEMENT LP"
+    },
+    "0001655006": {
+        "name": "NWAM LLC"
+    },
+    "0001388167": {
+        "name": "CLARIVEST ASSET MANAGEMENT LLC"
+    },
+    "0001398825": {
+        "name": "ARCHON CAPITAL MANAGEMENT LLC"
+    },
+    "0001086477": {
+        "name": "LONGVIEW ASSET MANAGEMENT, LLC"
+    },
+    "0001017284": {
+        "name": "THOMPSON DAVIS & COMPANY ., INC."
+    },
+    "0001308555": {
+        "name": "MOUNTAIN LAKE INVESTMENT MANAGEMENT LLC"
+    },
+    "0001638555": {
+        "name": "SUMMIT PARTNERS PUBLIC ASSET MANAGEMENT, LLC"
+    },
+    "0001121914": {
+        "name": "AZZAD ASSET MANAGEMENT INC"
+    },
+    "0001468395": {
+        "name": "CRESTWOOD CAPITAL MANAGEMENT, L.P."
+    },
+    "0001633362": {
+        "name": "SIMCOE CAPITAL MANAGEMENT, LLC"
+    },
+    "0001592746": {
+        "name": "FULLERTON FUND MANAGEMENT COMPANY LTD."
+    },
+    "0001594492": {
+        "name": "FIELD & MAIN BANK"
+    },
+    "0001512022": {
+        "name": "HERALD INVESTMENT MANAGEMENT LTD"
+    },
+    "0001065349": {
+        "name": "CAPITAL INTERNATIONAL SARL"
+    },
+    "0001166564": {
+        "name": "CYRUS CAPITAL PARTNERS, L.P."
+    },
+    "0001418773": {
+        "name": "ROBECO INSTITUTIONAL ASSET MANAGEMENT B.V."
+    },
+    "0001411530": {
+        "name": "SUMITOMO MITSUI DS ASSET MANAGEMENT COMPANY, LTD"
+    },
+    "0001554179": {
+        "name": "TURIYA ADVISORS ASIA LTD"
+    },
+    "0001508512": {
+        "name": "DREXEL MORGAN & COMPANY ."
+    },
+    "0001137774": {
+        "name": "PRUDENTIAL FINANCIAL INC"
+    },
+    "0001375534": {
+        "name": "GENERATION INVESTMENT MANAGEMENT LLP"
+    },
+    "0001040190": {
+        "name": "NIPPON LIFE GLOBAL INVESTORS AMERICAS, INC."
     }
 }
