@@ -15,7 +15,8 @@ if __name__ == "__main__":
     all_tickers = set()
     earliest_start = pd.to_datetime('2100-01-01')
 
-    for name, cik in top_funds.items():
+    for cik, info in top_funds.items():
+        name = info["name"]
         print(f"Getting tickers for {name} ({cik})")
         tickers, first_filing_date = tickers_from_cik(cik)
         if tickers:
