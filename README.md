@@ -22,3 +22,7 @@ A free and open-source hedge fund position aggregator and investment simulator
 * Data for hedge fund live allocations is refreshed daily using a Github Action powered by `runner_update_allocations.py`, which fetches the hedge funds from the `top_funds.json` file and runs the refresh function from `fetch_hedge_fund_allocations.py`. The live allocations are saved to `./sec/allocations`, whilst CUSIP conversion cache is saved to `./sec/cusip_conversion_table.json`.
 * Hedge fund backtests unfortunately should be run locally. This is because they require historical data, which is unfeasible for GitHub actions since it takes way more than the alotted 500Mb. The backtesting entrypoint is `runner_do_backtests.py`, whilst the backtesting and downloading functionality is implemented in `backtester.py` and `download_data.py`, respectively. The backtests are saved to `./sec/backtests`, historical allocations are saved to `./sec/past_allocations`, whereas price history is saved to `./data/historical`.
 * The HedgeSage UI is built using [Svelte](https://svelte.dev/), with [shadcn-svelte](https://shadcn-svelte.com/) used as the component library. It acts merely as a front-end to the information stored in this repository. The builds are targeting the `docs` directory for simplicity in use with GitHub Pages.
+
+## TODO:
+-   [ ] Implement fund searching functionality
+-   [ ] Allow to retrieve 13F data from .txt files, letting backtests through years earlier than 2013.
