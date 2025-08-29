@@ -2089,57 +2089,246 @@
     },
     "0001274196": {
         "name": "BEDRIJFSTAKPENSIOENFONDS VOOR DE MEDIA PNO",
-        "earliest_filing_date": "2003-12-31"
+        "earliest_filing_date": "2003-12-31",
+        "backtest_results": {
+            "final_portfolio_value_copy": 4846879.628321273,
+            "total_return_copy": 3.8468796283212736,
+            "annualized_return_copy": 0.14254811626701258,
+            "sharpe_ratio_copy": 0.8226026837311392,
+            "max_drawdown_copy": -0.298941543994968,
+            "calmar_ratio_copy": 0.47684277789577506,
+            "final_portfolio_value_copy_scaled": 5917841.228686392,
+            "total_return_copy_scaled": 4.917841228686393,
+            "annualized_return_copy_scaled": 0.16196965629913262,
+            "sharpe_ratio_copy_scaled": 0.8800367278184411,
+            "max_drawdown_copy_scaled": -0.29894154399496814,
+            "calmar_ratio_copy_scaled": 0.5418104627902067,
+            "final_portfolio_value_fund": 4585594.756618304,
+            "total_return_fund": 3.5855947566183044,
+            "annualized_return_fund": 0.13343463725219706,
+            "sharpe_ratio_fund": 0.7819182950587065,
+            "max_drawdown_fund": -0.3030805456831601,
+            "calmar_ratio_fund": 0.44026130727535845
+        }
     },
     "0001166620": {
-        "name": "KLCM ADVISORS, INC."
+        "name": "KLCM ADVISORS, INC.",
+        "earliest_filing_date": "2001-12-31",
+        "backtest_results": {
+            "final_portfolio_value_copy": 2122408.29577535,
+            "total_return_copy": 1.12240829577535,
+            "annualized_return_copy": 0.06449310608723335,
+            "sharpe_ratio_copy": 0.5936809784898566,
+            "max_drawdown_copy": -0.2827204928015033,
+            "calmar_ratio_copy": 0.22811613494361604,
+            "final_portfolio_value_copy_scaled": 3028945.5162620437,
+            "total_return_copy_scaled": 2.0289455162620436,
+            "annualized_return_copy_scaled": 0.09640454979284963,
+            "sharpe_ratio_copy_scaled": 0.6033056045644721,
+            "max_drawdown_copy_scaled": -0.3797902146784408,
+            "calmar_ratio_copy_scaled": 0.2538363182276116,
+            "final_portfolio_value_fund": 2133695.270973387,
+            "total_return_fund": 1.1336952709733872,
+            "annualized_return_fund": 0.06431330293145843,
+            "sharpe_ratio_fund": 0.5879041766644849,
+            "max_drawdown_fund": -0.2763464745304838,
+            "calmar_ratio_fund": 0.23272706134835827
+        }
     },
     "0000937522": {
-        "name": "SCHWERIN BOYLE CAPITAL MANAGEMENT INC"
+        "name": "SCHWERIN BOYLE CAPITAL MANAGEMENT INC",
+        "earliest_filing_date": "1997-12-31",
+        "backtest_results": {
+            "final_portfolio_value_copy": 2944672.707397049,
+            "total_return_copy": 1.9446727073970487,
+            "annualized_return_copy": 0.09386057194055808,
+            "sharpe_ratio_copy": 0.679303142225124,
+            "max_drawdown_copy": -0.3343446550132233,
+            "calmar_ratio_copy": 0.28072999084386707,
+            "final_portfolio_value_copy_scaled": 3239832.0432067853,
+            "total_return_copy_scaled": 2.2398320432067855,
+            "annualized_return_copy_scaled": 0.10257485331350136,
+            "sharpe_ratio_copy_scaled": 0.6613487672991829,
+            "max_drawdown_copy_scaled": -0.3878668039232621,
+            "calmar_ratio_copy_scaled": 0.26445896445882844,
+            "final_portfolio_value_fund": 3230903.004450983,
+            "total_return_fund": 2.2309030044509828,
+            "annualized_return_fund": 0.10125867026025093,
+            "sharpe_ratio_fund": 0.7231095359636025,
+            "max_drawdown_fund": -0.3337138353472244,
+            "calmar_ratio_fund": 0.3034296440088939
+        }
     },
     "0001009254": {
-        "name": "EVERETT HARRIS &amp; COMPANY"
+        "name": "EVERETT HARRIS &amp; COMPANY",
+        "earliest_filing_date": "1999-03-31",
+        "backtest_results": {
+            "final_portfolio_value_copy": 2920354.1973041855,
+            "total_return_copy": 1.9203541973041856,
+            "annualized_return_copy": 0.09264485149574919,
+            "sharpe_ratio_copy": 0.816395344437941,
+            "max_drawdown_copy": -0.21487985556865666,
+            "calmar_ratio_copy": 0.43114721596668265,
+            "final_portfolio_value_copy_scaled": 3250075.135805402,
+            "total_return_copy_scaled": 2.250075135805402,
+            "annualized_return_copy_scaled": 0.1023508533742088,
+            "sharpe_ratio_copy_scaled": 0.8364565548072251,
+            "max_drawdown_copy_scaled": -0.23944689376043288,
+            "calmar_ratio_copy_scaled": 0.42744698737504205,
+            "final_portfolio_value_fund": 3098146.75450487,
+            "total_return_fund": 2.09814675450487,
+            "annualized_return_fund": 0.09746499769748795,
+            "sharpe_ratio_fund": 0.8565972776739275,
+            "max_drawdown_fund": -0.21412039988709072,
+            "calmar_ratio_fund": 0.4551878183904144
+        }
     },
     "0001040762": {
-        "name": "MALTESE CAPITAL MANAGEMENT LLC"
+        "name": "MALTESE CAPITAL MANAGEMENT LLC",
+        "earliest_filing_date": "1999-03-31",
+        "backtest_results": {
+            "final_portfolio_value_copy": 2048794.82334186,
+            "total_return_copy": 1.04879482334186,
+            "annualized_return_copy": 0.06139137709813047,
+            "sharpe_ratio_copy": 0.5902646856590841,
+            "max_drawdown_copy": -0.28392830052164164,
+            "calmar_ratio_copy": 0.2162214086631744,
+            "final_portfolio_value_copy_scaled": 2574532.6234632316,
+            "total_return_copy_scaled": 1.5745326234632318,
+            "annualized_return_copy_scaled": 0.0817225792550842,
+            "sharpe_ratio_copy_scaled": 0.5461015274885743,
+            "max_drawdown_copy_scaled": -0.317525745643652,
+            "calmar_ratio_copy_scaled": 0.25737308037628726,
+            "final_portfolio_value_fund": 2368474.8016100423,
+            "total_return_fund": 1.3684748016100423,
+            "annualized_return_fund": 0.07349043730870886,
+            "sharpe_ratio_fund": 0.674354234423795,
+            "max_drawdown_fund": -0.2883022027876621,
+            "calmar_ratio_fund": 0.254907651062366
+        }
     },
     "0000062039": {
-        "name": "MANNING &amp; NAPIER ADVISORS LLC"
+        "name": "MANNING &amp; NAPIER ADVISORS LLC",
+        "earliest_filing_date": "1999-03-31",
+        "backtest_results": {
+            "final_portfolio_value_copy": 1629452.0411077223,
+            "total_return_copy": 0.6294520411077222,
+            "annualized_return_copy": 0.04125707665752554,
+            "sharpe_ratio_copy": 0.6361154880581107,
+            "max_drawdown_copy": -0.15674436494912636,
+            "calmar_ratio_copy": 0.2632125031794037,
+            "final_portfolio_value_copy_scaled": 3901515.553202485,
+            "total_return_copy_scaled": 2.901515553202485,
+            "annualized_return_copy_scaled": 0.11932626410562719,
+            "sharpe_ratio_copy_scaled": 0.7543904874883484,
+            "max_drawdown_copy_scaled": -0.3125147054351907,
+            "calmar_ratio_copy_scaled": 0.38182607739837404,
+            "final_portfolio_value_fund": 1724107.1571636882,
+            "total_return_fund": 0.7241071571636881,
+            "annualized_return_fund": 0.04581827055905574,
+            "sharpe_ratio_fund": 0.6815975702872206,
+            "max_drawdown_fund": -0.163531164720308,
+            "calmar_ratio_fund": 0.2801806654861172
+        }
     },
     "0001067324": {
-        "name": "MOUNTAIN PACIFIC INVESTMENT ADVISERS LLC"
+        "name": "MOUNTAIN PACIFIC INVESTMENT ADVISERS LLC",
+        "earliest_filing_date": "1999-06-30",
+        "backtest_results": {
+            "final_portfolio_value_copy": 3106943.3638672004,
+            "total_return_copy": 2.1069433638672006,
+            "annualized_return_copy": 0.0980446557069321,
+            "sharpe_ratio_copy": 0.6909240277145877,
+            "max_drawdown_copy": -0.31155604570500073,
+            "calmar_ratio_copy": 0.314693478295608,
+            "final_portfolio_value_copy_scaled": 3467819.501981499,
+            "total_return_copy_scaled": 2.467819501981499,
+            "annualized_return_copy_scaled": 0.10804501643566056,
+            "sharpe_ratio_copy_scaled": 0.7103126126733813,
+            "max_drawdown_copy_scaled": -0.32857789170039614,
+            "calmar_ratio_copy_scaled": 0.3288261905769916,
+            "final_portfolio_value_fund": 3523939.4554339913,
+            "total_return_fund": 2.5239394554339913,
+            "annualized_return_fund": 0.10915016553914536,
+            "sharpe_ratio_fund": 0.7544027976861907,
+            "max_drawdown_fund": -0.3113890057954936,
+            "calmar_ratio_fund": 0.35052671580457245
+        }
     },
     "0001279936": {
-        "name": "CANTILLON CAPITAL MANAGEMENT LLC"
+        "name": "CANTILLON CAPITAL MANAGEMENT LLC",
+        "earliest_filing_date": "2003-12-31",
+        "backtest_results": {
+            "final_portfolio_value_copy": 2108091.127836658,
+            "total_return_copy": 1.108091127836658,
+            "annualized_return_copy": 0.06340426253033815,
+            "sharpe_ratio_copy": 0.8213776857880316,
+            "max_drawdown_copy": -0.17077891989337524,
+            "calmar_ratio_copy": 0.3712651571395592,
+            "final_portfolio_value_copy_scaled": 4986454.207191299,
+            "total_return_copy_scaled": 3.986454207191299,
+            "annualized_return_copy_scaled": 0.14161430333688463,
+            "sharpe_ratio_copy_scaled": 0.8322200462781045,
+            "max_drawdown_copy_scaled": -0.33991445239996915,
+            "calmar_ratio_copy_scaled": 0.41661748224300416,
+            "final_portfolio_value_fund": 2001251.5094223847,
+            "total_return_fund": 1.0012515094223846,
+            "annualized_return_fund": 0.05871862435759834,
+            "sharpe_ratio_fund": 0.7590137019815241,
+            "max_drawdown_fund": -0.16434043765385872,
+            "calmar_ratio_fund": 0.3572986977269354
+        }
     },
     "0001037389": {
         "name": "RENAISSANCE TECHNOLOGIES LLC",
         "backtest_results": {
-            "final_portfolio_value_copy": 3100033.8815403115,
-            "total_return_copy": 2.1000338815403117,
-            "annualized_return_copy": 0.09849547074239595,
-            "sharpe_ratio_copy": 0.7853420413228056,
+            "final_portfolio_value_copy": 3109801.437422814,
+            "total_return_copy": 2.109801437422814,
+            "annualized_return_copy": 0.09878243474979431,
+            "sharpe_ratio_copy": 0.7873318504001147,
             "max_drawdown_copy": -0.2775998830600786,
-            "calmar_ratio_copy": 0.3548109230329878,
-            "final_portfolio_value_copy_scaled": 3552725.2720819553,
-            "total_return_copy_scaled": 2.5527252720819553,
-            "annualized_return_copy_scaled": 0.1109979578658098,
-            "sharpe_ratio_copy_scaled": 0.8112278015892664,
+            "calmar_ratio_copy": 0.35584465548357475,
+            "final_portfolio_value_copy_scaled": 3563986.893160463,
+            "total_return_copy_scaled": 2.563986893160463,
+            "annualized_return_copy_scaled": 0.11128994146212556,
+            "sharpe_ratio_copy_scaled": 0.8130650083668673,
             "max_drawdown_copy_scaled": -0.2962618923804374,
-            "calmar_ratio_copy_scaled": 0.3746616109616775,
-            "final_portfolio_value_fund": 3593317.704515585,
-            "total_return_fund": 2.5933177045155853,
-            "annualized_return_fund": 0.11093009367063655,
-            "sharpe_ratio_fund": 0.8599084071500082,
+            "calmar_ratio_copy_scaled": 0.3756471700356769,
+            "final_portfolio_value_fund": 3605418.5110019026,
+            "total_return_fund": 2.605418511001903,
+            "annualized_return_fund": 0.11123731027628847,
+            "sharpe_ratio_fund": 0.861979758050148,
             "max_drawdown_fund": -0.28105931481881047,
-            "calmar_ratio_fund": 0.3946857044825199
+            "calmar_ratio_fund": 0.3957787712817824
         }
     },
     "0001317784": {
-        "name": "SFE INVESTMENT COUNSEL"
+        "name": "SFE INVESTMENT COUNSEL",
+        "earliest_filing_date": "2003-12-31",
+        "backtest_results": {
+            "final_portfolio_value_copy": 3537101.65267197,
+            "total_return_copy": 2.53710165267197,
+            "annualized_return_copy": 0.11061795878662739,
+            "sharpe_ratio_copy": 0.7932993723772169,
+            "max_drawdown_copy": -0.31553947520623143,
+            "calmar_ratio_copy": 0.3505677339240338,
+            "final_portfolio_value_copy_scaled": 4177667.2014943734,
+            "total_return_copy_scaled": 3.1776672014943736,
+            "annualized_return_copy_scaled": 0.12607678398237976,
+            "sharpe_ratio_copy_scaled": 0.8218149966242267,
+            "max_drawdown_copy_scaled": -0.32906108916793747,
+            "calmar_ratio_copy_scaled": 0.38314096723248864,
+            "final_portfolio_value_fund": 3584388.868695702,
+            "total_return_fund": 2.5843888686957017,
+            "annualized_return_fund": 0.11070279802931848,
+            "sharpe_ratio_fund": 0.7917792338161662,
+            "max_drawdown_fund": -0.31606472321828044,
+            "calmar_ratio_fund": 0.35025357117398065
+        }
     },
     "0001175954": {
-        "name": "CENTRAL BANK &amp; TRUST COMPANY"
+        "name": "CENTRAL BANK &amp; TRUST COMPANY",
+        "earliest_filing_date": "2002-06-30"
     },
     "0001215208": {
         "name": "SOMERVILLE KURT F"
