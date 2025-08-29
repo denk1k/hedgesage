@@ -90,19 +90,46 @@ def parse_13f_holdings(xml_url):
         response = requests.get(xml_url, headers=headers)
         response.raise_for_status()
         xml_content = response.content
+        if not xml_content.strip().startswith(b'<'):
+            print(f"Skipping non-XML from {xml_url}")
+            return pd.DataFrame()
         root = ET.fromstring(xml_content)
 
         holdings = []
+        
         namespace = {'ns': 'http://www.sec.gov/edgar/document/thirteenf/informationtable'}
+        info_tables = root.findall('ns:infoTable', namespace)
 
-        for info_table in root.findall('ns:infoTable', namespace):
-            holding = {
-                'nameOfIssuer': info_table.find('ns:nameOfIssuer', namespace).text,
-                'cusip': info_table.find('ns:cusip', namespace).text,
-                'value': float(info_table.find('ns:value', namespace).text) * 1000,
-                'shares': int(info_table.find('ns:shrsOrPrnAmt/ns:sshPrnamt', namespace).text)
-            }
-            holdings.append(holding)
+        if info_tables:
+            for info_table in info_tables:
+                name_node = info_table.find('ns:nameOfIssuer', namespace)
+                cusip_node = info_table.find('ns:cusip', namespace)
+                value_node = info_table.find('ns:value', namespace)
+                shares_node = info_table.find('ns:shrsOrPrnAmt/ns:sshPrnamt', namespace)
+                
+                if all(node is not None for node in [name_node, cusip_node, value_node, shares_node]):
+                    holding = {
+                        'nameOfIssuer': name_node.text,
+                        'cusip': cusip_node.text,
+                        'value': float(value_node.text) * 1000,
+                        'shares': int(shares_node.text)
+                    }
+                    holdings.append(holding)
+        else: # if above fails try w no namespace
+            for info_table in root.findall('infoTable'):
+                name_node = info_table.find('nameOfIssuer')
+                cusip_node = info_table.find('cusip')
+                value_node = info_table.find('value')
+                shares_node = info_table.find('shrsOrPrnAmt/sshPrnamt')
+
+                if all(node is not None for node in [name_node, cusip_node, value_node, shares_node]):
+                    holding = {
+                        'nameOfIssuer': name_node.text,
+                        'cusip': cusip_node.text,
+                        'value': float(value_node.text) * 1000,
+                        'shares': int(shares_node.text)
+                    }
+                    holdings.append(holding)
 
         return pd.DataFrame(holdings)
 
@@ -115,7 +142,7 @@ def get_tickers_from_cusips(cusips_to_find, max_retries=8, bf=1.0):
     headers = {'Content-Type': 'application/json'}
     batch_size = 10
 
-    # Load existing conversion table and identify which CUSIPs are new
+    # identify which CUSIPs are new
     existing_map = load_cusip_ct()
     new_cusips = [c for c in cusips_to_find if c not in existing_map]
     cusips_with_na = [c for c in cusips_to_find if c in existing_map and existing_map[c] == "N/A"]
@@ -178,7 +205,7 @@ def get_tickers_from_cusips(cusips_to_find, max_retries=8, bf=1.0):
                 updated_count += 1
             time.sleep(0.5)
     save_cusip_ct(existing_map)
-    print("Updated", updated_count, "via the financial modeling prep API.")
+    print("Updated", updated_count, "via the FMP API.")
     return existing_map
 
 def generate_investment_allocations(cik):
@@ -191,7 +218,7 @@ def generate_investment_allocations(cik):
     print(f"Found 13F info table at: {latest_13f_url}")
     holdings_13f = parse_13f_holdings(latest_13f_url)
     if holdings_13f.empty:
-        print("No holdings data could be parsed from the 13F filing.")
+        print("No holdings data could be parsed from 13F filing.")
         return
 
     unique_cusips = holdings_13f['cusip'].unique().tolist()
@@ -211,6 +238,145 @@ def generate_investment_allocations(cik):
     print(f"Report saved to: {output_path}")
     print("\nInvestment Allocations:")
     print(final_allocations.to_string())
+
+def get_all_13f_filing_urls(cik):
+    initial_url = f"https://data.sec.gov/submissions/CIK{cik.zfill(10)}.json"
+    headers = {'User-Agent': 'denk1k no@gmail.com'}
+    all_urls = []
+
+    urls_to_process = [initial_url]
+    processed_file_names = set()
+
+    def process_filing_data(filing_block, cik_num, headers_dict):
+        urls_found = []
+        forms = filing_block.get('form', [])
+        accession_numbers = filing_block.get('accessionNumber', [])
+        report_dates = filing_block.get('reportDate', [])
+        filing_dates = filing_block.get('filingDate', [])
+        primary_documents = filing_block.get('primaryDocument', [])
+
+        for i, form in enumerate(forms):
+            if form == '13F-HR':
+                accession_number_raw = accession_numbers[i]
+                accession_number = accession_number_raw.replace('-', '')
+                report_date = report_dates[i]
+                filing_date = filing_dates[i]
+                primary_document = primary_documents[i]
+
+                filing_directory_url = f"https://www.sec.gov/Archives/edgar/data/{cik_num}/{accession_number}/"
+                try:
+                    dir_response = requests.get(filing_directory_url, headers=headers_dict)
+                    dir_response.raise_for_status()
+                    soup = BeautifulSoup(dir_response.content, 'html.parser')
+                    xml_url = None
+                    for link in soup.find_all('a'):
+                        href = link.get('href')
+                        if href and ('infotable.xml' in href.lower() or 'holding.xml' in href.lower()):
+                            xml_url = f"https://www.sec.gov{href}"
+                            break
+                    
+                    if not xml_url:
+                        for link in soup.find_all('a'):
+                            href = link.get('href')
+                            if href and href.lower().endswith('.xml') and 'primary_doc.xml' not in href.lower():
+                                xml_url = f"https://www.sec.gov{href}"
+                                break
+
+                    if not xml_url:
+                        xml_url = f"https://www.sec.gov/Archives/edgar/data/{cik_num}/{accession_number}/{primary_document}"
+
+                    urls_found.append({'reportDate': report_date, 'url': xml_url, 'filingDate': filing_date, 'accessionNumber': accession_number_raw})
+                except requests.exceptions.RequestException as e:
+                    print(f"Could not fetch directory for {accession_number}: {e}")
+                    continue
+
+        return urls_found
+
+    try:
+        response = requests.get(initial_url, headers=headers)
+        response.raise_for_status()
+        data = response.json()
+        
+        if 'filings' in data and 'recent' in data['filings']:
+            all_urls.extend(process_filing_data(data['filings']['recent'], cik, headers))
+
+        if 'filings' in data and 'files' in data['filings']:
+            for file_info in data['filings']['files']:
+                file_name = file_info.get('name')
+                if file_name:
+                    urls_to_process.append(f"https://data.sec.gov/submissions/{file_name}")
+        
+        processed_file_names.add(initial_url.split('/')[-1])
+
+        for url in urls_to_process:
+            file_name = url.split('/')[-1]
+            if file_name in processed_file_names:
+                continue
+
+            print(f"Processing older filings from: {file_name}")
+            try:
+                resp = requests.get(url, headers=headers)
+                resp.raise_for_status()
+                older_data = resp.json()
+                all_urls.extend(process_filing_data(older_data, cik, headers))
+                processed_file_names.add(file_name)
+            except requests.exceptions.RequestException as e:
+                print(f"couldnt fetch or process older filing file {url}: {e}")
+                continue
+
+    except requests.exceptions.RequestException as e:
+        print(f"Error fetching initial submissions for CIK {cik}: {e}")
+        return []
+
+    print(f"Found {len(all_urls)} total 13F-HR filings for CIK {cik}.")
+    return all_urls
+
+def fetch_all_past_allocations(cik):
+    print(f"--- Fetching all past allocations for CIK: {cik} ---")
+    filing_urls = get_all_13f_filing_urls(cik)
+    if not filing_urls:
+        print("Could not find any 13F filings.")
+        return
+
+    for filing in filing_urls:
+        report_date = filing['reportDate']
+        filing_date = filing['filingDate']
+        accession_number = filing['accessionNumber']
+        xml_url = filing['url']
+
+        output_dir = f'./sec/past_allocations/{cik}'
+        os.makedirs(output_dir, exist_ok=True)
+        output_path = os.path.join(output_dir, f"{report_date}.csv")
+
+        if os.path.exists(output_path):
+            # For now, if a file for a report date exists, its just skipped.
+            print(f"Skipping filing for {report_date} - already fetched")
+            continue
+        
+        print(f"\n--- Processing filing for {report_date} ---")
+        print(f"Found 13F info table at: {xml_url}")
+
+        holdings_13f = parse_13f_holdings(xml_url)
+        if holdings_13f.empty:
+            print(f"No holdings data could be parsed from the 13F filing for {report_date}.")
+            continue
+
+        unique_cusips = holdings_13f['cusip'].unique().tolist()
+        cusip_to_ticker_map = get_tickers_from_cusips(unique_cusips)
+        holdings_13f['ticker'] = holdings_13f['cusip'].map(cusip_to_ticker_map)
+        total_portfolio_value = holdings_13f['value'].sum()
+        holdings_13f['allocation_percent'] = (holdings_13f['value'] / total_portfolio_value) * 100
+
+        final_columns = ['ticker', 'nameOfIssuer', 'cusip', 'value', 'shares', 'allocation_percent']
+        final_allocations = holdings_13f.sort_values(by='allocation_percent', ascending=False)[final_columns]
+        
+        final_allocations['filingDate'] = filing_date
+        final_allocations['reportDate'] = report_date
+        final_allocations['accessionNumber'] = accession_number
+
+        final_allocations.to_csv(output_path, index=False)
+
+        print(f"Report for {report_date} saved to: {output_path}")
 
 if __name__ == "__main__":
     renaissance_cik = '1037389' # renaissance technologies

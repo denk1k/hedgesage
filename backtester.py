@@ -11,7 +11,7 @@ def backtest_hedge_fund(cik: str, initial_investment: float = 1_000_000):
     print(f"--- Starting backtest for CIK: {cik} ---")
 
     print(f"--- Making sure hist price data is available for {cik} ---")
-    # download_data_since_first_filing(cik)
+    download_data_since_first_filing(cik)
     print(f"--- Download process complete ---")
 
     allocation_path = f'./sec/past_allocations/{cik}/*.csv'
