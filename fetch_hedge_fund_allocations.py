@@ -26,9 +26,6 @@ def fetch_cusip_on_fmp(cusip: str):
         else:
             print(f"Error: Ticker not found for CUSIP {cusip}.")
             return "N/A"
-    except requests.exceptions.RequestException as e:
-        print(f"Error fetching data for CUSIP {cusip}: {e}")
-        return "N/A"
     except IndexError:
         print(f"Error: Empty response for CUSIP {cusip}.")
         return "N/A"
@@ -197,7 +194,7 @@ def get_tickers_from_cusips(cusips_to_find, max_retries=8, bf=1.0):
     updated_count = 0
     for cusip, ticker in existing_map.items():
         if ticker == "N/A":
-            new_ticker = fetch_cusip_on_fmp(cusip)
+            new_ticker = fetch_cusip_on_fmp(cusip) # over time if run daily this will procedurally remove the N/A's from the cusip collection leading to more precise allocations
             if new_ticker == "STOP":
                 break
             if new_ticker != "N/A":
@@ -209,6 +206,7 @@ def get_tickers_from_cusips(cusips_to_find, max_retries=8, bf=1.0):
     return existing_map
 
 def generate_investment_allocations(cik):
+    cik = cik.zfill(10)
     print(f"--- Processing CIK: {cik} ---")
     latest_13f_url = get_latest_13f_filing_url(cik)
     if not latest_13f_url:

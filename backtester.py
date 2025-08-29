@@ -8,6 +8,7 @@ from fetch_hedge_fund_allocations import fetch_all_past_allocations
 from data_downloader import download_data_since_first_filing
 
 def backtest_hedge_fund(cik: str, initial_investment: float = 1_000_000):
+    cik = cik.zfill(10) # make sure that ciks are uniform
     print(f"--- Starting backtest for CIK: {cik} ---")
 
     print(f"--- Making sure hist price data is available for {cik} ---")

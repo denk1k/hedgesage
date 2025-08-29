@@ -1,0 +1,9 @@
+# This script can be run via github actions very well, because it does not require a lot of storage neither (too many) runtime minutes.
+from fetch_hedge_fund_allocations import generate_investment_allocations
+import json
+if __name__ == "__main__":
+    with open("top_funds.json", "r") as f:
+        top_funds = json.load(f)
+    for name, cik in top_funds.items():
+        print(f"Generating investment allocations for a fund {name}")
+        generate_investment_allocations(cik)
