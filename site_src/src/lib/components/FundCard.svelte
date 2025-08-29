@@ -224,7 +224,7 @@
 <Drawer.Root bind:open={drawerOpen}>
   <Drawer.Content>
     <Drawer.Header>
-      <Drawer.Title>{fundData.name} - Performance Chart</Drawer.Title>
+      <Drawer.Title>{@html fundData.name} - Performance Chart</Drawer.Title>
     </Drawer.Header>
     <div class="h-[90vh] overflow-auto px-4">
       {#if chartData}
@@ -262,7 +262,7 @@
 <Drawer.Root bind:open={allocationsDrawerOpen}>
   <Drawer.Content>
     <Drawer.Header>
-      <Drawer.Title>{fundData.name} - Allocations</Drawer.Title>
+      <Drawer.Title>{@html fundData.name} - Allocations</Drawer.Title>
     </Drawer.Header>
     <div class="h-[90vh] overflow-auto px-4">
       {#if isAllocationsLoading}
