@@ -154,7 +154,7 @@ def parse_13f_holdings(xml_url):
         print(f"Error parsing 13F holdings from {xml_url}: {e}")
         return pd.DataFrame()
 
-def get_tickers_from_cusips(cusips_to_find, max_retries=8, bf=1.0):
+def get_cusip_tickers(cusips_to_find, max_retries=8, bf=1.0):
     api_url = 'https://api.openfigi.com/v3/mapping' #openfigi has issues though - not all cusips are found. For that the function financialmodelingprep API is used to fill in the missing values.
     headers = {'Content-Type': 'application/json'}
     batch_size = 10
@@ -240,24 +240,24 @@ def generate_investment_allocations(cik):
         return
 
     unique_cusips = holdings_13f['cusip'].unique().tolist()
-    cusip_to_ticker_map = get_tickers_from_cusips(unique_cusips)
+    cusip_to_ticker_map = get_cusip_tickers(unique_cusips)
     holdings_13f['ticker'] = holdings_13f['cusip'].map(cusip_to_ticker_map)
     total_portfolio_value = holdings_13f['value'].sum()
     holdings_13f['allocation_percent'] = (holdings_13f['value'] / total_portfolio_value) * 100
 
     final_columns = ['ticker', 'nameOfIssuer', 'cusip', 'value', 'shares', 'allocation_percent']
-    final_allocations = holdings_13f.sort_values(by='allocation_percent', ascending=False)[final_columns]
+    f_alloc = holdings_13f.sort_values(by='allocation_percent', ascending=False)[final_columns]
     output_dir = './sec/allocations'
     os.makedirs(output_dir, exist_ok=True)
     output_path = os.path.join(output_dir, f"{cik}.csv")
-    final_allocations.to_csv(output_path, index=False)
+    f_alloc.to_csv(output_path, index=False)
 
     print(f"\nTotal portfolio value from 13F: ${total_portfolio_value:,.2f}")
     print(f"Report saved to: {output_path}")
     print("\nInvestment Allocations:")
-    print(final_allocations.to_string())
+    print(f_alloc.to_string())
 
-def get_all_13f_filing_urls(cik):
+def get_all_13f_furls(cik):
     initial_url = f"https://data.sec.gov/submissions/CIK{cik.zfill(10)}.json"
     headers = {'User-Agent': 'denk1k no@gmail.com'}
     all_urls = []
@@ -351,17 +351,17 @@ def get_all_13f_filing_urls(cik):
 
 def fetch_all_past_allocations(cik):
     print(f"--- Fetching all past allocations for CIK: {cik} ---")
-    filing_urls = get_all_13f_filing_urls(cik)
-    if not filing_urls:
+    furls = get_all_13f_furls(cik)
+    if not furls:
         print("Could not find any 13F filings.")
         return
 
-    if filing_urls:
-        earliest_date = min(pd.to_datetime(f['reportDate']) for f in filing_urls)
+    if furls:
+        earliest_date = min(pd.to_datetime(f['reportDate']) for f in furls)
         update_fund_data(cik, {'earliest_filing_date': earliest_date.strftime('%Y-%m-%d')})
         print(f"Set earliest filing date for CIK {cik} to {earliest_date.strftime('%Y-%m-%d')}")
 
-    for filing in filing_urls:
+    for filing in furls:
         report_date = filing['reportDate']
         filing_date = filing['filingDate']
         accession_number = filing['accessionNumber']
@@ -385,21 +385,21 @@ def fetch_all_past_allocations(cik):
             continue
 
         unique_cusips = holdings_13f['cusip'].unique().tolist()
-        cusip_to_ticker_map = get_tickers_from_cusips(unique_cusips)
+        cusip_to_ticker_map = get_cusip_tickers(unique_cusips)
         holdings_13f['ticker'] = holdings_13f['cusip'].map(cusip_to_ticker_map)
         total_portfolio_value = holdings_13f['value'].sum()
         holdings_13f['allocation_percent'] = (holdings_13f['value'] / total_portfolio_value) * 100
 
         final_columns = ['ticker', 'nameOfIssuer', 'cusip', 'value', 'shares', 'allocation_percent']
-        final_allocations = holdings_13f.sort_values(by='allocation_percent', ascending=False)[final_columns]
+        f_alloc = holdings_13f.sort_values(by='allocation_percent', ascending=False)[final_columns]
         
-        final_allocations['filingDate'] = filing_date
-        final_allocations['reportDate'] = report_date
-        final_allocations['accessionNumber'] = accession_number
+        f_alloc['filingDate'] = filing_date
+        f_alloc['reportDate'] = report_date
+        f_alloc['accessionNumber'] = accession_number
 
-        final_allocations.to_csv(output_path, index=False)
+        f_alloc.to_csv(output_path, index=False)
 
-        print(f"Report for {report_date} saved to: {output_path}")
+        print(f"Report at {report_date} saved to: {output_path}")
 
 if __name__ == "__main__":
     renaissance_cik = '1037389' # renaissance technologies
