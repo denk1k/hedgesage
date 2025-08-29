@@ -38,6 +38,7 @@
   $: selectedLabel = metricLabels[metricType];
 
   $: selectedMetrics = fundData.backtest_results ? {
+    earliest_filing_date: fundData.earliest_filing_date || null,
     total_return: fundData.backtest_results[`total_return${metricSuffixes[metricType]}`] ?? null,
     annualized_return: fundData.backtest_results[`annualized_return${metricSuffixes[metricType]}`] ?? null,
     sharpe_ratio: fundData.backtest_results[`sharpe_ratio${metricSuffixes[metricType]}`] ?? null,
@@ -166,6 +167,7 @@
           </Select.Root>
         </div>
         <div class="grid grid-cols-2 gap-2 text-sm">
+          <p>Earliest Filing Date:</p><p>{selectedMetrics.earliest_filing_date || 'N/A'}</p>
           <p>Total Return:</p><p>{selectedMetrics.total_return !== null ? (selectedMetrics.total_return * 100).toFixed(2) + '%' : 'N/A'}</p>
           <p>Annualized Return:</p><p>{selectedMetrics.annualized_return !== null ? (selectedMetrics.annualized_return * 100).toFixed(2) + '%' : 'N/A'}</p>
           <p>Sharpe Ratio:</p><p>{selectedMetrics.sharpe_ratio !== null ? selectedMetrics.sharpe_ratio.toFixed(2) : 'N/A'}</p>
