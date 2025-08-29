@@ -3,9 +3,9 @@ name: Daily Fetch Hedge Fund Allocations
 on:
   schedule:
     - cron: "0 0 * * *" # Runs every day at midnight UTC
-  push:
-    branches:
-      - main
+  # push:
+  #   branches:
+  #     - main
 
 jobs:
   build:
@@ -29,7 +29,7 @@ jobs:
     - name: Run script
       env:
         FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
-      run: python fetch_hedge_fund_allocations.py
+      run: python runner_update_allocations.py
 
     - name: Commit and push changes
       uses: stefanzweifel/git-auto-commit-action@v4

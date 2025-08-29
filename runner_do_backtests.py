@@ -1,4 +1,4 @@
-# This script cannot be run via GH actions, since historical data consumes a ton of resources.
+# This script cannot be run via GH actions, since historical data consumes a ton of resources. It could very well run for a day.
 import json
 import os
 import pandas as pd
