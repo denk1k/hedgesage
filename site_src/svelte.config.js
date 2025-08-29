@@ -10,7 +10,10 @@ const config = {
 			fallback: 'index.html',
 			precompress: false,
 			strict: true
-		})
+		}),
+		paths: {
+			base: process.env.NODE_ENV === 'production' ? '/hedgesage' : '',
+		}
 	},
 	preprocess: vitePreprocess()
 };
