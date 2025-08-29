@@ -15,17 +15,20 @@ def fetch_cusip_on_fmp(cusip: str):
     url = f"https://financialmodelingprep.com/api/v3/cusip/{cusip}?apikey={api_key}"
     try:
         response = requests.get(url)
-        if response.status_code == 429:
-            print("Rate limit hit. There is no point in proceeding of CUSIP fetching via FMP.")
+        if response.status_code == 429 or response.status_code == 403:
+            print("A non-recoverable error occurred. There is no point in proceeding of CUSIP fetching via FMP.")
             return "STOP" # this usually means that the free allowment of 250 requests per day had been hit, so continuing is pointless.
-        response.raise_for_status()
-        data = response.json()
-        if data and isinstance(data, list) and data[0].get("ticker"):
-            print(f"Found ticker for {cusip}: {data[0]['ticker']}")
-            return data[0]["ticker"]
-        else:
-            print(f"Error: Ticker not found for CUSIP {cusip}.")
-            return "N/A"
+        try:
+            response.raise_for_status()
+            data = response.json()
+            if data and isinstance(data, list) and data[0].get("ticker"):
+                print(f"Found ticker for {cusip}: {data[0]['ticker']}")
+                return data[0]["ticker"]
+            else:
+                print(f"Error: Ticker not found for CUSIP {cusip}.")
+                return "N/A"
+        except Exception as e:
+            print(f"ERR on FMP API @ CUSIP {cusip}: {e}")
     except IndexError:
         print(f"Error: Empty response for CUSIP {cusip}.")
         return "N/A"
