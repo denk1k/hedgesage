@@ -8,8 +8,8 @@
   import { AreaChart, LineChart } from "layerchart";
   import { scaleUtc } from "d3-scale";
   import { curveNatural } from "d3-shape";
-  
   import Expand from "@lucide/svelte/icons/expand";
+  import AllocationsDataTable from '$lib/components/AllocationsDataTable.svelte';
 
   export let cik: string;
   export let fundData: any;
@@ -19,6 +19,10 @@
   let isLoading = false;
   let error: string | null = null;
   let drawerOpen = false;
+  let allocationsDrawerOpen = false;
+  let allocationsData: any[] | null = null;
+  let isAllocationsLoading = false;
+  let allocationsError: string | null = null;
 
   const metricSuffixes: Record<string, string> = {
     fund: '_fund',
@@ -75,10 +79,42 @@
       console.log(chartData)
 
     } catch (e: any) {
-      console.error('Error in loadChartData:', e);
       error = e.message;
     } finally {
       isLoading = false;
+    }
+  }
+
+  async function loadAllocationsData() {
+    isAllocationsLoading = true;
+    allocationsError = null;
+    try {
+      const response = await fetch(`https://raw.githubusercontent.com/denk1k/hedgesage/refs/heads/main/sec/allocations/${cik}.csv`);
+      if (!response.ok) {
+        throw new Error(`Allocations data not available for this fund.`);
+      }
+      console.log("Alloc response OK")
+      const csvText = await response.text();
+      const rows = csvText.split('\n');
+      const header = rows.shift()?.split(',');
+      if (!header) {
+        throw new Error('Invalid CSV header');
+      }
+      
+      const parsedData = rows.map(row => {
+        const values = row.split(',');
+        const rowData = header.reduce((obj, key, index) => {
+          obj[key.trim()] = values[index];
+          return obj;
+        }, {});
+        return rowData;
+      }).filter(d => d.ticker); // Filter out empty rows
+
+      allocationsData = parsedData;
+    } catch (e: any) {
+      allocationsError = e.message;
+    } finally {
+      isAllocationsLoading = false;
     }
   }
 
@@ -100,6 +136,10 @@
     color: chartConfig[metricToSeriesKey[metricType]].color
   }];
 
+  $: if (allocationsDrawerOpen && !allocationsData && !isAllocationsLoading && !allocationsError) {
+    loadAllocationsData();
+  }
+
 </script>
 
 <Card.Root>
@@ -113,6 +153,7 @@
       {/if}
     </Card.Title>
     <Card.Description>CIK: {cik}</Card.Description>
+    
   </Card.Header>
   <Card.Content>
     <div class="grid gap-4">
@@ -163,15 +204,20 @@
         {:else if isLoading}
           <p>Loading...</p>
         {:else if error}
-          <Alert.Root variant="destructive">
-            <Alert.Title>Error</Alert.Title>
-            <Alert.Description>{error}</Alert.Description>
-          </Alert.Root>
+          <div class="flex flex-col items-center gap-4">
+            <Alert.Root variant="destructive">
+              <Alert.Title>Error</Alert.Title>
+              <Alert.Description>{error}</Alert.Description>
+            </Alert.Root>
+            <Button onclick={loadChartData}>Retry</Button>
+          </div>
         {:else}
-          <Button onclick={loadChartData}>Load Chart</Button>
+          <Button variant="link" onclick={loadChartData}>Load Chart</Button>
         {/if}
       </div>
+      <Button  onclick={() => allocationsDrawerOpen = true}>View Allocations</Button>
     </div>
+    
   </Card.Content>
 </Card.Root>
 
@@ -208,6 +254,24 @@
             }}
           />
         </Chart.Container>
+      {/if}
+    </div>
+  </Drawer.Content>
+</Drawer.Root>
+
+<Drawer.Root bind:open={allocationsDrawerOpen}>
+  <Drawer.Content>
+    <Drawer.Header>
+      <Drawer.Title>{fundData.name} - Allocations</Drawer.Title>
+    </Drawer.Header>
+    <div class="h-[90vh] overflow-auto px-4">
+      {#if isAllocationsLoading}
+        <p>Loading allocations...</p>
+      {:else if allocationsError}
+        <div class="text-red-500">{allocationsError}</div>
+        <Button onclick={loadAllocationsData}>Retry</Button>
+      {:else if allocationsData}
+        <AllocationsDataTable data={allocationsData} />
       {/if}
     </div>
   </Drawer.Content>
