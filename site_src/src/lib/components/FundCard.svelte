@@ -144,13 +144,8 @@
 
 <Card.Root>
   <Card.Header>
-    <Card.Title class="flex justify-between items-start">
+    <Card.Title>
       <span>{fundData.name}</span>
-      {#if chartData}
-        <Button variant="ghost" size="icon" onclick={() => drawerOpen = true}>
-          <Expand class="h-4 w-4" />
-        </Button>
-      {/if}
     </Card.Title>
     <Card.Description>CIK: {cik}</Card.Description>
     
@@ -178,8 +173,11 @@
           <p>Calmar Ratio:</p><p>{selectedMetrics.calmar_ratio !== null ? selectedMetrics.calmar_ratio.toFixed(2) : 'N/A'}</p>
         </div>
       {/if}
-      <div class="h-[250px] flex items-center justify-center rounded-md border">
+      <div class="relative h-[250px] flex items-center justify-center rounded-md border">
         {#if chartData}
+          <Button variant="ghost" size="icon" class="absolute top-1 right-1 z-10 h-8 w-8" onclick={() => drawerOpen = true}>
+            <Expand class="h-3 w-3" />
+          </Button>
           <Chart.Container config={chartConfig} class="aspect-auto h-full w-full">
             <LineChart
               data={chartData}
