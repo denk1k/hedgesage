@@ -161,8 +161,8 @@
             </Select.Trigger>
             <Select.Content>
               <Select.Item value="fund">Fund's Original Performance</Select.Item>
-              <Select.Item value="copy">Copied Performance (Filing Dates)</Select.Item>
-              <Select.Item value="copy_scaled">Copied Performance (Filing Dates, Investments Scaled to 100% of Portfolio)</Select.Item>
+              <Select.Item value="copy">Copied Performance (Rebalances on Filing Dates)</Select.Item>
+              <Select.Item value="copy_scaled">Copied Performance (Rebalances on Filing Dates, Investments Scaled to 100% of Portfolio)</Select.Item>
             </Select.Content>
           </Select.Root>
         </div>
