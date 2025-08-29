@@ -153,12 +153,8 @@
                   format: (v) => `${(v/1000000).toFixed(1)}M`,
                 },
                 xAxis: {
-                  format: (v: Date) => {
-                    return v.toLocaleDateString("en-US", {
-                      month: "short",
-                      day: "numeric",
-                    });
-                  },
+                  ticks: 5,
+                  format: (v) => v.toLocaleDateString("en-US", { month: 'short', year: 'numeric' }),
                 },
                 highlight: { points: { r: 4 } },
               }}
@@ -202,12 +198,8 @@
               spline: { curve: curveNatural, motion: "tween", strokeWidth: 2 },
 
               xAxis: {
-                format: (v: Date) => {
-                  return v.toLocaleDateString("en-US", {
-                    month: "short",
-                    day: "numeric",
-                  });
-                },
+                ticks: 10,
+                format: (v) => v.toLocaleDateString("en-US", { month: 'short', year: 'numeric' }),
               },
               yAxis: {
                 ticks: 10,
