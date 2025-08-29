@@ -35,8 +35,11 @@
 </script>
 
 <main class="container mx-auto p-4">
-  <h1 class="text-3xl font-bold mb-4">Hedge Funds' Performance</h1>
-
+  <!-- <h1 class="text-3xl font-bold mb-4">Hedge Funds' Performance</h1> -->
+   <div class="self-center relative left-1/2 -translate-x-1/2 w-[300px]">
+    <img src="/hedgesage/logo-transparent.png" alt="HedgeSage Logo" class="mb-4" />
+</div>
+  
   {#if funds}
     <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
       {#each sortedFunds as [cik, fundData]}
