@@ -4,8 +4,7 @@ import json
 if __name__ == "__main__":
     with open("top_funds.json", "r") as f:
         top_funds = json.load(f)
-    for fund in top_funds:
-        cik = fund["cik"]
-        name = fund["name"]
+    for cik, info in top_funds.items():
+        name = info["name"]
         print(f"Generating investment allocations for a fund {name}")
         generate_investment_allocations(cik)

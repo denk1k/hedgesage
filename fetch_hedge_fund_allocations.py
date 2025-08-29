@@ -6,6 +6,23 @@ import json
 import time
 import os
 
+def update_fund_data(cik, new_data):
+    top_funds_path = './top_funds.json'
+    try:
+        with open(top_funds_path, 'r') as f:
+            all_funds = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        all_funds = {}
+
+    cik = cik.zfill(10)
+    if cik in all_funds:
+        all_funds[cik].update(new_data)
+    else:
+        all_funds[cik] = new_data
+
+    with open(top_funds_path, 'w') as f:
+        json.dump(all_funds, f, indent=4)
+
 def fetch_cusip_on_fmp(cusip: str):
     api_key = os.environ.get("FMP_API_KEY")
     if not api_key:
@@ -338,6 +355,11 @@ def fetch_all_past_allocations(cik):
     if not filing_urls:
         print("Could not find any 13F filings.")
         return
+
+    if filing_urls:
+        earliest_date = min(pd.to_datetime(f['reportDate']) for f in filing_urls)
+        update_fund_data(cik, {'earliest_filing_date': earliest_date.strftime('%Y-%m-%d')})
+        print(f"Set earliest filing date for CIK {cik} to {earliest_date.strftime('%Y-%m-%d')}")
 
     for filing in filing_urls:
         report_date = filing['reportDate']

@@ -47,8 +47,7 @@ if __name__ == "__main__":
                     print(f'downloader had an exception: {exc}')
 
     print("All data downloaded. Starting backtests.")
-    for fund in top_funds:
-        cik = fund["cik"]
-        name = fund["name"]
+    for cik, info in top_funds.items():
+        name = info["name"]
         print(f"Generating backtest for: {name}")
         backtest_hedge_fund(cik, download_data=False)

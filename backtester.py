@@ -3,8 +3,7 @@ import numpy as np
 import glob
 import os
 import plotly.graph_objects as go
-from pathlib import Path
-from fetch_hedge_fund_allocations import fetch_all_past_allocations
+from fetch_hedge_fund_allocations import fetch_all_past_allocations, update_fund_data
 from data_downloader import download_data_since_first_filing
 
 def backtest_hedge_fund(cik: str, initial_investment: float = 1_000_000, download_data=True):
@@ -234,6 +233,17 @@ def backtest_hedge_fund(cik: str, initial_investment: float = 1_000_000, downloa
     print(f"Sharpe Ratio: {sharpe_ratio:.2f}")
     print(f"Max Drawdown: {max_drawdown:.2%}")
     print(f"Calmar Ratio: {calmar_ratio:.2f}")
+
+    results = {
+        "final_portfolio_value": portfolio_value.iloc[-1],
+        "total_return": total_return,
+        "annualized_return": annualized_return,
+        "sharpe_ratio": sharpe_ratio,
+        "max_drawdown": max_drawdown,
+        "calmar_ratio": calmar_ratio
+    }
+    update_fund_data(cik, {"backtest_results": results})
+    print(f"Saved backtest results for CIK {cik} to top_funds.json")
 
     output_dir = './sec/backtests'
     os.makedirs(output_dir, exist_ok=True)
