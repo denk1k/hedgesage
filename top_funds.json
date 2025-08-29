@@ -285,7 +285,27 @@
         "name": "CANTILLON CAPITAL MANAGEMENT LLC"
     },
     "0001037389": {
-        "name": "RENAISSANCE TECHNOLOGIES LLC"
+        "name": "RENAISSANCE TECHNOLOGIES LLC",
+        "backtest_results": {
+            "final_portfolio_value_copy": 3100033.8815403115,
+            "total_return_copy": 2.1000338815403117,
+            "annualized_return_copy": 0.09849547074239595,
+            "sharpe_ratio_copy": 0.7853420413228056,
+            "max_drawdown_copy": -0.2775998830600786,
+            "calmar_ratio_copy": 0.3548109230329878,
+            "final_portfolio_value_copy_scaled": 3552725.2720819553,
+            "total_return_copy_scaled": 2.5527252720819553,
+            "annualized_return_copy_scaled": 0.1109979578658098,
+            "sharpe_ratio_copy_scaled": 0.8112278015892664,
+            "max_drawdown_copy_scaled": -0.2962618923804374,
+            "calmar_ratio_copy_scaled": 0.3746616109616775,
+            "final_portfolio_value_fund": 3593317.704515585,
+            "total_return_fund": 2.5933177045155853,
+            "annualized_return_fund": 0.11093009367063655,
+            "sharpe_ratio_fund": 0.8599084071500082,
+            "max_drawdown_fund": -0.28105931481881047,
+            "calmar_ratio_fund": 0.3946857044825199
+        }
     },
     "0001317784": {
         "name": "SFE INVESTMENT COUNSEL"
@@ -598,5 +618,28 @@
     },
     "0000850529": {
         "name": "FISHER ASSET MANAGEMENT, LLC"
+    },
+    "0001006438": {
+        "name": "X Fund",
+        "backtest_results": {
+            "final_portfolio_value_copy": 2979795.490899042,
+            "total_return_copy": 1.979795490899042,
+            "annualized_return_copy": 0.09491590606128986,
+            "sharpe_ratio_copy": 0.6373783473796978,
+            "max_drawdown_copy": -0.34518955541305796,
+            "calmar_ratio_copy": 0.2749674912605984,
+            "final_portfolio_value_copy_scaled": 3938818.853681557,
+            "total_return_copy_scaled": 2.938818853681557,
+            "annualized_return_copy_scaled": 0.1205845207348637,
+            "sharpe_ratio_copy_scaled": 0.6538717796224718,
+            "max_drawdown_copy_scaled": -0.43176854739705445,
+            "calmar_ratio_copy_scaled": 0.27928046510524107,
+            "final_portfolio_value_fund": 3131462.026067342,
+            "total_return_fund": 2.131462026067342,
+            "annualized_return_fund": 0.09843084369370314,
+            "sharpe_ratio_fund": 0.6805963900956707,
+            "max_drawdown_fund": -0.3327660973834702,
+            "calmar_ratio_fund": 0.29579588926775263
+        }
     }
 }
