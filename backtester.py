@@ -331,7 +331,7 @@ def backtest_hedge_fund(cik: str, initial_investment: float = 1_000_000, downloa
 
 
 if __name__ == '__main__':
-    # renaissance_cik = '1037389'
-    # backtest_hedge_fund(renaissance_cik)
-    appaloosa = '0001006438'
-    backtest_hedge_fund(appaloosa)
+    renaissance_cik = '1037389'
+    backtest_hedge_fund(renaissance_cik)
+    # appaloosa = '0001006438'
+    # backtest_hedge_fund(appaloosa)
