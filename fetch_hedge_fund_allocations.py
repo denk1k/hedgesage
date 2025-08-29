@@ -150,7 +150,7 @@ def parse_13f_holdings(xml_url):
 
         return pd.DataFrame(holdings)
 
-    except (requests.exceptions.RequestException, ET.ParseError) as e:
+    except Exception as e:
         print(f"Error parsing 13F holdings from {xml_url}: {e}")
         return pd.DataFrame()
 
