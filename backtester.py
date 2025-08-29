@@ -7,13 +7,13 @@ from pathlib import Path
 from fetch_hedge_fund_allocations import fetch_all_past_allocations
 from data_downloader import download_data_since_first_filing
 
-def backtest_hedge_fund(cik: str, initial_investment: float = 1_000_000):
+def backtest_hedge_fund(cik: str, initial_investment: float = 1_000_000, download_data=True):
     cik = cik.zfill(10) # make sure that ciks are uniform
     print(f"--- Starting backtest for CIK: {cik} ---")
-
-    print(f"--- Making sure hist price data is available for {cik} ---")
-    download_data_since_first_filing(cik)
-    print(f"--- Download process complete ---")
+    if download_data:
+        print(f"--- Making sure hist price data is available for {cik} ---")
+        download_data_since_first_filing(cik)
+        print(f"--- Download process complete ---")
 
     allocation_path = f'./sec/past_allocations/{cik}/*.csv'
     allocation_files = glob.glob(allocation_path)
