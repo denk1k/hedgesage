@@ -5,23 +5,29 @@
 
   let funds: Record<string, any> | null = null;
   let error: string | null = null;
-  let sortBy = 'sharpe_ratio_copy';
 
-  const sopt = [
-    { value: 'sharpe_ratio_copy', label: 'Sharpe Ratio' },
-    { value: 'calmar_ratio_copy', label: 'Calmar Ratio' },
-    { value: 'total_return_copy', label: 'Total Returns' },
-    { value: 'max_drawdown_copy', label: 'Maximum Drawdown' },
-    { value: 'annualized_return_copy', label: 'Annualized Return' },
+  let metricType = 'copy';
+  let sortMetric = 'sharpe_ratio';
+
+  const metricTypeOptions = [
+    { value: 'fund', label: 'Original' },
+    { value: 'copy', label: 'Copied' },
+    { value: 'copy_scaled', label: 'Copied (Scaled)' },
   ];
 
-  $: selectedSortLabel = sopt.find(o => o.value === sortBy)?.label;
+  const sopt = [
+    { value: 'sharpe_ratio', label: 'Sharpe Ratio' },
+    { value: 'calmar_ratio', label: 'Calmar Ratio' },
+    { value: 'total_return', label: 'Total Returns' },
+    { value: 'max_drawdown', label: 'Maximum Drawdown' },
+    { value: 'annualized_return', label: 'Annualized Return' },
+  ];
 
   const sortmetrics_descending = [
-    'sharpe_ratio_copy',
-    'calmar_ratio_copy',
-    'total_return_copy',
-    'annualized_return_copy',
+    'sharpe_ratio',
+    'calmar_ratio',
+    'total_return',
+    'annualized_return',
   ];
 
   onMount(async () => {
@@ -36,12 +42,14 @@
     }
   });
 
+  $: sortBy = `${sortMetric}_${metricType}`;
+
   $: sortedFunds = funds ? Object.entries(funds).sort(([, a], [, b]) => {
     const valA = a.backtest_results?.[sortBy];
     const valB = b.backtest_results?.[sortBy];
 
     if (valA != null && valB != null) {
-      if (sortmetrics_descending.includes(sortBy)) {
+      if (sortmetrics_descending.includes(sortMetric)) {
         return valB - valA;
       } else {
         return valA - valB;
@@ -59,11 +67,21 @@
     <img src="/hedgesage/logo-transparent.png" alt="HedgeSage Logo" class="mb-4" />
 </div>
 
-<div class="flex items-center mb-4">
-  <h2 class="text-xl font-semibold mr-2">Top hedge funds by</h2>
-  <Select.Root type="single" bind:value={sortBy}>
-    <Select.Trigger class="w-[200px]">
-      {selectedSortLabel}
+<div class="flex items-center mb-4 gap-2">
+  <h2 class="text-xl font-semibold">Hedge funds sorted by</h2>
+  <Select.Root type="single" bind:value={metricType}>
+    <Select.Trigger class="w-[180px]">
+      {metricTypeOptions.find(o => o.value === metricType)?.label}
+    </Select.Trigger>
+    <Select.Content>
+      {#each metricTypeOptions as option}
+        <Select.Item value={option.value}>{option.label}</Select.Item>
+      {/each}
+    </Select.Content>
+  </Select.Root>
+  <Select.Root type="single" bind:value={sortMetric}>
+    <Select.Trigger class="w-[220px]">
+      {sopt.find(o => o.value === sortMetric)?.label}
     </Select.Trigger>
     <Select.Content>
       {#each sopt as option}
