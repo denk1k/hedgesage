@@ -1,12 +1,12 @@
 ![HedgeSage Logo](logo.png)
 # [HedgeSage](https://denk1k.github.io/hedgesage/)
 A free and open-source hedge fund position aggregator and investment simulator
-## ✨It uses 13F filings to:
+## ✨ It uses 13F filings to:
 * Aggregate current hedge fund positions
 * Backtest the funds' original performance
-* Simulate returns that would have been achieved by copying the hedge funds
+* Simulate returns that would have been achieved by copying the hedge funds' positions
   * With manager-weighted allocation
-  * With manager-weighted allocation scaled to the entire account
+  * With manager-weighted allocation and investment value scaled to 100% of the portfolio
 * And shows all of this within a simple, neat and minimal UI :)
 
 ## 🚀 Running yourself is very simple:
