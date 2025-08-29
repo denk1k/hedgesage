@@ -1,9 +1,28 @@
 <script lang="ts">
   import FundCard from '$lib/components/FundCard.svelte';
   import { onMount } from 'svelte';
+  import * as Select from "$lib/components/ui/select/index.js";
 
   let funds: Record<string, any> | null = null;
   let error: string | null = null;
+  let sortBy = 'sharpe_ratio_copy';
+
+  const sopt = [
+    { value: 'sharpe_ratio_copy', label: 'Sharpe Ratio' },
+    { value: 'calmar_ratio_copy', label: 'Calmar Ratio' },
+    { value: 'total_return_copy', label: 'Total Returns' },
+    { value: 'max_drawdown_copy', label: 'Maximum Drawdown' },
+    { value: 'annualized_return_copy', label: 'Annualized Return' },
+  ];
+
+  $: selectedSortLabel = sopt.find(o => o.value === sortBy)?.label;
+
+  const sortmetrics_descending = [
+    'sharpe_ratio_copy',
+    'calmar_ratio_copy',
+    'total_return_copy',
+    'annualized_return_copy',
+  ];
 
   onMount(async () => {
     try {
@@ -17,19 +36,19 @@
     }
   });
 
-  $: sortedFunds = funds ? Object.entries(funds).sort(([, fundA], [, fundB]) => {
-    const sharpe1 = fundA.backtest_results?.sharpe_ratio_copy;
-    const sharpe2 = fundB.backtest_results?.sharpe_ratio_copy;
+  $: sortedFunds = funds ? Object.entries(funds).sort(([, a], [, b]) => {
+    const valA = a.backtest_results?.[sortBy];
+    const valB = b.backtest_results?.[sortBy];
 
-    if (sharpe1 != null && sharpe2 != null) {
-      return sharpe2 - sharpe1;
+    if (valA != null && valB != null) {
+      if (sortmetrics_descending.includes(sortBy)) {
+        return valB - valA;
+      } else {
+        return valA - valB;
+      }
     }
-    if (sharpe1 != null) {
-      return -1;
-    }
-    if (sharpe2 != null) {
-      return 1;
-    }
+    if (valA != null) return -1;
+    if (valB != null) return 1;
     return 0;
   }) : [];
 </script>
@@ -38,6 +57,20 @@
   <!-- <h1 class="text-3xl font-bold mb-4">Hedge Funds' Performance</h1> -->
    <div class="self-center relative left-1/2 -translate-x-1/2 w-[300px]">
     <img src="/hedgesage/logo-transparent.png" alt="HedgeSage Logo" class="mb-4" />
+</div>
+
+<div class="flex items-center mb-4">
+  <h2 class="text-xl font-semibold mr-2">Top hedge funds by</h2>
+  <Select.Root type="single" bind:value={sortBy}>
+    <Select.Trigger class="w-[200px]">
+      {selectedSortLabel}
+    </Select.Trigger>
+    <Select.Content>
+      {#each sopt as option}
+        <Select.Item value={option.value}>{option.label}</Select.Item>
+      {/each}
+    </Select.Content>
+  </Select.Root>
 </div>
   
   {#if funds}

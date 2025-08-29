@@ -145,7 +145,7 @@
 <Card.Root>
   <Card.Header>
     <Card.Title>
-      <span>{fundData.name}</span>
+      <span>{@html fundData.name}</span>
     </Card.Title>
     <Card.Description>CIK: {cik}</Card.Description>
     
