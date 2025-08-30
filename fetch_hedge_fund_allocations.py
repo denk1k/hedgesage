@@ -5,6 +5,7 @@ from bs4 import BeautifulSoup
 import json
 import time
 import os
+import re
 
 def update_fund_data(cik, new_data):
     top_funds_path = './top_funds.json'
@@ -109,6 +110,84 @@ def get_latest_13f_filing_url(cik):
 
     return None
 
+def parse_13f_text_holdings(content):
+    text = content.decode('utf-8', errors='ignore')
+
+    tables = re.findall(r'<TABLE>([\s\S]*?)</TABLE>', text, re.IGNORECASE)
+
+    all_holdings = []
+
+    for table in tables:
+        lines = table.strip().split('\n')
+
+        template_line_index = -1
+        for i, line in enumerate(lines):
+            if line.strip().startswith('<S>'):
+                template_line_index = i
+                break
+
+        if template_line_index == -1:
+            continue
+
+        template_line = lines[template_line_index]
+
+        col_starts = [m.start() for m in re.finditer('<C>', template_line)]
+        s_start = template_line.find('<S>')
+        if s_start != -1:
+            col_starts.insert(0, s_start)
+
+        if len(col_starts) < 5:
+            continue
+
+        name_buffer = ''
+        for line in lines[template_line_index + 1:]:
+            line = line.rstrip()
+            if not line.strip() or line.strip().startswith('<S>') or line.strip().startswith('---'):
+                continue
+
+            cusip = ""
+            if len(line) > col_starts[2]:
+                cusip = line[col_starts[2]:col_starts[3]].strip()
+
+            if len(cusip) == 9 and cusip.isalnum():
+                name_of_issuer = line[:col_starts[1]].strip()
+                if name_buffer:
+                    name_of_issuer = name_buffer + ' ' + name_of_issuer
+                    name_buffer = ''
+
+                value_str = ""
+                if len(line) > col_starts[3]:
+                    value_str = line[col_starts[3]:col_starts[4]].strip()
+
+                shares_str = ""
+                if len(line) > col_starts[4]:
+                    shares_str = line[col_starts[4]:col_starts[5]].strip()
+
+                if not value_str or not shares_str:
+                    continue
+
+                try:
+                    value = float(value_str.replace(',', '')) * 1000
+                    shares = int(shares_str.replace(',', ''))
+                except (ValueError, IndexError):
+                    continue
+
+                holding = {
+                    'nameOfIssuer': name_of_issuer,
+                    'cusip': cusip,
+                    'value': value,
+                    'shares': shares
+                }
+                all_holdings.append(holding)
+            else:
+                name_buffer = (name_buffer + ' ' + line.strip()) if name_buffer else line.strip()
+    print("Holdings fetched from text")
+    
+    df =  pd.DataFrame(all_holdings)
+    print(df.head(5))
+    return df
+
+
 def parse_13f_holdings(xml_url):
     if not xml_url:
         return pd.DataFrame()
@@ -118,49 +197,55 @@ def parse_13f_holdings(xml_url):
     try:
         response = requests.get(xml_url, headers=headers)
         response.raise_for_status()
-        xml_content = response.content
-        if not xml_content.strip().startswith(b'<'):
-            print(f"Skipping non-XML from {xml_url}")
-            return pd.DataFrame()
-        root = ET.fromstring(xml_content)
+        content = response.content
 
-        holdings = []
-        
-        namespace = {'ns': 'http://www.sec.gov/edgar/document/thirteenf/informationtable'}
-        info_tables = root.findall('ns:infoTable', namespace)
+        try:
+            if not content.strip().startswith(b'<'):
+                print(f"Skipping non-XML from {xml_url}")
+                return pd.DataFrame()
+            root = ET.fromstring(content)
 
-        if info_tables:
-            for info_table in info_tables:
-                name_node = info_table.find('ns:nameOfIssuer', namespace)
-                cusip_node = info_table.find('ns:cusip', namespace)
-                value_node = info_table.find('ns:value', namespace)
-                shares_node = info_table.find('ns:shrsOrPrnAmt/ns:sshPrnamt', namespace)
-                
-                if all(node is not None for node in [name_node, cusip_node, value_node, shares_node]):
-                    holding = {
-                        'nameOfIssuer': name_node.text,
-                        'cusip': cusip_node.text,
-                        'value': float(value_node.text) * 1000,
-                        'shares': int(shares_node.text)
-                    }
-                    holdings.append(holding)
-        else: # if above fails try w no namespace
-            for info_table in root.findall('infoTable'):
-                name_node = info_table.find('nameOfIssuer')
-                cusip_node = info_table.find('cusip')
-                value_node = info_table.find('value')
-                shares_node = info_table.find('shrsOrPrnAmt/sshPrnamt')
+            holdings = []
 
-                if all(node is not None for node in [name_node, cusip_node, value_node, shares_node]):
-                    holding = {
-                        'nameOfIssuer': name_node.text,
-                        'cusip': cusip_node.text,
-                        'value': float(value_node.text) * 1000,
-                        'shares': int(shares_node.text)
-                    }
-                    holdings.append(holding)
+            namespace = {'ns': 'http://www.sec.gov/edgar/document/thirteenf/informationtable'}
+            info_tables = root.findall('ns:infoTable', namespace)
 
-        return pd.DataFrame(holdings)
+            if info_tables:
+                for info_table in info_tables:
+                    name_node = info_table.find('ns:nameOfIssuer', namespace)
+                    cusip_node = info_table.find('ns:cusip', namespace)
+                    value_node = info_table.find('ns:value', namespace)
+                    shares_node = info_table.find('ns:shrsOrPrnAmt/ns:sshPrnamt', namespace)
+
+                    if all(node is not None for node in [name_node, cusip_node, value_node, shares_node]):
+                        holding = {
+                            'nameOfIssuer': name_node.text,
+                            'cusip': cusip_node.text,
+                            'value': float(value_node.text) * 1000,
+                            'shares': int(shares_node.text)
+                        }
+                        holdings.append(holding)
+            else:  # if above fails try w no namespace
+                for info_table in root.findall('infoTable'):
+                    name_node = info_table.find('nameOfIssuer')
+                    cusip_node = info_table.find('cusip')
+                    value_node = info_table.find('value')
+                    shares_node = info_table.find('shrsOrPrnAmt/sshPrnamt')
+
+                    if all(node is not None for node in [name_node, cusip_node, value_node, shares_node]):
+                        holding = {
+                            'nameOfIssuer': name_node.text,
+                            'cusip': cusip_node.text,
+                            'value': float(value_node.text) * 1000,
+                            'shares': int(shares_node.text)
+                        }
+                        holdings.append(holding)
+
+            return pd.DataFrame(holdings)
+
+        except ET.ParseError:
+            print(f"XML parsing failed for {xml_url}, attempting to parse as text.")
+            return parse_13f_text_holdings(content)
 
     except Exception as e:
         print(f"Error parsing 13F holdings from {xml_url}: {e}")
