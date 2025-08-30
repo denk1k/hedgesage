@@ -81,15 +81,27 @@ def get_latest_13f_filing_url(cik):
                 filing_directory_url = f"https://www.sec.gov/Archives/edgar/data/{cik}/{accession_number}/"
                 dir_response = requests.get(filing_directory_url, headers=headers)
                 dir_response.raise_for_status()
-
                 soup = BeautifulSoup(dir_response.content, 'html.parser')
+
+                xml_url = None
                 for link in soup.find_all('a'):
                     href = link.get('href')
-                    if href and ('InfoTable.xml' in href or 'holding.xml' in href or 'infotable.xml' in href):
-                        return f"https://www.sec.gov{href}"
+                    if href and ('infotable.xml' in href.lower() or 'holding.xml' in href.lower()):
+                        xml_url = f"https://www.sec.gov{href}"
+                        break
 
-                primary_document = filings_data['filings']['recent']['primaryDocument'][i]
-                return f"https://www.sec.gov/Archives/edgar/data/{cik}/{accession_number}/{primary_document}"
+                if not xml_url:
+                    for link in soup.find_all('a'):
+                        href = link.get('href')
+                        if href and href.lower().endswith('.xml') and 'primary_doc.xml' not in href.lower():
+                            xml_url = f"https://www.sec.gov{href}"
+                            break
+
+                if not xml_url:
+                    primary_document = filings_data['filings']['recent']['primaryDocument'][i]
+                    xml_url = f"https://www.sec.gov/Archives/edgar/data/{cik}/{accession_number}/{primary_document}"
+                
+                return xml_url
 
     except requests.exceptions.RequestException as e:
         print(f"Error fetching filings index for CIK {cik}: {e}")
@@ -402,5 +414,5 @@ def fetch_all_past_allocations(cik):
         print(f"Report at {report_date} saved to: {output_path}")
 
 if __name__ == "__main__":
-    renaissance_cik = '1037389' # renaissance technologies
+    renaissance_cik = '0001050464' # renaissance technologies
     generate_investment_allocations(renaissance_cik)
