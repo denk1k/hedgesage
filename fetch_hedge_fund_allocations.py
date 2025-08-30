@@ -251,8 +251,8 @@ def parse_13f_holdings(xml_url):
         print(f"Error parsing 13F holdings from {xml_url}: {e}")
         return pd.DataFrame()
     finally:
-        print("Sleeping for 0.2s to prevent rate limits")
-        time.sleep(0.2)
+        print("Sleeping for 0.12s to prevent rate limits")
+        time.sleep(0.12)
 
 def get_cusip_tickers(cusips_to_find, max_retries=8, bf=1.0):
     api_url = 'https://api.openfigi.com/v3/mapping' #openfigi has issues though - not all cusips are found. For that the function financialmodelingprep API is used to fill in the missing values.
@@ -408,8 +408,8 @@ def get_all_13f_furls(cik):
                     print(f"Could not fetch directory for {accession_number}: {e}")
                     continue
                 finally:
-                    print("Sleeping before the next request for 0.2s")
-                    time.sleep(0.2) # it is crucial that we sleep this time cause if >10req/s the IP will be rate limited for 10mins
+                    print("Sleeping before the next request for 0.12s")
+                    time.sleep(0.12) # it is crucial that we sleep this time cause if >10req/s the IP will be rate limited for 10mins. So we limit to about 8req/s
 
         return urls_found
 
