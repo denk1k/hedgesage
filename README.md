@@ -31,4 +31,4 @@ A free and open-source hedge fund position aggregator and investment simulator
 -   [ ] Portfolio builder with CSV allocation export
 -   [x] Fix the live allocations retriever (basically copy functionality from the past allocations retriever)
 -   [x] Prevent rate limits from sec.gov
--   [ ] There is a inefficiency in `runner_do_backtests.py`, as the allocations fetching is done twice.
+-   [ ] There is an inefficiency in `runner_do_backtests.py`, as the allocations fetching is done twice.
