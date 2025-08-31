@@ -33,3 +33,5 @@ A free and open-source hedge fund position aggregator and investment simulator
 -   [x] Prevent rate limits from sec.gov
 -   [ ] There is an inefficiency in `runner_do_backtests.py`, as the allocations fetching is done twice.
 -   [ ] Make backtests runnable on GitHub Actions
+-   [ ] Allow to export allocations as a CSV
+-   [ ] Allow to export allocations as a CSV in T212's format
