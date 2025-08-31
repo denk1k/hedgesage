@@ -93,8 +93,8 @@
   
   {#if funds}
     <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-      {#each sortedFunds as [cik, fundData]}
-        <FundCard {cik} {fundData} />
+      {#each sortedFunds as [cik, fundData] (cik)}
+        <FundCard {cik} {fundData} metricType={metricType} />
       {/each}
     </div>
   {:else if error}

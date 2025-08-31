@@ -14,7 +14,7 @@
   export let cik: string;
   export let fundData: any;
 
-  let metricType: string = 'copy';
+  export let metricType: string = 'copy';
   let chartData: any[] | null = null;
   let isLoading = false;
   let error: string | null = null;
@@ -180,6 +180,7 @@
           <Button variant="ghost" size="icon" class="absolute top-1 right-1 z-10 h-8 w-8" onclick={() => drawerOpen = true}>
             <Expand class="h-3 w-3" />
           </Button>
+          {#key metricType}
           <Chart.Container config={chartConfig} class="aspect-auto h-full w-full">
             <LineChart
               data={chartData}
@@ -201,6 +202,7 @@
               }}
             />
           </Chart.Container>
+          {/key}
         {:else if isLoading}
           <p>Loading...</p>
         {:else if error}
