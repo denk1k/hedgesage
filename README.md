@@ -35,3 +35,5 @@ A free and open-source hedge fund position aggregator and investment simulator
 -   [ ] Make backtests runnable on GitHub Actions
 -   [ ] Allow to export allocations as a CSV
 -   [ ] Allow to export allocations as a CSV in T212's format
+-   [x] Add link to repo
+-   [ ] Show when allocations were last changed
