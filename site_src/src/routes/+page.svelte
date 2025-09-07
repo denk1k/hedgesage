@@ -7,6 +7,7 @@
   import * as Input from "$lib/components/ui/input/index.js";
   import { Button } from "$lib/components/ui/button/index.js";
   import GithubIcon from "@lucide/svelte/icons/github";
+  import CreatePortfolioDrawer from '$lib/components/CreatePortfolioDrawer.svelte';
 
   let funds: Record<string, any> | null = null;
   let error: string | null = null;
@@ -146,6 +147,9 @@
       {/each}
     </Select.Content>
   </Select.Root>
+  <div class="ml-4">
+    <CreatePortfolioDrawer {funds} />
+  </div>
     <div class="ml-auto flex items-center gap-4">
       {#if funds}
         <span class="text-sm text-muted-foreground">
