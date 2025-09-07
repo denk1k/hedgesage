@@ -136,7 +136,7 @@
                         const allocationPercent = parseFloat(values[allocationIndex]);
                         if (ticker && !isNaN(allocationPercent)) {
                             const fundWeight = fundWeights[fund.cik];
-                            const weightedAllocation = allocationPercent * fundWeight;
+                            const weightedAllocation = (allocationPercent / 100) * fundWeight;
                             portfolioAllocations[ticker] = (portfolioAllocations[ticker] || 0) + weightedAllocation;
                         }
                     }
