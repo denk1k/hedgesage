@@ -6,6 +6,7 @@
   import * as Label from "$lib/components/ui/label/index.js";
   import * as Input from "$lib/components/ui/input/index.js";
   import { Button } from "$lib/components/ui/button/index.js";
+  import GithubIcon from "@lucide/svelte/icons/github";
 
   let funds: Record<string, any> | null = null;
   let error: string | null = null;
@@ -112,7 +113,11 @@
 
 <main class="container mx-auto p-4">
   <div class="self-center relative left-1/2 -translate-x-1/2 w-[300px]">
-    <img src="/hedgesage/logo-transparent.png" alt="HedgeSage Logo" class="mb-4" />
+    <div class="flex justify-center items-center gap-4"><img src="/hedgesage/logo-transparent.png" alt="HedgeSage Logo" class="mb-4" />
+      <Button href="https://github.com/denk1k/hedgesage" variant="ghost" size="icon">
+        <GithubIcon class="size-6"/>
+      </Button></div>
+    
   </div>
 
 <div class="flex items-center mb-4 gap-2">
