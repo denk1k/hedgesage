@@ -148,7 +148,7 @@
     </Select.Content>
   </Select.Root>
   <div class="ml-4">
-    <CreatePortfolioDrawer {funds} />
+    <CreatePortfolioDrawer funds={sortedFunds} defaultAllocationStrategy={sortBy} />
   </div>
     <div class="ml-auto flex items-center gap-4">
       {#if funds}

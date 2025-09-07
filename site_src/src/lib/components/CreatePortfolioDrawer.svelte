@@ -4,13 +4,13 @@
   import * as Select from "$lib/components/ui/select/index.js";
   import { Checkbox } from "$lib/components/ui/checkbox/index.js";
   import { Label } from "$lib/components/ui/label/index.js";
-  import { onMount } from "svelte";
 
-  export let funds: Record<string, any> | null = null;
+  export let funds: [string, any][] | null = null;
+  export let defaultAllocationStrategy: string;
 
   let selectedFunds: Record<string, boolean> = {};
   $: if (funds) {
-    for (const cik of Object.keys(funds)) {
+    for (const [cik] of funds) {
       if (!(cik in selectedFunds)) {
         selectedFunds[cik] = false;
       }
@@ -18,7 +18,7 @@
     selectedFunds = selectedFunds;
   }
 
-  let allocationMetric = "even";
+  let allocationMetric = defaultAllocationStrategy || "even";
   let isDownloading = false;
 
   const allocationOptions = [
@@ -43,13 +43,13 @@
   async function downloadCSV() {
     isDownloading = true;
     try {
-      const activeFundCiks = funds ? Object.keys(funds).filter(cik => selectedFunds[cik]) : [];
-      if (activeFundCiks.length === 0) {
+      const activeFunds = funds ? funds.filter(([cik]) => selectedFunds[cik]) : [];
+      if (activeFunds.length === 0) {
         alert("Please select at least one fund.");
         return;
       }
 
-      const allocationPromises = activeFundCiks.map(async (cik) => {
+      const allocationPromises = activeFunds.map(async ([cik]) => {
         try {
           const response = await fetch(`https://raw.githubusercontent.com/denk1k/hedgesage/refs/heads/main/sec/allocations/${cik}.csv`);
           if (!response.ok) {
@@ -78,9 +78,8 @@
 
       const fetchedAllocations = await Promise.all(allocationPromises);
       const allocationsMap = new Map(fetchedAllocations.map(item => [item.cik, item.allocations]));
-      const activeFunds = activeFundCiks.map(cik => [cik, funds[cik]]);
 
-      const totalMetricValue = activeFunds.reduce((sum, [cik, fundData]) => {
+      const totalMetricValue = activeFunds.reduce((sum, [, fundData]) => {
         if (allocationMetric === "even") {
           return sum + 1;
         }
@@ -135,7 +134,7 @@
     }
   }
 
-  $: fundsList = funds ? Object.entries(funds) : [];
+  $: fundsList = funds || [];
 
   $: sortedFundsList = (() => {
     if (!fundsList) return [];
