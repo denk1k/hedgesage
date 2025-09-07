@@ -28,12 +28,12 @@ A free and open-source hedge fund position aggregator and investment simulator
 -   [x] Allow to retrieve 13F data from .txt files, letting backtests through years earlier than 2013.
 -   [ ] Allow for inclusion and downloading of non-stock tickers for the backtests
 -   [ ] Adjust extreme volatility data sanite checks.
--   [ ] Portfolio builder with CSV allocation export
+-   [x] Portfolio builder
 -   [x] Fix the live allocations retriever (basically copy functionality from the past allocations retriever)
 -   [x] Prevent rate limits from sec.gov
 -   [ ] There is an inefficiency in `runner_do_backtests.py`, as the allocations fetching is done twice.
 -   [ ] Make backtests runnable on GitHub Actions
--   [ ] Allow to export allocations as a CSV
--   [ ] Allow to export allocations as a CSV in T212's format
+-   [x] Allow to export allocations as a CSV
 -   [x] Add link to repo
 -   [ ] Show when allocations were last changed
+-   [ ] Improve the portfolio builder UX - instead of a drawer allowing you to select portfolios, instead there should be a + button on every one of the hedge fund cards, which will add the portfolio to the portfolio builder, which in of itself could be a drawer containing just the selected portfolios instead. This is better, because that would make better use of the feature-rich cards that the user would look at anyways and avoid the use of the clumsy checkboxes.
