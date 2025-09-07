@@ -115,7 +115,7 @@
   <div class="self-center relative left-1/2 -translate-x-1/2 w-[300px] mb-4">
     <div class="flex justify-center items-center">
       <img src="/hedgesage/logo-transparent.png" alt="HedgeSage Logo" />
-      <div class="mt-5" style="margin-left: -10px;"><Button href="https://github.com/denk1k/hedgesage" variant="ghost" size="icon">
+      <div class="mt-3" style="margin-left: -10px;"><Button href="https://github.com/denk1k/hedgesage" variant="ghost" size="icon">
         <GithubIcon class="size-6"/>
       </Button></div>
 
