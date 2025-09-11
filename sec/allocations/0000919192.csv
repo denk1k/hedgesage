@@ -74,7 +74,7 @@ ADP,AUTOMATIC DATA PROCESSING INC.                                              
 HON,HONEYWELL INTL INC                                                              ,438516106,29150000.0,125171,0.2250271923940037
 NEE,NEXTERA ENERGY INC                                                              ,65339F101,27883000.0,401661,0.21524642214483725
 SYK,STRYKER CORPORATION                                                             ,863667101,27767000.0,70184,0.2143509451528062
-N/A,EATON CORP PLC SHS COM                                                          ,G29183103,27676000.0,77525,0.21364845889181636
+ETN,EATON CORP PLC SHS COM                                                          ,G29183103,27676000.0,77525,0.21364845889181636
 CRWD,CROWDSTRIKE HOLDINGS INC -A                                                     ,22788C105,27528000.0,54050,0.21250595376405262
 UNP,UNION PACIFIC CORP.                                                             ,907818108,27166000.0,118074,0.20971144797857647
 LRCX,LAM RESEARCH CORP COM NEW                                                       ,512807306,27092000.0,278323,0.2091401954146946
@@ -127,7 +127,7 @@ HWM,HOWMET AEROSPACE INC                                                        
 RCL,ROYAL CARIBBEAN GROUP COM                                                       ,V7780T103,17261000.0,55122,0.13324852034006512
 MDLZ,MONDELEZ INTERNATIONAL INC-A                                                    ,609207105,17112000.0,253734,0.13209829558305974
 SNPS,SYNOPSYS INC                                                                    ,871607107,17065000.0,33286,0.13173547300870234
-N/A,AON PLC SHS CL A COM                                                            ,G0403H108,17052000.0,47798,0.13163511782856094
+AON,AON PLC SHS CL A COM                                                            ,G0403H108,17052000.0,47798,0.13163511782856094
 ELV,ELEVANCE HEALTH INC                                                             ,036752103,16964000.0,43613,0.130955790455296
 CVS,CVS HEALTH CORP COM                                                             ,126650100,16949000.0,245703,0.13083999601667132
 MMM,3M COMPANY                                                                      ,88579Y101,16763000.0,110111,0.129404144977725
@@ -219,7 +219,7 @@ TTWO,TAKE-TWO INTERACTIVE SOFTWARE INC                                          
 SLB,SCHLUMBERGER LTD COM STK                                                        ,806857108,8889000.0,262983,0.06861978432899825
 EW,EDWARDS LIFESCIENCES CORP                                                       ,28176E108,8863000.0,113324,0.06841907396871542
 KMB,KIMBERLY-CLARK CORP                                                             ,494368103,8855000.0,68685,0.06835731693478225
-N/A,FLEX LTD COM                                                                    ,Y2573F102,8799000.0,176269,0.06792501769725004
+FLEX,FLEX LTD COM                                                                    ,Y2573F102,8799000.0,176269,0.06792501769725004
 MET,METLIFE INC.                                                                    ,59156R108,8769000.0,109034,0.06769342882000064
 CASY,CASEY'S GEN STORES INC                                                          ,147528103,8768000.0,17183,0.06768570919075899
 KR,THE KROGER CO.                                                                  ,501044101,8706000.0,121372,0.06720709217777689
@@ -273,12 +273,12 @@ NRG,NRG ENERGY INC                                                              
 EBA,EBAY INC                                                                        ,278642103,7130000.0,95754,0.05504095649294156
 HIG,HARTFORD INSURANCE GROUP INC                                                    ,416515104,7094000.0,55916,0.05476304984024227
 WSO,WATSCO INC                                                                      ,942622200,7093000.0,16061,0.054755330211000625
-N/A,TE CONNECTIVITY PLC ORD SHS COM                                                 ,G87052109,7088000.0,42022,0.05471673206479239
+TEL,TE CONNECTIVITY PLC ORD SHS COM                                                 ,G87052109,7088000.0,42022,0.05471673206479239
 ED,CONSOLIDATED EDISON INC                                                         ,209115104,7082000.0,70572,0.054670414289342516
 BURL,BURLINGTON STORES INC                                                           ,122017106,7072000.0,30400,0.05459321799692605
 ACM,AECOM COM                                                                       ,00766T100,6915000.0,61268,0.053381236205987496
 ILMN,ILLUMINA INC                                                                    ,452327109,6902000.0,72342,0.053280881025846084
-N/A,GARMIN LTD                                                                      ,H2906T109,6892000.0,33020,0.053203684733429624
+GRMN,GARMIN LTD                                                                      ,H2906T109,6892000.0,33020,0.053203684733429624
 DHI,D R HORTON INC                                                                  ,23331A109,6891000.0,53453,0.053195965104187976
 XPO,XPO INC COM                                                                     ,983793100,6862000.0,54337,0.05297209585618022
 VICI,VICI PPTYS INC COM                                                              ,925652109,6858000.0,210378,0.05294121733921363
@@ -292,7 +292,7 @@ FNF,FNF GROUP                                                                   
 GGG,GRACO INC COM                                                                   ,384109104,6672000.0,77607,0.05150536630026733
 CSGP,COSTAR GROUP INC                                                                ,22160N109,6650000.0,82717,0.051335534456951104
 WEC,WEC ENERGY GROUP INC                                                            ,92939U106,6636000.0,63686,0.051227459647568044
-N/A,ARCH CAPITAL GROUP LTD                                                          ,G0450A105,6596000.0,72443,0.05091867447790218
+ACGL,ARCH CAPITAL GROUP LTD                                                          ,G0450A105,6596000.0,72443,0.05091867447790218
 GEHC,GE HEALTHCARE TECHNOLOGIES INC COMMON ST                                        ,36266G107,6570000.0,88706,0.050717964117619356
 AG8,AGILENT TECHNOLOGIES INC                                                        ,00846U101,6525000.0,55292,0.05037058080174525
 IR,INGERSOLL-RAND INC                                                              ,45687V106,6508000.0,78242,0.050239347104637254
@@ -324,7 +324,7 @@ CCL,CARNIVAL CORPORATION                                                        
 NBIX,NEUROCRINE BIOSCIENCES INC                                                      ,64125C109,5940000.0,47260,0.04585459769538189
 STT,STATE STREET CORP                                                               ,857477103,5898000.0,55468,0.04553037326723272
 GLPI,GAMING AND LEISURE PROPERTIE                                                    ,36467J108,5893000.0,126236,0.04549177512102449
-N/A,WILLIS TOWERS WATSON PLC LTD SHS COM                                            ,G96629103,5864000.0,19132,0.04526790587301673
+WTW,WILLIS TOWERS WATSON PLC LTD SHS COM                                            ,G96629103,5864000.0,19132,0.04526790587301673
 IRM,IRON MOUNTAIN INC                                                               ,46284V101,5854000.0,57071,0.045190709580600265
 DRI,DARDEN RESTAURANTS INC                                                          ,237194105,5829000.0,26740,0.044997718849559096
 MANH,MANHATTAN ASSOCIATES INC                                                        ,562750109,5770000.0,29219,0.04454226072430193
@@ -420,7 +420,7 @@ HLI,HOULIHAN LOKEY INC.                                                         
 CNP,CENTERPOINT ENERGY INC                                                          ,15189T107,4712000.0,128239,0.03637489298663964
 CINF,CINCINNATI FINL CORP COM                                                        ,172062101,4690000.0,31495,0.036205061143323405
 EQR,EQUITY RESIDENTIAL                                                              ,29476L107,4667000.0,69146,0.03602750967076553
-N/A,FABRINET                                                                        ,G3323L100,4649000.0,15778,0.035888556344415894
+FN,FABRINET                                                                        ,G3323L100,4649000.0,15778,0.035888556344415894
 SUX,TD SYNNEX CORPORATION                                                           ,87162W100,4642000.0,34208,0.035834518939724364
 STZ,CONSTELLATION BRANDS INC CL A                                                   ,21036P108,4633000.0,28478,0.03576504227654954
 CHD,CHURCH  DWIGHT INC                                                              ,171340102,4615000.0,48018,0.0356260889501999
@@ -461,7 +461,7 @@ BLD,TOPBUILD CORP                                                               
 NVR,NVR INC                                                                         ,62944T105,4225000.0,572,0.03261543354595765
 NYT,NEW YORK TIMES CO-A                                                             ,650111107,4215000.0,75291,0.032538237253541186
 WBS,WEBSTER FINL CORP COM                                                           ,947890109,4199000.0,76913,0.032414723185674836
-N/A,SMURFIT WESTROCK PLC SHS COM                                                    ,G8267P108,4188000.0,97059,0.03232980726401672
+SW,SMURFIT WESTROCK PLC SHS COM                                                    ,G8267P108,4188000.0,97059,0.03232980726401672
 AVTR,AVANTOR INC                                                                     ,05352A100,4183000.0,310804,0.032291209117808486
 TROW,T ROWE PRICE GROUP INC                                                          ,74144T108,4156000.0,43072,0.03208277912828403
 SSB,SOUTHSTATE CORPORATION COM                                                      ,840441109,4137000.0,44951,0.03193610617269274
@@ -502,7 +502,7 @@ PCTY,PAYLOCITY HLDG CORP                                                        
 EIX,EDISON INTERNATIONAL                                                            ,281020107,3829000.0,74197,0.02955846036626553
 DCI,DONALDSON CO                                                                    ,257651109,3829000.0,55215,0.02955846036626553
 HOOD,ROBINHOOD MKTS INC COM CL A                                                     ,770700102,3828000.0,40886,0.029550740737023882
-N/A,FLUTTER ENTMT PLC SHS COM                                                       ,G3643J108,3825000.0,13384,0.029527581849298944
+FLUT,FLUTTER ENTMT PLC SHS COM                                                       ,G3643J108,3825000.0,13384,0.029527581849298944
 REXR,REXFORD INDUSTRIAL REALTY INC                                                   ,76169C100,3817000.0,107315,0.029465824815365766
 DLTR,DOLLAR TREE INC                                                                 ,256746108,3809000.0,38459,0.029404067781432595
 FND,FLOOR  DECOR HOLDINGS INC -A                                                    ,339750101,3787000.0,49852,0.029234235938116363
@@ -560,7 +560,7 @@ CAVA,CAVA GROUP INC COM                                                         
 CHDN,CHURCHILL DOWNS INC                                                             ,171484108,3425000.0,33908,0.02643973015264023
 MAA,MID-AMERICA APARTMENT COMM                                                      ,59522J103,3416000.0,23080,0.026370253489465405
 BRBR,BELLRING BRANDS INC COMMON STOCK COM                                            ,07831C103,3413000.0,58922,0.026347094601740468
-N/A,PENTAIR PLC                                                                     ,G7S00T104,3400000.0,33119,0.02624673942159906
+PNR,PENTAIR PLC                                                                     ,G7S00T104,3400000.0,33119,0.02624673942159906
 LNG,CHENIERE ENERGY INC                                                             ,16411R208,3399000.0,13957,0.02623901979235741
 DECK,DECKERS OUTDOOR CORP                                                            ,243537107,3397000.0,32955,0.026223580533874122
 SNA,SNAP-ON INCORPORATED                                                            ,833034101,3394000.0,10906,0.026200421646149177
@@ -850,7 +850,7 @@ CLF,CLEVELAND-CLIFFS INC                                                        
 PRGO,PERRIGO CO PLC                                                                  ,G97822103,1677000.0,62773,0.012945818238241653
 EXPO,EXPONENT INC                                                                    ,30214U102,1667000.0,22310,0.012868621945825187
 CTRE,CARETRUST REIT INC                                                              ,14174T107,1666000.0,54457,0.01286090231658354
-N/A,WEATHERFORD INTL PLC ORD SHS COM                                                ,G48833118,1666000.0,33119,0.01286090231658354
+WFRD,WEATHERFORD INTL PLC ORD SHS COM                                                ,G48833118,1666000.0,33119,0.01286090231658354
 EMN,EASTMAN CHEM CO                                                                 ,277432100,1664000.0,22291,0.012845463058100247
 KBH,KB HOME.                                                                        ,48666K109,1659000.0,31311,0.012806864911892011
 BCO,BRINKS CO                                                                       ,109696104,1657000.0,18552,0.012791425653408718
@@ -860,7 +860,7 @@ GKOS,GLAUKOS CORPORATION                                                        
 ETSY,ETSY INC                                                                        ,29786A106,1646000.0,32811,0.012706509731750604
 HAE,HAEMONETICS CORP MASS                                                           ,405024100,1646000.0,22068,0.012706509731750604
 TRNO,TERRENO REALTY CORP                                                             ,88146M101,1641000.0,29262,0.01266791158554237
-N/A,GATES INDUSTRIAL CORP PLC                                                       ,G39108108,1636000.0,71019,0.012629313439334135
+GTES,GATES INDUSTRIAL CORP PLC                                                       ,G39108108,1636000.0,71019,0.012629313439334135
 ALE,ALLETE INC COM NEW                                                              ,018522300,1633000.0,25494,0.012606154551609194
 GNRC,GENERAC HOLDINGS INC                                                            ,368736104,1628000.0,11365,0.012567556405400962
 SATS,ECHOSTAR CORPORATION                                                            ,278768106,1625000.0,58648,0.01254439751767602
@@ -974,7 +974,7 @@ CALM,CAL-MAINE FOODS INC                                                        
 ITGR,INTEGER HOLDINGS CORP                                                           ,45826H109,1216000.0,9887,0.009387069157842487
 GTM,ZOOMINFO TECHNOLOGIES INC COM                                                   ,98980F104,1215000.0,120077,0.00937934952860084
 CXT,CRANE NXT CO COM                                                                ,224441105,1214000.0,22517,0.009371629899359194
-N/A,VALARIS LTD COM                                                                 ,G9460G101,1205000.0,28612,0.009302153236184373
+VAL,VALARIS LTD COM                                                                 ,G9460G101,1205000.0,28612,0.009302153236184373
 ACA,ARCOSA INC                                                                      ,039653100,1205000.0,13898,0.009302153236184373
 AFRM,AFFIRM HLDGS INC COM CL A                                                       ,00827B106,1201000.0,17371,0.009271274719217786
 YETI,YETI HOLDINGS INC                                                               ,98585X104,1194000.0,37890,0.009217237314526259
@@ -1075,7 +1075,7 @@ GNW,GENWORTH FINANCIAL INC-CL A                                                 
 HASI,HA SUSTAINABLE INFRA CAP INC REIT                                               ,41068X100,922000.0,34316,0.007117498160798333
 OTTR,OTTER TAIL CORP                                                                 ,689648103,921000.0,11950,0.0071097785315566864
 MGEE,MGE ENERGY INC                                                                  ,55277P104,919000.0,10392,0.007094339273073394
-N/A,CAPRI HOLDINGS LTD                                                              ,G1890L107,917000.0,51782,0.007078900014590099
+CPRI,CAPRI HOLDINGS LTD                                                              ,G1890L107,917000.0,51782,0.007078900014590099
 ICUI,ICU MED INC                                                                     ,44930G107,912000.0,6903,0.007040301868381865
 RNST,RENASANT CORP                                                                   ,75970E107,906000.0,25227,0.006993984092931984
 CATY,CATHAY GENERAL BANCORP                                                          ,149150104,905000.0,19886,0.006986264463690338
@@ -1111,7 +1111,7 @@ TPH,TRI POINTE HOMES INC                                                        
 SMPL,SIMPLY GOOD FOODS CO/THE                                                        ,82900L102,828000.0,26207,0.006391853012083535
 IPGP,IPG PHOTONICS CORP                                                              ,44980X109,826000.0,12033,0.006376413753600242
 CAKE,CHEESECAKE FACTORY INC COM                                                      ,163072101,819000.0,13069,0.0063223763489087155
-N/A,VIKING HOLDINGS LTD ORD SHS COM                                                 ,G93A5A101,815000.0,15297,0.006291497831942127
+VIK,VIKING HOLDINGS LTD ORD SHS COM                                                 ,G93A5A101,815000.0,15297,0.006291497831942127
 FUN,SIX FLAGS ENTERTAINMENT CORP. COM                                               ,83001C108,813000.0,26713,0.006276058573458834
 ENVA,ENOVA INTERNATIONAL INC                                                         ,29357K103,809000.0,7252,0.006245180056492246
 CARG,CARGURUS INC                                                                    ,141788109,808000.0,24149,0.0062374604272506
@@ -1160,7 +1160,7 @@ PI,IMPINJ INC                                                                   
 APLE,APPLE HOSPITALITY REIT INC                                                      ,03784Y200,738000.0,63269,0.005697086380335325
 AGYS,AGILYSYS INC COM                                                                ,00847J105,734000.0,6400,0.005666207863368738
 CVBF,CVB FINL CORP COM                                                               ,126600105,734000.0,37110,0.005666207863368738
-N/A,CUSHMAN  WAKEFIELD PLC                                                          ,G2717B108,729000.0,65834,0.005627609717160504
+CWK,CUSHMAN  WAKEFIELD PLC                                                          ,G2717B108,729000.0,65834,0.005627609717160504
 YOU,CLEAR SECURE INC COM CL A                                                       ,18467V109,725000.0,26132,0.005596731200193917
 SAM,BOSTON BEER COMPANY INC-A                                                       ,100557107,720000.0,3771,0.005558133053985683
 DEI,DOUGLAS EMMETT INC                                                              ,25960P109,716000.0,47591,0.0055272545370190955
@@ -1202,7 +1202,7 @@ CON,CONCENTRA GROUP HOLDINGS PAREN COMMON                                       
 DV,DOUBLEVERIFY HLDGS INC COM                                                      ,25862V105,638000.0,42593,0.004925123456170647
 DAN,DANA INCORPORATED                                                               ,235825205,636000.0,37058,0.0049096841976873536
 FW2N,BANNER CORPORATION                                                              ,06652V208,633000.0,9867,0.0048865253099624134
-N/A,AMDOCS LIMITED                                                                  ,G02602103,632000.0,6923,0.004878805680720766
+DOX,AMDOCS LIMITED                                                                  ,G02602103,632000.0,6923,0.004878805680720766
 TRMK,TRUSTMARK CORPORATION                                                           ,898402102,630000.0,17281,0.0048633664222374725
 TRN,TRINITY INDS INC                                                                ,896522109,630000.0,23313,0.0048633664222374725
 EPAC,ENERPAC TOOL GROUP CORP                                                         ,292765104,627000.0,15460,0.004840207534512532
@@ -1307,7 +1307,7 @@ PZZA,PAPA JOHNS INTL INC                                                        
 WKC,WORLD KINECT CORPORATION COM                                                    ,981475106,457000.0,16126,0.0035278705634325795
 NWN,NORTHWEST NATURAL HOLDING CO                                                    ,66765N105,455000.0,11454,0.003512431304949286
 IONS,IONIS PHARMACEUTICALS INC                                                       ,462222100,455000.0,11526,0.003512431304949286
-N/A,CREDO TECHNOLOGY GROUP HOLDING ORDINARY                                         ,G25457105,453000.0,4889,0.003496992046465992
+CRDO,CREDO TECHNOLOGY GROUP HOLDING ORDINARY                                         ,G25457105,453000.0,4889,0.003496992046465992
 SEM,SELECT MEDICAL HOLDINGS CORP                                                    ,81619Q105,452000.0,29790,0.0034892724172243456
 DRH,DIAMONDROCK HOSPITALITY CO                                                      ,252784301,452000.0,59044,0.0034892724172243456
 DFIN,DONNELLEY FINANCIAL SOLUTIONS INC                                               ,25787G100,452000.0,7332,0.0034892724172243456
@@ -1320,7 +1320,7 @@ DNOW,NOW INC                                                                    
 AXS,AXIS CAPITAL HOLDINGS                                                           ,G0692U109,444000.0,4273,0.0034275153832911713
 CENTA,CENTRAL GARDEN AND PET CO-A                                                     ,153527205,444000.0,14180,0.0034275153832911713
 CRGY,CRESCENT ENERGY COMPANY CL A COM                                                ,44952J104,444000.0,51622,0.0034275153832911713
-N/A,XP INC CL A COM                                                                 ,G98239109,443000.0,21934,0.0034197957540495244
+XP,XP INC CL A COM                                                                 ,G98239109,443000.0,21934,0.0034197957540495244
 LZB,LA-Z-BOY INCORPORATED                                                           ,505336107,441000.0,11862,0.0034043564955662307
 IIPR,INNOVATIVE INDL PPTYS                                                           ,45781V101,441000.0,7995,0.0034043564955662307
 SCCO,SOUTHERN COPPER CORP                                                            ,84265V105,440000.0,4350,0.003396636866324584
@@ -1338,7 +1338,7 @@ AGNC,AGNC INVESTMENT CORP                                                       
 INSW,INTERNATIONAL SEAWAYS INC COM                                                   ,Y41053102,422000.0,11558,0.003257683539974942
 VSCO,VICTORIAS SECRET AND CO COMMON STOCK                                            ,926400102,421000.0,22718,0.0032499639107332954
 WWW,WOLVERINE WORLD WIDE                                                            ,978097103,416000.0,23032,0.0032113657645250616
-N/A,SHARKNINJA INC COM SHS                                                          ,G8068L108,414000.0,4180,0.0031959265060417675
+SN,SHARKNINJA INC COM SHS                                                          ,G8068L108,414000.0,4180,0.0031959265060417675
 GNL,GLOBAL NET LEASE INC                                                            ,379378201,414000.0,54831,0.0031959265060417675
 STBA,S  T BANCORP INC                                                                ,783859101,414000.0,10945,0.0031959265060417675
 TNC,TENNANT COMPANY                                                                 ,880345103,412000.0,5321,0.0031804872475584742
@@ -1445,7 +1445,7 @@ HLIT,HARMONIC INC                                                               
 TALO,TALOS ENERGY INC                                                                ,87484T108,303000.0,35720,0.002339047660218975
 LGIH,LGI HOMES INC                                                                   ,50187T106,303000.0,5889,0.002339047660218975
 DCOM,DIME CMNTY BANCSHARES INC COM                                                   ,25432X102,302000.0,11224,0.002331328030977328
-N/A,UNITI GROUP INC                                                                 ,91325V108,301000.0,69656,0.0023236084017356816
+UNIT,UNITI GROUP INC                                                                 ,91325V108,301000.0,69656,0.0023236084017356816
 SEDG,SOLAREDGE TECHNOLOGIES                                                          ,83417M104,301000.0,14777,0.0023236084017356816
 KLG,WK KELLOGG CO COM SHS                                                           ,92942W107,301000.0,18883,0.0023236084017356816
 IONQ,IONQ INC                                                                        ,46222L108,299000.0,6963,0.002308169143252388
@@ -1514,7 +1514,7 @@ STAA,STAAR SURGICAL CO                                                          
 XPEL,XPEL INC                                                                        ,98379L100,236000.0,6566,0.0018218325010286405
 IART,INTEGRA LIFESCIENCES HLDGS CORP                                                 ,457985208,234000.0,19081,0.0018063932425453472
 WGO,WINNEBAGO INDUSTRIES INC                                                        ,974637100,233000.0,8023,0.0017986736133037003
-N/A,WHITE MOUNTAINS INSURANCE GROUP                                                 ,G9618E107,233000.0,130,0.0017986736133037003
+WTM,WHITE MOUNTAINS INSURANCE GROUP                                                 ,G9618E107,233000.0,130,0.0017986736133037003
 HFWA,HERITAGE FINANCIAL CORP.                                                        ,42722X106,232000.0,9731,0.0017909539840620533
 VTOL,BRISTOW GROUP INC                                                               ,11040G103,231000.0,6997,0.0017832343548204066
 BEPC,BROOKFIELD RENEWABLE CORP COM CL A EX                                           ,11285B108,230000.0,7002,0.00177551472557876
@@ -1553,7 +1553,7 @@ ACHR,ARCHER AVIATION INC COM CL A                                               
 DLX,DELUXE CORPORATION                                                              ,248019101,200000.0,12576,0.0015439258483293567
 CARS,CARS.COM INC                                                                    ,14575E105,199000.0,16752,0.0015362062190877096
 NVRI,ENVIRI CORPORATION COM                                                          ,415864107,198000.0,22811,0.0015284865898460627
-N/A,GLOBALFOUNDRIES INC ORDINARY SHARES                                             ,G39387108,197000.0,5156,0.001520766960604416
+GFS,GLOBALFOUNDRIES INC ORDINARY SHARES                                             ,G39387108,197000.0,5156,0.001520766960604416
 OKLO,OKLO INC COM CL A                                                               ,02156V109,196000.0,3508,0.0015130473313627693
 VRNS,VARONIS SYSTEMS INC                                                             ,922280102,194000.0,3832,0.0014976080728794756
 AHR,AMERICAN HEALTHCARE REIT INC COM SHS                                            ,398182303,193000.0,5266,0.001489888443637829
@@ -1562,7 +1562,7 @@ QTWO,Q2 HOLDINGS INC.                                                           
 CDE,COEUR MINING INC                                                                ,192108504,191000.0,21544,0.0014744491851545354
 OMI,OWENS  MINOR INC NEW COM                                                        ,690732102,191000.0,20964,0.0014744491851545354
 PDFS,PDF SOLUTIONS INC                                                               ,693282105,190000.0,8878,0.0014667295559128886
-N/A,ICHOR HOLDINGS LTD                                                              ,G4740B105,189000.0,9645,0.0014590099266712417
+ICHR,ICHOR HOLDINGS LTD                                                              ,G4740B105,189000.0,9645,0.0014590099266712417
 MDGL,MADRIGAL PHARMACEUTICALS INC                                                    ,558868105,188000.0,622,0.001451290297429595
 VSTS,VESTIS CORPORATION COM SHS                                                      ,29430C102,188000.0,32734,0.001451290297429595
 BLMN,BLOOMIN BRANDS INC                                                              ,094235108,187000.0,21687,0.0014435706681879483
@@ -1577,7 +1577,7 @@ TRST,TRUSTCO BK CORP N Y COM NEW                                                
 SHEN,SHENANDOAH TELECOMMUNICATIONS CO                                                ,82312B106,180000.0,13186,0.0013895332634964207
 ETD,ETHAN ALLEN INTERIORS INC                                                       ,297602104,179000.0,6437,0.0013818136342547739
 UPST,UPSTART HLDGS INC COM                                                           ,91680M107,178000.0,2759,0.0013740940050131272
-N/A,ALPHA  OMEGA SEMICONDUCTOR                                                      ,G6331P104,177000.0,6914,0.0013663743757714804
+AOSL,ALPHA  OMEGA SEMICONDUCTOR                                                      ,G6331P104,177000.0,6914,0.0013663743757714804
 CACC,CREDIT ACCEPTANCE CORP.                                                         ,225310101,177000.0,347,0.0013663743757714804
 MOD,MODINE MANUFACTURING CO                                                         ,607828100,176000.0,1789,0.0013586547465298338
 UFCS,UNITED FIRE GROUP INC                                                           ,910340108,175000.0,6087,0.001350935117288187
@@ -1622,7 +1622,7 @@ MIR,MIRION TECHNOLOGIES INC COM CL A                                            
 WRLD,WORLD ACCEPTANCECORP                                                            ,981419104,151000.0,915,0.001165664015488664
 PAHC,PHIBRO ANIMAL HEALTH                                                            ,71742Q106,148000.0,5809,0.001142505127763724
 CEVA,CEVA INC                                                                        ,157210105,147000.0,6709,0.001134785498522077
-N/A,ENSTAR GROUP LIMITED                                                            ,G3075P101,147000.0,438,0.001134785498522077
+ESGR,ENSTAR GROUP LIMITED                                                            ,G3075P101,147000.0,438,0.001134785498522077
 UHT,UNIVERSAL HEALTH REALTY INCOME                                                  ,91359E105,146000.0,3641,0.0011270658692804302
 MLAB,MESA LABORATORIES INC                                                           ,59064R109,146000.0,1551,0.0011270658692804302
 PRIM,PRIMORIS SERVICES CORP                                                          ,74164F103,146000.0,1871,0.0011270658692804302
@@ -1632,7 +1632,7 @@ QBTS,D-WAVE QUANTUM INC COM                                                     
 KREF,KKR REAL ESTATE FINANCE TRUST INC                                               ,48251K100,143000.0,16294,0.0011039069815554899
 DNB,DUN  BRADSTREET HOLDINGS INC                                                    ,26484T106,143000.0,15717,0.0011039069815554899
 TWI,TITAN INTERNATIONAL INC                                                         ,88830M102,143000.0,13910,0.0011039069815554899
-N/A,GOLAR LNG LIMITED                                                               ,G9456A100,143000.0,3467,0.0011039069815554899
+GLNG,GOLAR LNG LIMITED                                                               ,G9456A100,143000.0,3467,0.0011039069815554899
 SCHL,SCHOLASTIC CORP                                                                 ,807066105,142000.0,6782,0.0010961873523138432
 CWAN,CLEARWATER ANALYTICS HLDGS INC CL A COM                                         ,185123106,141000.0,6447,0.0010884677230721962
 LTH,LIFE TIME GROUP HOLDINGS INC                                                    ,53190C102,141000.0,4634,0.0010884677230721962
@@ -1660,7 +1660,7 @@ HRI,HERC HLDGS INC                                                              
 MNRO,MONRO INC                                                                       ,610236101,128000.0,8586,0.0009881125429307882
 FWONA,LIBERTY MEDIA CORP DEL COM LBTY ONE S A                                         ,531229771,128000.0,1350,0.0009881125429307882
 FTRE,FORTREA HLDGS INC COMMON STOCK                                                  ,34965K107,127000.0,25662,0.0009803929136891413
-N/A,NOBLE CORP PLC ORD SHS A COM                                                    ,G65431127,126000.0,4735,0.0009726732844474945
+NE,NOBLE CORP PLC ORD SHS A COM                                                    ,G65431127,126000.0,4735,0.0009726732844474945
 VTLE,VITAL ENERGY INC COM                                                            ,516806205,126000.0,7811,0.0009726732844474945
 HL,HECLA MINING COMPANY                                                            ,422704106,123000.0,20597,0.0009495143967225543
 SMR,NUSCALE PWR CORP CL A                                                           ,67079K100,123000.0,3117,0.0009495143967225543
@@ -1707,7 +1707,7 @@ WSBC,WESBANCO INC                                                               
 USNA,USANA HEALTH SCIENCES INC                                                       ,90328M107,94000.0,3088,0.0007256451487147976
 SCVL,SHOE CARNIVAL INC                                                               ,824889109,94000.0,5028,0.0007256451487147976
 INTA,INTAPP INC COM                                                                  ,45827U109,94000.0,1825,0.0007256451487147976
-N/A,WNS HLDGS LTD COM SHS COM                                                       ,G98196101,93000.0,1470,0.0007179255194731508
+WNS,WNS HLDGS LTD COM SHS COM                                                       ,G98196101,93000.0,1470,0.0007179255194731508
 NUVL,NUVALENT INC COM                                                                ,670703107,93000.0,1217,0.0007179255194731508
 LEU,CENTRUS ENERGY CORP CL A                                                        ,15643U104,92000.0,501,0.000710205890231504
 PFSI,PENNYMAC FINANCIAL SERVICES                                                     ,70932M107,92000.0,926,0.000710205890231504
@@ -1879,7 +1879,7 @@ COUR,COURSERA INC COM                                                           
 AIV,APARTMENT INVT  MGMT CO CL A                                                    ,03748R747,41000.0,4760,0.00031650479890751805
 IMAX,IMAX CORPORATION                                                                ,45245E109,41000.0,1467,0.00031650479890751805
 CNNE,CANNAE HOLDINGS INC                                                             ,13765N107,41000.0,1956,0.00031650479890751805
-N/A,BIOHAVEN LTD COM                                                                ,G1110E107,41000.0,2939,0.00031650479890751805
+BHVN,BIOHAVEN LTD COM                                                                ,G1110E107,41000.0,2939,0.00031650479890751805
 WGS,GENEDX HOLDINGS CORP COM CL A                                                   ,81663L200,41000.0,443,0.00031650479890751805
 GSAT,GLOBALSTAR INC COM NEW                                                          ,378973507,40000.0,1702,0.00030878516966587126
 QCRH,QCR HOLDINGS INC COM                                                            ,74727A104,40000.0,582,0.00030878516966587126
@@ -1929,7 +1929,7 @@ NSSC,NAPCO SECURITY TECHNOLOGIES INC                                            
 PWP,PERELLA WEINBERG PARTNERS CLASS A                                               ,71367G102,35000.0,1791,0.0002701870234576374
 DX,DYNEX CAPITAL INC                                                               ,26817Q886,35000.0,2900,0.0002701870234576374
 VRDN,VIRIDIAN THERAPEUTICS INC                                                       ,92790C104,35000.0,2531,0.0002701870234576374
-N/A,BITDEER TECHNOLOGIES GROUP CL A ORD COM                                         ,G11448100,35000.0,3066,0.0002701870234576374
+BTDR,BITDEER TECHNOLOGIES GROUP CL A ORD COM                                         ,G11448100,35000.0,3066,0.0002701870234576374
 SMA,SMARTSTOP SELF STORAG REIT INC COM                                              ,83192D402,35000.0,967,0.0002701870234576374
 FA,FIRST ADVANTAGE CORP NEW COM                                                    ,31846B108,34000.0,2075,0.0002624673942159906
 MNKD,MANKIND CORP                                                                    ,56400P706,34000.0,9187,0.0002624673942159906
@@ -1963,7 +1963,7 @@ SFD,SMITHFIELD FOODS INC COM                                                    
 PDM,PIEDMONT REALTY TRUST INC COM CL A REIT                                         ,720190206,31000.0,4309,0.00023930850649105025
 SPNS,SAPIENS INTL CORP N V SHS COM                                                   ,G7T16G103,31000.0,1069,0.00023930850649105025
 HG,HAMILTON INSURANCE GROUP LTD. CL B                                              ,G42706104,31000.0,1428,0.00023930850649105025
-N/A,GOLDEN OCEAN GROUP LTD SHS NEW COM                                              ,G39637205,31000.0,4276,0.00023930850649105025
+GOGL,GOLDEN OCEAN GROUP LTD SHS NEW COM                                              ,G39637205,31000.0,4276,0.00023930850649105025
 IMKTA,INGLES MARKETS INC-CLASS A                                                      ,457030104,31000.0,488,0.00023930850649105025
 PRCH,PORCH GROUP INC                                                                 ,733245104,31000.0,2671,0.00023930850649105025
 HLF,HERBALIFE LTD COM                                                               ,G4412G101,30000.0,3479,0.00023158887724940346
@@ -2010,7 +2010,7 @@ DYN,DYNE THERAPEUTICS INC COM                                                   
 WTTR,SELECT WATER SOLUTIONS INC CL A COM                                             ,81617J301,27000.0,3160,0.0002084299895244631
 GLDD,GREAT LAKES DREDGE  DOCK CO                                                     ,390607109,27000.0,2230,0.0002084299895244631
 LQDA,LIQUIDIA CORPORATION COM                                                        ,53635D202,27000.0,2195,0.0002084299895244631
-N/A,CIMPRESSS PLC                                                                   ,G2143T103,27000.0,584,0.0002084299895244631
+CMPR,CIMPRESSS PLC                                                                   ,G2143T103,27000.0,584,0.0002084299895244631
 GRPN,GROUPON INC                                                                     ,399473206,27000.0,793,0.0002084299895244631
 OSBC,OLD SECOND BANCORP INC ILL COM                                                  ,680277100,26000.0,1470,0.00020071036028281635
 UWMC,UWM HOLDINGS CORPORATION COM CL A                                               ,91823B109,26000.0,6195,0.00020071036028281635
@@ -2076,13 +2076,13 @@ AMBP,ARDAGH METAL PACKAGING S A SHS COM                                         
 PLYM,PLYMOUTH INDUSTRIAL REIT INC                                                    ,729640102,22000.0,1377,0.00016983184331622922
 CTLP,CANTALOUPE INC COM                                                              ,138103106,22000.0,2006,0.00016983184331622922
 FCBC,FIRST COMMUNITY BANKSHARES INC                                                  ,31983A103,22000.0,573,0.00016983184331622922
-N/A,WAVE LIFE SCIENCES LTD                                                          ,Y95308105,22000.0,3328,0.00016983184331622922
+WVE,WAVE LIFE SCIENCES LTD                                                          ,Y95308105,22000.0,3328,0.00016983184331622922
 EQBK,EQUITY BANCSHARES -A                                                            ,29460X109,22000.0,539,0.00016983184331622922
 ODP,ODP CORP                                                                        ,88337F105,22000.0,1233,0.00016983184331622922
 HCKT,HACKETT GROUP INC                                                               ,404609109,22000.0,878,0.00016983184331622922
 ORIC,ORIC PHARMACEUTICALS INC                                                        ,68622P109,22000.0,2130,0.00016983184331622922
 MBIN,MERCHANTS BANCORP                                                               ,58844R108,21000.0,625,0.00016211221407458242
-N/A,TRONOX HOLDINGS PLC CL A                                                        ,G9087Q102,21000.0,4127,0.00016211221407458242
+TROX,TRONOX HOLDINGS PLC CL A                                                        ,G9087Q102,21000.0,4127,0.00016211221407458242
 ACEL,ACCEL ENTERTAINMENT INC                                                         ,00436Q106,21000.0,1787,0.00016211221407458242
 DJCO,DAILY JOURNAL CORP                                                              ,233912104,21000.0,49,0.00016211221407458242
 IAS,INTEGRAL AD SCIENCE HLDNG CORP COM                                              ,45828L108,21000.0,2519,0.00016211221407458242
@@ -2157,7 +2157,7 @@ EU,ENCORE ENERGY CORP COM NEW                                                   
 PUBM,PUBMATIC INC COM CL A                                                           ,74467Q103,18000.0,1448,0.0001389533263496421
 PPTA,PERPETUA RESOURCES CORP COM                                                     ,714266103,18000.0,1453,0.0001389533263496421
 BYRN,BYRNA TECHNOLOGIES INC COM                                                      ,12448X201,18000.0,598,0.0001389533263496421
-N/A,UROGEN PHARMA LTD                                                               ,M96088105,18000.0,1335,0.0001389533263496421
+URGN,UROGEN PHARMA LTD                                                               ,M96088105,18000.0,1335,0.0001389533263496421
 CCBG,CAPITAL CITY BANK GROUP INC                                                     ,139674105,18000.0,469,0.0001389533263496421
 GNE,GENIE ENERGY LTD                                                                ,372284208,18000.0,667,0.0001389533263496421
 GCMG,GCM GROSVENOR INC COM CL A                                                      ,36831E108,18000.0,1530,0.0001389533263496421
@@ -2320,7 +2320,7 @@ ASPI,ASP ISOTOPES INC COM                                                       
 LENZ,GRAPHITE BIO INC COM                                                            ,52635N103,13000.0,434,0.00010035518014140818
 BCAL,SOUTHERN CALIF BANCORP COM                                                      ,84252A106,13000.0,840,0.00010035518014140818
 TSHA,TAYSHA GENE THERAPIES INC COM SHS                                               ,877619106,13000.0,5534,0.00010035518014140818
-N/A,ENTERPRISE BANCORP INC                                                          ,293668109,13000.0,323,0.00010035518014140818
+EBTC,ENTERPRISE BANCORP INC                                                          ,293668109,13000.0,323,0.00010035518014140818
 GTN,GRAY MEDIA INC                                                                  ,389375106,13000.0,2959,0.00010035518014140818
 BFLY,BUTTERFLY NETWORK INC COM CL A                                                  ,124155102,13000.0,6560,0.00010035518014140818
 FFIC,FLUSHING FINANCIAL CORP                                                         ,343873105,13000.0,1099,0.00010035518014140818
@@ -2330,7 +2330,7 @@ FLB,STANDARD BIOTOOLS INC COM                                                   
 ACNB,ACNB CORPORATION                                                                ,000868109,13000.0,293,0.00010035518014140818
 MLYS,MINERALYS THERAPEUTICS INC                                                      ,603170101,13000.0,985,0.00010035518014140818
 ANGO,ANGIODYNAMICS INC                                                               ,03475V101,13000.0,1291,0.00010035518014140818
-N/A,VTEX SHS CL COM                                                                 ,G9470A102,13000.0,1972,0.00010035518014140818
+VTEX,VTEX SHS CL COM                                                                 ,G9470A102,13000.0,1972,0.00010035518014140818
 HPP,HUDSON PACIFIC PPTYS INC                                                        ,444097109,13000.0,4736,0.00010035518014140818
 AEHR,AEHR TEST SYS COM                                                               ,00760J108,13000.0,978,0.00010035518014140818
 NEXN,NEXXEN INTL LTD SHS NEW COM                                                     ,M8T80P204,13000.0,1291,0.00010035518014140818
@@ -2799,7 +2799,7 @@ ONEW,ONEWATER MARINE INC                                                        
 FRGE,FORGE GLOBAL HOLDINGS INC COM SHS                                               ,34629L202,5000.0,247,3.859814620823391e-05
 RCKY,ROCKY BRANDS INC                                                                ,774515100,5000.0,239,3.859814620823391e-05
 NGNE,NEUROGENE INC COM                                                               ,64135M105,5000.0,356,3.859814620823391e-05
-N/A,MEDIWOUND LTD SHS NEW COM                                                       ,M68830112,5000.0,277,3.859814620823391e-05
+MDWD,MEDIWOUND LTD SHS NEW COM                                                       ,M68830112,5000.0,277,3.859814620823391e-05
 TE,T1 ENERGY INC                                                                   ,35834F104,5000.0,3879,3.859814620823391e-05
 PBFS,PIONEER BANCORP INC/NY                                                          ,723561106,5000.0,400,3.859814620823391e-05
 HBB,HAMILTON BEACH BRAND -A                                                         ,40701T104,5000.0,295,3.859814620823391e-05
@@ -2922,7 +2922,7 @@ PDEX,PRO-DEX INC COLO COM NEW                                                   
 AARD,AARDVARK THERAPEUTICS INC COM                                                   ,002942100,3000.0,193,2.3158887724940348e-05
 JILL,J JILL INC COM                                                                  ,46620W201,3000.0,212,2.3158887724940348e-05
 NVCT,NUVECTIS PHARMA INC COM                                                         ,67080T108,3000.0,440,2.3158887724940348e-05
-N/A,WALDENCAST PLC CLASS A ORD SHS COM                                              ,G9503X103,3000.0,1230,2.3158887724940348e-05
+WALD,WALDENCAST PLC CLASS A ORD SHS COM                                              ,G9503X103,3000.0,1230,2.3158887724940348e-05
 FF,FUTUREFUEL CORP                                                                 ,36116M106,3000.0,900,2.3158887724940348e-05
 LFT,LUMENT FINANCE TRUST INC COM                                                    ,55025L108,3000.0,1559,2.3158887724940348e-05
 TVRD,TVARDI THERAPEUTICS INC COM                                                     ,140755307,3000.0,117,2.3158887724940348e-05
