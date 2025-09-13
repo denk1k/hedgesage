@@ -647,7 +647,7 @@ COOP,MR COOPER GROUP INC                                                        
 AGCO,AGCO CORPORATION                                                                ,001084102,2919000.0,28294,0.022533597756366958
 GPK,GRAPHIC PACKAGING HLDG CO                                                       ,388689101,2899000.0,137601,0.022379205171534022
 CLX,THE CLOROX COMPANY                                                              ,189054109,2892000.0,24088,0.022325167766842496
-N/A,LYONDELLBASELL INDUSTRIES N V SHS COM                                           ,N53745100,2883000.0,49821,0.022255691103667673
+LYB,LYONDELLBASELL INDUSTRIES N V SHS COM                                           ,N53745100,2883000.0,49821,0.022255691103667673
 IDA,IDACORP INC                                                                     ,451107106,2878000.0,24926,0.02221709295745944
 FAF,FIRST AMERICAN FINANCIAL                                                        ,31847R102,2873000.0,46805,0.022178494811251205
 KBR,KBR INC                                                                         ,48242W106,2857000.0,59588,0.02205498074338486
@@ -1122,7 +1122,7 @@ CWEN,CLEARWAY ENERGY INC CL-C                                                   
 MYRG,MYR GROUP INC                                                                   ,55405W104,804000.0,4433,0.006206581910284013
 IOT,SAMSARA INC COM CL A                                                            ,79589L106,803000.0,20190,0.006198862281042367
 AZZ,AZZ INC COM                                                                     ,002474104,803000.0,8502,0.006198862281042367
-N/A,ROYALTY PHARMA PLC SHS CLASS A COM                                              ,G7709Q104,803000.0,22300,0.006198862281042367
+RPRX,ROYALTY PHARMA PLC SHS CLASS A COM                                              ,G7709Q104,803000.0,22300,0.006198862281042367
 FTI,TECHNIPFMC PLC COM                                                              ,G87110105,799000.0,23214,0.0061679837640757785
 ALRM,ALARM.COM HOLDINGS INC                                                          ,011642105,796000.0,14069,0.006144824876350838
 CPK,CHESAPEAKE UTILITIES CORP.                                                      ,165303108,796000.0,6618,0.006144824876350838
@@ -1542,7 +1542,7 @@ NXRT,NEXPOINT RESIDENTIAL TRUST INC                                             
 MATW,MATTHEWS INTL CORP-CLASS A                                                      ,577128101,210000.0,8787,0.0016211221407458243
 MMI,MARCUS  MILLICHAP                                                               ,566324109,210000.0,6838,0.0016211221407458243
 RC,READY CAPITAL CORP COM                                                          ,75574U101,209000.0,47781,0.0016134025115041774
-N/A,GLOBANT SA                                                                      ,L44385109,208000.0,2292,0.0016056828822625308
+GLOB,GLOBANT SA                                                                      ,L44385109,208000.0,2292,0.0016056828822625308
 SAFE,SAFEHOLD INC COM                                                                ,78646V107,206000.0,13271,0.0015902436237792371
 SXC,SUNCOKE ENERGY INC                                                              ,86722A103,206000.0,24018,0.0015902436237792371
 REX,REX AMERICAN RESOURCES CORP                                                     ,761624105,206000.0,4227,0.0015902436237792371
@@ -1566,7 +1566,7 @@ ICHR,ICHOR HOLDINGS LTD                                                         
 MDGL,MADRIGAL PHARMACEUTICALS INC                                                    ,558868105,188000.0,622,0.001451290297429595
 VSTS,VESTIS CORPORATION COM SHS                                                      ,29430C102,188000.0,32734,0.001451290297429595
 BLMN,BLOOMIN BRANDS INC                                                              ,094235108,187000.0,21687,0.0014435706681879483
-N/A,HELEN OF TROY LIMITED                                                           ,G4388N106,185000.0,6518,0.0014281314097046548
+HELE,HELEN OF TROY LIMITED                                                           ,G4388N106,185000.0,6518,0.0014281314097046548
 KOP,KOPPERS HOLDINGS INC                                                            ,50060P106,184000.0,5723,0.001420411780463008
 CABO,CABLE ONE INC.                                                                  ,12685J105,184000.0,1354,0.001420411780463008
 ANGI,ANGI INC CL A NEW COM                                                           ,00183L201,182000.0,11950,0.0014049725219797144
@@ -2202,7 +2202,7 @@ LUNR,INTUITIVE MACHINES INC CLASS A COM                                         
 PFIS,PEOPLES FINL SVCS CORP                                                          ,711040105,16000.0,318,0.00012351406786634852
 REAL,THE REALREAL INC                                                                ,88339P101,16000.0,3398,0.00012351406786634852
 SAGE,SAGE THERAPEUTICS INC                                                           ,78667J108,16000.0,1783,0.00012351406786634852
-N/A,GIGACLOUD TECHNOLOGY INC CLASS A ORD COM                                        ,G38644103,16000.0,812,0.00012351406786634852
+GCT,GIGACLOUD TECHNOLOGY INC CLASS A ORD COM                                        ,G38644103,16000.0,812,0.00012351406786634852
 AXGN,AXOGEN INC                                                                      ,05463X106,16000.0,1463,0.00012351406786634852
 RXST,RXSIGHT INC COM                                                                 ,78349D107,16000.0,1257,0.00012351406786634852
 DHIL,DIAMOND HILL INVESTMENT GRP                                                     ,25264R207,16000.0,107,0.00012351406786634852
