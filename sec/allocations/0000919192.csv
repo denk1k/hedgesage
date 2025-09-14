@@ -369,7 +369,7 @@ FITB,FIFTH THIRD BANCORP                                                        
 AMH,AMERICAN HOMES 4 RENT -A                                                        ,02665T306,5294000.0,146780,0.04086771720527806
 CNC,CENTENE CORP DEL COM                                                            ,15135B101,5230000.0,96357,0.04037366093381267
 KNSL,KINSALE CAP GROUP INC COM                                                       ,49714P108,5216000.0,10780,0.04026558612442962
-N/A,CNH INDL NV SHS COM                                                             ,N20944109,5192000.0,400627,0.0400803150226301
+CNHI,CNH INDL NV SHS COM                                                             ,N20944109,5192000.0,400627,0.0400803150226301
 HPE,HEWLETT PACKARD ENTERPRISE CO                                                   ,42824C109,5189000.0,253756,0.04005715613490515
 TOL,TOLL BROTHERS INC                                                               ,889478103,5181000.0,45397,0.03999539910097198
 AEE,AMEREN CORPORATION                                                              ,023608102,5178000.0,53918,0.03997224021324704
@@ -1236,7 +1236,7 @@ HUBG,HUB GROUP INC. CLASS A                                                     
 STRA,STRATEGIC EDUCATION                                                             ,86272C103,575000.0,6751,0.0044387868139469
 RBRK,RUBRIK INC. CL A COM                                                            ,781154109,571000.0,6370,0.004407908296980313
 Z,ZILLOW GROUP INC CL C CAP STK                                                   ,98954M200,570000.0,8143,0.004400188667738666
-N/A,ELASTIC NV                                                                      ,N14506104,568000.0,6730,0.004384749409255373
+ESTC,ELASTIC NV                                                                      ,N14506104,568000.0,6730,0.004384749409255373
 N/A,QIAGEN NV COM SHS                                                               ,N72482206,565000.0,11751,0.004361590521530432
 TG7,TRIUMPH GROUP INC                                                               ,896818101,564000.0,21914,0.004353870892288785
 POWL,POWELL INDS INC                                                                 ,739128106,563000.0,2675,0.004346151263047138
@@ -1780,7 +1780,7 @@ PRM,PERIMETER SOLUTIONS INC COMMON STOCK                                        
 BRZE,BRAZE INC COM CL A                                                              ,10576N102,64000.0,2261,0.0004940562714653941
 ALKT,ALKAMI TECHNOLOGY INC COM                                                       ,01644J108,63000.0,2091,0.00048633664222374725
 PAGS,PAGSEGURO DIGITAL LTD COM CL A                                                  ,G68707101,63000.0,6498,0.00048633664222374725
-N/A,SEADRILL 2021 LTD COM                                                           ,G7997W102,62000.0,2377,0.0004786170129821005
+SDRL,SEADRILL 2021 LTD COM                                                           ,G7997W102,62000.0,2377,0.0004786170129821005
 IGT,BRIGHTSTAR LOTTERY SHS                                                          ,G4863A108,62000.0,3940,0.0004786170129821005
 REYN,REYNOLDS CONSUMER PRODUCTS INC                                                  ,76171L106,61000.0,2862,0.0004708973837404537
 COMM,COMMSCOPE HOLDING CO INC                                                        ,20337X109,61000.0,7348,0.0004708973837404537
@@ -1792,7 +1792,7 @@ STNG,SCORPIO TANKERS INC                                                        
 NNI,NELNET INC. CLASS A                                                             ,64031N108,60000.0,493,0.0004631777544988069
 CSTM,CONSTELLIUM SE CL A SHS                                                         ,F21107101,60000.0,4542,0.0004631777544988069
 DNLI,DENALI THERAPEUTICS INC                                                         ,24823R105,60000.0,4305,0.0004631777544988069
-N/A,TECNOGLASS INC ORD SHS COM                                                      ,G87264100,60000.0,780,0.0004631777544988069
+TGLS,TECNOGLASS INC ORD SHS COM                                                      ,G87264100,60000.0,780,0.0004631777544988069
 LEN/B,LENNAR CORP                                                                     ,526057302,59000.0,557,0.0004554581252571601
 FOLD,AMICUS THERAPEUTICS INC                                                         ,03152W109,59000.0,10224,0.0004554581252571601
 SGRY,SURGERY PARTNERS INC                                                            ,86881A100,59000.0,2664,0.0004554581252571601
@@ -1989,7 +1989,7 @@ UHAL,U HAUL HOLDING COMPANY COM                                                 
 BBUC,BROOKFIELD BUSINESS CORP CL A EXC SUB                                           ,11259V106,28000.0,902,0.0002161496187661099
 FARO,FARO TECHNOLOGIES INC                                                           ,311642102,28000.0,627,0.0002161496187661099
 WLDN,WILLDAN GROUP INC                                                               ,96924N100,28000.0,440,0.0002161496187661099
-N/A,EXPRO GROUP HOLDINGS NV COM                                                     ,N3144W105,28000.0,3265,0.0002161496187661099
+XPRO,EXPRO GROUP HOLDINGS NV COM                                                     ,N3144W105,28000.0,3265,0.0002161496187661099
 CTBI,COMMUNITY TRUST BANCORP INC                                                     ,204149108,28000.0,538,0.0002161496187661099
 UTZ,UTZ BRANDS INC COM CL A                                                         ,918090101,28000.0,2226,0.0002161496187661099
 EVLV,EVOLV TECHNOLOGIES HLDNGS INC COM CL A                                          ,30049H102,28000.0,4566,0.0002161496187661099
