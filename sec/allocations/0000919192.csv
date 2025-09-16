@@ -245,7 +245,7 @@ SFM,SPROUTS FARMERS MARKETS INC                                                 
 RMD,RESMED INC                                                                      ,761152107,8031000.0,31126,0.06199634243966531
 DT,DYNATRACE INC                                                                   ,268150109,8020000.0,145264,0.0619114265180072
 GLW,CORNING INCORPORATED                                                            ,219350105,7969000.0,151523,0.061517725426683205
-N/A,NXP SEMICONDUCTORS NV                                                           ,N6596X109,7822000.0,35799,0.06038293992816113
+NXPI,NXP SEMICONDUCTORS NV                                                           ,N6596X109,7822000.0,35799,0.06038293992816113
 XEL,XCEL ENERGY INC                                                                 ,98389B100,7803000.0,114575,0.06023626697256985
 OKTA,OKTA INC                                                                        ,679295105,7797000.0,77996,0.06018994919711996
 CTSH,COGNIZANT TECHNOLOGY SOLUTIONS CORP                                             ,192446102,7764000.0,99503,0.05993520143214562
@@ -2152,7 +2152,7 @@ FMNB,FARMERS NATIONAL BANC CORP COM                                             
 MYE,MYERS INDUSTRIES INC                                                            ,628464109,18000.0,1243,0.0001389533263496421
 SMBK,SMARTFINANCIAL INC                                                              ,83190L208,18000.0,544,0.0001389533263496421
 GHM,GRAHAM CORP                                                                     ,384556106,18000.0,355,0.0001389533263496421
-N/A,ERMENEGILDO ZEGNA N V ORD SHS                                                   ,N30577105,18000.0,2110,0.0001389533263496421
+ZGN,ERMENEGILDO ZEGNA N V ORD SHS                                                   ,N30577105,18000.0,2110,0.0001389533263496421
 EU,ENCORE ENERGY CORP COM NEW                                                      ,29259W700,18000.0,6266,0.0001389533263496421
 PUBM,PUBMATIC INC COM CL A                                                           ,74467Q103,18000.0,1448,0.0001389533263496421
 PPTA,PERPETUA RESOURCES CORP COM                                                     ,714266103,18000.0,1453,0.0001389533263496421
