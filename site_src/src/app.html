@@ -22,14 +22,16 @@
                     src="https://denk1k.github.io/hedgesage/logo-transparent.png"
                     alt="HedgeSage Logo"
                 />
-                <div class="mt-1" style="margin-left: -10px">
-                    <button
-                        href="https://github.com/denk1k/hedgesage"
-                        variant="ghost"
-                        size="icon"
+                <div class="mt-1" style="margin-left: -10px;">
+                    <a
+                            href="https://github.com/denk1k/hedgesage"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Open HedgeSage on GitHub"
+                            class="inline-flex h-8 w-8 items-center justify-center rounded-[4px] bg-transparent hover:bg-white/20 transition-colors"
                     >
-                        <GithubIcon class="size-6"></GithubIcon>
-                    </button>
+                        <i data-lucide="github"></i>
+                    </a>
                 </div>
             </div>
             <h1 class="flex justify-center items-center text-cyan-600">
@@ -38,5 +40,14 @@
             </h1>
         </div>
         <div style="display: contents">%sveltekit.body%</div>
+        <script type="module">
+            import { createIcons, Github } from "https://cdn.jsdelivr.net/npm/lucide@latest/+esm";
+            const init = () => createIcons({ icons: { Github } });
+            if (document.readyState === "loading") {
+                document.addEventListener("DOMContentLoaded", init);
+            } else {
+                init();
+            }
+        </script>
     </body>
 </html>
