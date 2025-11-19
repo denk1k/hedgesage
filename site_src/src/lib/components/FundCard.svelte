@@ -32,8 +32,8 @@
 
   const metricLabels: Record<string, string> = {
     fund: "Fund's Original Performance",
-    copy: "Copied Performance (Filing Dates)",
-    copy_scaled: "Copied Performance (Filing Dates, Scaled)"
+    copy: "Fund's Copied Performance",
+    copy_scaled: "Fund's Copied Performance (Scaled)"
   };
   $: selectedLabel = metricLabels[metricType];
 
@@ -71,7 +71,7 @@
             };
         })
         .filter((d): d is Exclude<typeof d, null> => d !== null && d.date instanceof Date && !isNaN(d.date.valueOf()));
-      
+
       console.log('parsedData:', parsedData);
       if (parsedData.length === 0) {
         throw new Error('CSV invalid');
@@ -101,7 +101,7 @@
       if (!header) {
         throw new Error('Invalid CSV header');
       }
-      
+
       const parsedData = rows.map(row => {
         const values = row.split(',');
         const rowData = header.reduce((obj, key, index) => {
@@ -149,7 +149,7 @@
       <span>{@html fundData.name}</span>
     </Card.Title>
     <Card.Description>CIK: {cik}</Card.Description>
-    
+
   </Card.Header>
   <Card.Content>
     <div class="grid gap-4">
@@ -186,7 +186,7 @@
               data={chartData}
               x="date"
               xScale={scaleUtc()}
-              
+
               series={activeSeries}
               props={{
                 spline: { curve: curveNatural, motion: "tween", strokeWidth: 2 },
@@ -219,7 +219,7 @@
       </div>
       <Button  onclick={() => allocationsDrawerOpen = true}>View Allocations</Button>
     </div>
-    
+
   </Card.Content>
 </Card.Root>
 
@@ -228,14 +228,14 @@
     <Drawer.Header>
       <Drawer.Title>{@html fundData.name} - Performance Chart</Drawer.Title>
     </Drawer.Header>
-    <div class="h-[90vh] overflow-auto px-4">
+    <div class="h-[90vh] overflow-auto px-8">
       {#if chartData}
         <Chart.Container config={chartConfig} class="aspect-auto h-full w-full">
           <LineChart
             data={chartData}
             x="date"
             xScale={scaleUtc()}
-            series={[ 
+            series={[
                 { key: "PortfolioValue_fund", label: "Fund", color: chartConfig.PortfolioValue_fund.color },
                 { key: "PortfolioValue_copy", label: "Copy", color: chartConfig.PortfolioValue_copy.color },
                 { key: "PortfolioValue_copy_scaled", label: "Copy (Scaled)", color: chartConfig.PortfolioValue_copy_scaled.color },
@@ -263,10 +263,12 @@
 
 <Drawer.Root bind:open={allocationsDrawerOpen}>
   <Drawer.Content>
+  <div class="p-4">
     <Drawer.Header>
-      <Drawer.Title>{@html fundData.name} - Allocations</Drawer.Title>
-    </Drawer.Header>
-    <div class="h-[90vh] overflow-auto px-4">
+        <Drawer.Title>{@html fundData.name} - Allocations</Drawer.Title>
+        <Drawer.Description>This page shows the current allocations for the hedge fund. Last updated: .</Drawer.Description>
+      </Drawer.Header>
+    <div class="h-[90vh] overflow-auto">
       {#if isAllocationsLoading}
         <p>Loading allocations...</p>
       {:else if allocationsError}
@@ -275,6 +277,7 @@
       {:else if allocationsData}
         <AllocationsDataTable data={allocationsData} />
       {/if}
+    </div>
     </div>
   </Drawer.Content>
 </Drawer.Root>

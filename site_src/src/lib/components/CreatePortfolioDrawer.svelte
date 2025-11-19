@@ -92,7 +92,7 @@
         const weight = (allocationMetric === "even" || totalMetricValue === 0)
           ? 1 / activeFunds.length
           : (fundData.backtest_results?.[allocationMetric] ?? 0) / totalMetricValue;
-        
+
         const fundAllocations = allocationsMap.get(cik);
         if (fundAllocations) {
           for (const allocation of fundAllocations) {
@@ -159,7 +159,7 @@
         <Drawer.Title>Create a Portfolio</Drawer.Title>
         <Drawer.Description>Select funds to include in your portfolio and how to weight them.</Drawer.Description>
       </Drawer.Header>
-      
+
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 overflow-y-auto p-1 flex-grow">
         {#each sortedFundsList as [cik, fundData]}
           <Label
@@ -174,7 +174,7 @@
               <p class="text-muted-foreground text-sm">
                 {#if allocationMetric !== 'even'}
                   {@const metricValue = getMetricValue(fundData, allocationMetric)}
-                  {allocationOptions.find(o => o.value === allocationMetric)?.label}: 
+                  {allocationOptions.find(o => o.value === allocationMetric)?.label}:
                   {metricValue !== null ? metricValue.toFixed(2) : 'N/A'}
                 {/if}
               </p>
@@ -183,8 +183,8 @@
         {/each}
       </div>
 
-      <Drawer.Footer class="pt-4 mt-auto">
-        <div class="flex items-center gap-4">
+      <Drawer.Footer class="mt-auto">
+        <div class="flex items-center gap-4 p-4">
           <Select.Root type="single" bind:value={allocationMetric}>
             <Select.Trigger class="w-[280px]">
               {allocationOptions.find(o => o.value === allocationMetric)?.label}
