@@ -323,7 +323,7 @@
                 >{@html fundData.name} - Performance Chart</Drawer.Title
             >
         </Drawer.Header>
-        <div class="h-[90vh] overflow-auto px-8">
+        <div class="h-[90vh] overflow-auto px-8 scrollbar-hide">
             {#if chartData}
                 <Chart.Container
                     config={chartConfig}
