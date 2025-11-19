@@ -27,7 +27,14 @@ A free and open-source hedge fund position aggregator and investment simulator
 -   [ ] Implement fund searching functionality
 -   [x] Allow to retrieve 13F data from .txt files, letting backtests through years earlier than 2013.
 -   [ ] Allow for inclusion and downloading of non-stock tickers for the backtests
--   [ ] Adjust extreme volatility data sanite checks.
+-   [ ] Unified performance rating
+-   [ ] Allocations last update date
+-   [ ] Saving portfolios with automatic update checking
+-   [ ] Latest allocations update section
+-   [ ] Stock ownership information
+-   [ ] Adjust extreme volatility data sanity checks
+-   [ ] Comparison versus benchmarks
+-   [ ] Incremental backtest updates
 -   [x] Portfolio builder
 -   [x] Fix the live allocations retriever (basically copy functionality from the past allocations retriever)
 -   [x] Prevent rate limits from sec.gov
