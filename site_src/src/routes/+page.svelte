@@ -113,6 +113,28 @@
 </script>
 
 <main class="container mx-auto p-4">
+<div class="self-center relative left-1/2 -translate-x-1/2">
+    <div class="flex justify-center items-center">
+      <img src="https://denk1k.github.io/hedgesage/logo-transparent.png" alt="HedgeSage Logo"  style="width:17.5rem;"/>
+      <div class="mt-1" style="margin-left: -10px;"><Button href="https://github.com/denk1k/hedgesage" variant="ghost" size="icon">
+        <GithubIcon class="size-6"/>
+      </Button></div>
+
+      </div>
+
+
+  </div>
+<h1
+                style="
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #0891b2;
+                " class="mb-8"
+            >
+                Hedge fund backtesting and portfolio creation via live positions
+                based on past performance and risk analysis.
+            </h1>
 
 
 <div class="flex items-center mb-4 gap-2">
