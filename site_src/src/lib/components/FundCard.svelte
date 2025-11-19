@@ -10,9 +10,12 @@
     import { curveNatural } from "d3-shape";
     import Expand from "@lucide/svelte/icons/expand";
     import AllocationsDataTable from "$lib/components/AllocationsDataTable.svelte";
+    import { onMount, onDestroy } from "svelte";
 
     export let cik: string;
     export let fundData: any;
+    let chartVisible = false;
+    let cardRef: HTMLElement;
 
     export let metricType: string = "copy";
     let chartData: any[] | null = null;
@@ -20,9 +23,15 @@
     let error: string | null = null;
     let drawerOpen = false;
     let allocationsDrawerOpen = false;
-    let allocationsData: any[] | null = null;
+    let allocationsData: AllocationData[] | null = null;
     let isAllocationsLoading = false;
     let allocationsError: string | null = null;
+
+    interface AllocationData {
+        ticker: string;
+        allocation_percent: string;
+        [key: string]: string;
+    }
 
     const metricSuffixes: Record<string, string> = {
         fund: "_fund",
@@ -62,6 +71,35 @@
                   ] ?? null,
           }
         : null;
+
+    let observer: IntersectionObserver;
+
+    onMount(() => {
+        observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    chartVisible = entry.isIntersecting;
+                });
+            },
+            {
+                rootMargin: "0px",
+                threshold: 0.1, // when 10% of the card is visible
+            },
+        );
+
+        if (cardRef) {
+            observer.observe(cardRef);
+        }
+    });
+    onDestroy(() => {
+        if (observer && cardRef) {
+            observer.unobserve(cardRef);
+        }
+    });
+
+    $: if (chartVisible && !chartData && !isLoading && !error) {
+        loadChartData();
+    }
 
     async function loadChartData() {
         console.log("loadChartData called for CIK:", cik);
@@ -133,13 +171,16 @@
             const parsedData = rows
                 .map((row) => {
                     const values = row.split(",");
-                    const rowData = header.reduce((obj, key, index) => {
-                        obj[key.trim()] = values[index];
-                        return obj;
-                    }, {});
+                    const rowData: AllocationData = header.reduce(
+                        (obj: Record<string, string>, key, index) => {
+                            obj[key.trim()] = values[index];
+                            return obj;
+                        },
+                        {} as AllocationData,
+                    );
                     return rowData;
                 })
-                .filter((d) => d.ticker); // Filter out empty rows
+                .filter((d) => d.ticker); // no empty rows
 
             allocationsData = parsedData;
         } catch (e: any) {
@@ -155,7 +196,7 @@
         PortfolioValue_fund: { label: "Fund", color: "red" },
     } satisfies Chart.ChartConfig;
 
-    const metricToSeriesKey = {
+    const metricToSeriesKey: Record<string, keyof typeof chartConfig> = {
         fund: "PortfolioValue_fund",
         copy: "PortfolioValue_copy",
         copy_scaled: "PortfolioValue_copy_scaled",
@@ -179,142 +220,157 @@
     }
 </script>
 
-<Card.Root>
-    <Card.Header>
-        <Card.Title>
-            <span>{@html fundData.name}</span>
-        </Card.Title>
-        <Card.Description>CIK: {cik}</Card.Description>
-    </Card.Header>
-    <Card.Content>
-        <div class="grid gap-4">
-            {#if selectedMetrics}
-                <div>
-                    <Select.Root type="single" bind:value={metricType}>
-                        <Select.Trigger class="w-full">
-                            {selectedLabel}
-                        </Select.Trigger>
-                        <Select.Content>
-                            <Select.Item value="fund"
-                                >Fund's Original Performance</Select.Item
-                            >
-                            <Select.Item value="copy"
-                                >Copied Performance (Rebalances on Filing Dates)</Select.Item
-                            >
-                            <Select.Item value="copy_scaled"
-                                >Copied Performance (Rebalances on Filing Dates,
-                                Investments Scaled to 100% of Portfolio)</Select.Item
-                            >
-                        </Select.Content>
-                    </Select.Root>
-                </div>
-                <div class="grid grid-cols-2 gap-2 text-sm">
-                    <p>Earliest Filing Date:</p>
-                    <p>{selectedMetrics.earliest_filing_date || "N/A"}</p>
-                    <p>Total Return:</p>
-                    <p>
-                        {selectedMetrics.total_return !== null
-                            ? (selectedMetrics.total_return * 100).toFixed(2) +
-                              "%"
-                            : "N/A"}
-                    </p>
-                    <p>Annualized Return:</p>
-                    <p>
-                        {selectedMetrics.annualized_return !== null
-                            ? (selectedMetrics.annualized_return * 100).toFixed(
-                                  2,
-                              ) + "%"
-                            : "N/A"}
-                    </p>
-                    <p>Sharpe Ratio:</p>
-                    <p>
-                        {selectedMetrics.sharpe_ratio !== null
-                            ? selectedMetrics.sharpe_ratio.toFixed(2)
-                            : "N/A"}
-                    </p>
-                    <p>Max Drawdown:</p>
-                    <p>
-                        {selectedMetrics.max_drawdown !== null
-                            ? (selectedMetrics.max_drawdown * 100).toFixed(2) +
-                              "%"
-                            : "N/A"}
-                    </p>
-                    <p>Calmar Ratio:</p>
-                    <p>
-                        {selectedMetrics.calmar_ratio !== null
-                            ? selectedMetrics.calmar_ratio.toFixed(2)
-                            : "N/A"}
-                    </p>
-                </div>
-            {/if}
-            <div
-                class="relative h-[250px] pl-4 flex items-center justify-center rounded-md border"
-            >
-                {#if chartData}
-                    <Button
-                        variant="ghost"
-                        size="icon"
-                        class="absolute top-1 right-1 z-10 h-8 w-8"
-                        onclick={() => (drawerOpen = true)}
-                    >
-                        <Expand class="h-3 w-3" />
-                    </Button>
-                    {#key metricType}
-                        <Chart.Container
-                            config={chartConfig}
-                            class="aspect-auto h-full w-full"
-                        >
-                            <LineChart
-                                data={chartData}
-                                x="date"
-                                xScale={scaleUtc()}
-                                series={activeSeries}
-                                props={{
-                                    spline: {
-                                        curve: curveNatural,
-                                        motion: "tween",
-                                        strokeWidth: 2,
-                                    },
-                                    yAxis: {
-                                        ticks: 10,
-                                        format: (v) =>
-                                            `${(v / 1000000).toFixed(1)}M`,
-                                    },
-                                    xAxis: {
-                                        ticks: 5,
-                                        format: (v) =>
-                                            v.toLocaleDateString("en-US", {
-                                                month: "short",
-                                                year: "numeric",
-                                            }),
-                                    },
-                                    highlight: { points: { r: 4 } },
-                                }}
-                            />
-                        </Chart.Container>
-                    {/key}
-                {:else if isLoading}
-                    <p>Loading...</p>
-                {:else if error}
-                    <div class="flex flex-col items-center gap-4">
-                        <Alert.Root variant="destructive">
-                            <Alert.Title>Error</Alert.Title>
-                            <Alert.Description>{error}</Alert.Description>
-                        </Alert.Root>
-                        <Button onclick={loadChartData}>Retry</Button>
+<div bind:this={cardRef}>
+    <Card.Root>
+        <Card.Header>
+            <Card.Title>
+                <span>{@html fundData.name}</span>
+            </Card.Title>
+            <Card.Description>CIK: {cik}</Card.Description>
+        </Card.Header>
+        <Card.Content>
+            <div class="grid gap-4">
+                {#if selectedMetrics}
+                    <div>
+                        <Select.Root type="single" bind:value={metricType}>
+                            <Select.Trigger class="w-full">
+                                {selectedLabel}
+                            </Select.Trigger>
+                            <Select.Content>
+                                <Select.Item value="fund"
+                                    >Fund's Original Performance</Select.Item
+                                >
+                                <Select.Item value="copy"
+                                    >Copied Performance (Rebalances on Filing
+                                    Dates)</Select.Item
+                                >
+                                <Select.Item value="copy_scaled"
+                                    >Copied Performance (Rebalances on Filing
+                                    Dates, Investments Scaled to 100% of
+                                    Portfolio)</Select.Item
+                                >
+                            </Select.Content>
+                        </Select.Root>
                     </div>
-                {:else}
-                    <Button variant="link" onclick={loadChartData}
-                        >Load Chart</Button
-                    >
+                    <div class="grid grid-cols-2 gap-2 text-sm">
+                        <p>Earliest Filing Date:</p>
+                        <p>{selectedMetrics.earliest_filing_date || "N/A"}</p>
+                        <p>Total Return:</p>
+                        <p>
+                            {selectedMetrics.total_return !== null
+                                ? (selectedMetrics.total_return * 100).toFixed(
+                                      2,
+                                  ) + "%"
+                                : "N/A"}
+                        </p>
+                        <p>Annualized Return:</p>
+                        <p>
+                            {selectedMetrics.annualized_return !== null
+                                ? (
+                                      selectedMetrics.annualized_return * 100
+                                  ).toFixed(2) + "%"
+                                : "N/A"}
+                        </p>
+                        <p>Sharpe Ratio:</p>
+                        <p>
+                            {selectedMetrics.sharpe_ratio !== null
+                                ? selectedMetrics.sharpe_ratio.toFixed(2)
+                                : "N/A"}
+                        </p>
+                        <p>Max Drawdown:</p>
+                        <p>
+                            {selectedMetrics.max_drawdown !== null
+                                ? (selectedMetrics.max_drawdown * 100).toFixed(
+                                      2,
+                                  ) + "%"
+                                : "N/A"}
+                        </p>
+                        <p>Calmar Ratio:</p>
+                        <p>
+                            {selectedMetrics.calmar_ratio !== null
+                                ? selectedMetrics.calmar_ratio.toFixed(2)
+                                : "N/A"}
+                        </p>
+                    </div>
                 {/if}
+                <div
+                    class="relative h-[250px] pl-4 flex items-center justify-center rounded-md border"
+                >
+                    {#if chartVisible}
+                        {#if isLoading}
+                            <p>Loading...</p>
+                        {:else if error}
+                            <div class="flex flex-col items-center gap-4">
+                                <Alert.Root variant="destructive">
+                                    <Alert.Title>Error</Alert.Title>
+                                    <Alert.Description
+                                        >{error}</Alert.Description
+                                    >
+                                </Alert.Root>
+                                <Button onclick={loadChartData}>Retry</Button>
+                            </div>
+                        {:else if chartData}
+                            <Button
+                                variant="ghost"
+                                size="icon"
+                                class="absolute top-1 right-1 z-10 h-8 w-8"
+                                onclick={() => (drawerOpen = true)}
+                            >
+                                <Expand class="h-3 w-3" />
+                            </Button>
+                            {#key metricType}
+                                <Chart.Container
+                                    config={chartConfig}
+                                    class="aspect-auto h-full w-full"
+                                >
+                                    <LineChart
+                                        data={chartData}
+                                        x="date"
+                                        xScale={scaleUtc()}
+                                        series={activeSeries}
+                                        props={{
+                                            spline: {
+                                                curve: curveNatural,
+                                                motion: "tween",
+                                                strokeWidth: 2,
+                                            },
+                                            yAxis: {
+                                                ticks: 10,
+                                                format: (v) =>
+                                                    `${(v / 1000000).toFixed(1)}M`,
+                                            },
+                                            xAxis: {
+                                                ticks: 5,
+                                                format: (v) =>
+                                                    v.toLocaleDateString(
+                                                        "en-US",
+                                                        {
+                                                            month: "short",
+                                                            year: "numeric",
+                                                        },
+                                                    ),
+                                            },
+                                            highlight: { points: { r: 4 } },
+                                        }}
+                                    />
+                                </Chart.Container>
+                            {/key}
+                        {/if}
+                    {:else}
+                        <div class="text-center">
+                            <p class="text-sm text-muted-foreground">
+                                Scroll to load chart
+                            </p>
+                        </div>
+                    {/if}
+                </div>
+                <Button onclick={() => (allocationsDrawerOpen = true)}
+                    >View Allocations</Button
+                >
             </div>
-            <Button onclick={() => (allocationsDrawerOpen = true)}
-                >View Allocations</Button
-            >
-        </div>
-    </Card.Content>
-</Card.Root>
+        </Card.Content>
+    </Card.Root>
+</div>
 
 <Drawer.Root bind:open={drawerOpen}>
     <Drawer.Content>
