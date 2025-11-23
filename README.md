@@ -24,7 +24,8 @@ A free and open-source hedge fund position aggregator and investment simulator
 * The HedgeSage UI is built using [Svelte](https://svelte.dev/), with [shadcn-svelte](https://shadcn-svelte.com/) used as the component library. It acts merely as a front-end to the information stored in this repository. The builds are targeting the `docs` directory for simplicity in use with GitHub Pages.
 
 ## TODO:
--   [ ] Implement fund searching functionality
+-   [ ] Implement fund searching functionality by name/cik
+-   [ ] Filtering based on annualized returns
 -   [x] Allow to retrieve 13F data from .txt files, letting backtests through years earlier than 2013.
 -   [ ] Allow for inclusion and downloading of non-stock tickers for the backtests
 -   [ ] Unified performance rating
@@ -35,6 +36,12 @@ A free and open-source hedge fund position aggregator and investment simulator
 -   [ ] Adjust extreme volatility data sanity checks
 -   [ ] Comparison versus benchmarks
 -   [ ] Incremental backtest updates
+-   [ ] Allocations table sorting/searching
+-   [ ] Search in portfolio creation
+-   [ ] Load/unload cards in the list as the user scrolls (?)
+-   [ ] Politician tracking
+-   [ ] Biggest daily returns of the funds
+-   [ ] Special page for each fund (SEO)
 -   [x] Portfolio builder
 -   [x] Fix the live allocations retriever (basically copy functionality from the past allocations retriever)
 -   [x] Prevent rate limits from sec.gov

@@ -8,11 +8,14 @@
     import { Button } from "$lib/components/ui/button/index.js";
     import GithubIcon from "@lucide/svelte/icons/github";
     import CreatePortfolioDrawer from "$lib/components/CreatePortfolioDrawer.svelte";
+    import * as InputGroup from "$lib/components/ui/input-group/index.js";
+    import SearchIcon from "@lucide/svelte/icons/search";
 
     let funds: Record<string, any> | null = null;
     let error: string | null = null;
     let metricType = "copy_scaled";
     let sortMetric = "sharpe_ratio";
+    let searchQuery = "";
 
     let filterMetricType = "copy";
     let minSharpe: number | null = 0.5;
@@ -85,7 +88,7 @@
     $: sortBy = `${sortMetric}_${metricType}`;
 
     $: filteredFunds = funds
-        ? Object.entries(funds).filter(([, fundData]) => {
+        ? Object.entries(funds).filter(([cik, fundData]) => {
               const results = fundData.backtest_results;
               if (!results) return false;
 
@@ -94,6 +97,13 @@
               const drawdown = results[`max_drawdown_${filterMetricType}`];
               const totalReturn = results[`total_return_${filterMetricType}`];
               const months = calculateMonths(fundData.earliest_filing_date);
+
+              if (searchQuery) {
+                  const query = searchQuery.toLowerCase();
+                  const nameMatch = fundData.name?.toLowerCase().includes(query);
+                  const cikMatch = cik.includes(query);
+                  if (!nameMatch && !cikMatch) return false;
+              }
 
               if (minSharpe !== null && (sharpe === null || sharpe < minSharpe))
                   return false;
@@ -165,6 +175,23 @@
         on past performance and risk analysis.
     </h1>
 
+    <div class="flex justify-center mb-6">
+        <div class="w-full max-w-sm">
+            <InputGroup.Root>
+                <InputGroup.Input
+                    placeholder="Search funds by name or CIK..."
+                    bind:value={searchQuery}
+                />
+                <InputGroup.Addon>
+                    <SearchIcon class="size-4" />
+                </InputGroup.Addon>
+                <InputGroup.Addon align="inline-end">
+                    {sortedFunds.length} results
+                </InputGroup.Addon>
+            </InputGroup.Root>
+        </div>
+    </div>
+
     <div class="flex items-center mb-4 gap-2">
         <h2 class="text-xl font-semibold">Hedge funds sorted by</h2>
         <Select.Root type="single" bind:value={metricType}>
@@ -204,8 +231,10 @@
                 </span>
             {/if}
             <Popover.Root>
-                <Popover.Trigger asChild>
-                    <Button variant="outline">Filter</Button>
+                <Popover.Trigger>
+                    {#snippet child({ props })}
+                        <Button {...props} variant="outline">Filter</Button>
+                    {/snippet}
                 </Popover.Trigger>
                 <Popover.Content class="w-80">
                     <div class="grid gap-4">
