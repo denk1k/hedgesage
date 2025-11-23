@@ -13,9 +13,9 @@
         <div class="flex items-center gap-6">
             <a href="/" class="flex items-center space-x-2">
                 <img
-                    src="https://denk1k.github.io/hedgesage/logo-transparent-cropped.png"
+                    src="https://raw.githubusercontent.com/denk1k/hedgesage/refs/heads/main/logo-transparent-cropped.png"
                     alt="HedgeSage Logo"
-                    class="h-12 w-32"
+                    class="h-12 w-auto"
                 />
             </a>
             
