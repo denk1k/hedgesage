@@ -10,6 +10,7 @@
     import CreatePortfolioDrawer from "$lib/components/CreatePortfolioDrawer.svelte";
     import * as InputGroup from "$lib/components/ui/input-group/index.js";
     import SearchIcon from "@lucide/svelte/icons/search";
+    import FilterIcon from "@lucide/svelte/icons/filter";
 
     let funds: Record<string, any> | null = null;
     let error: string | null = null;
@@ -188,20 +189,10 @@
     </h1>
 
     <div class="flex justify-center mb-6">
-        <div class="w-full max-w-sm">
-            <InputGroup.Root>
-                <InputGroup.Input
-                    placeholder="Search funds by name or CIK..."
-                    bind:value={searchQuery}
-                />
-                <InputGroup.Addon>
-                    <SearchIcon class="size-4" />
-                </InputGroup.Addon>
-                <InputGroup.Addon align="inline-end">
-                    {sortedFunds.length} results
-                </InputGroup.Addon>
-            </InputGroup.Root>
-        </div>
+        <CreatePortfolioDrawer
+            funds={sortedFunds}
+            defaultAllocationStrategy={sortBy}
+        />
     </div>
 
     <div class="flex items-center mb-4 gap-2">
@@ -230,22 +221,30 @@
                 {/each}
             </Select.Content>
         </Select.Root>
-        <div class="ml-4">
-            <CreatePortfolioDrawer
-                funds={sortedFunds}
-                defaultAllocationStrategy={sortBy}
-            />
-        </div>
+
         <div class="ml-auto flex items-center gap-4">
             {#if funds}
                 <span class="text-sm text-muted-foreground">
                     Showing {sortedFunds.length} of {Object.keys(funds).length} funds
                 </span>
             {/if}
+            <div class="w-[200px]">
+                <InputGroup.Root>
+                    <InputGroup.Input
+                        placeholder="Search..."
+                        bind:value={searchQuery}
+                    />
+                    <InputGroup.Addon>
+                        <SearchIcon class="size-4" />
+                    </InputGroup.Addon>
+                </InputGroup.Root>
+            </div>
             <Popover.Root>
                 <Popover.Trigger>
                     {#snippet child({ props })}
-                        <Button {...props} variant="outline">Filter</Button>
+                        <Button {...props} variant="outline" size="icon">
+                            <FilterIcon class="size-4" />
+                        </Button>
                     {/snippet}
                 </Popover.Trigger>
                 <Popover.Content class="w-80">
