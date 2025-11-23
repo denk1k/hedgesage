@@ -22,12 +22,17 @@
     let minCalmar: number | null = 0.3;
     let maxDrawdownPercent: number | null = -40;
     let minTotalReturnPercent: number | null = 150;
+    let minAnnualizedReturnPercent: number | null = 10;
     let minMonths: number | null = 120;
 
     $: maxDrawdown =
         maxDrawdownPercent !== null ? maxDrawdownPercent / 100 : null;
     $: minTotalReturn =
         minTotalReturnPercent !== null ? minTotalReturnPercent / 100 : null;
+    $: minAnnualizedReturn =
+        minAnnualizedReturnPercent !== null
+            ? minAnnualizedReturnPercent / 100
+            : null;
 
     const metricTypeOptions = [
         { value: "fund", label: "Original" },
@@ -96,6 +101,8 @@
               const calmar = results[`calmar_ratio_${filterMetricType}`];
               const drawdown = results[`max_drawdown_${filterMetricType}`];
               const totalReturn = results[`total_return_${filterMetricType}`];
+              const annualizedReturn =
+                  results[`annualized_return_${filterMetricType}`];
               const months = calculateMonths(fundData.earliest_filing_date);
 
               if (searchQuery) {
@@ -118,6 +125,11 @@
                   minTotalReturn !== null &&
                   (totalReturn === null || totalReturn < minTotalReturn)
               )
+                  return false;
+              if (
+                  minAnnualizedReturn !== null &&
+                  (annualizedReturn === null ||
+                      annualizedReturn < minAnnualizedReturn))
                   return false;
               if (minMonths !== null && (months === null || months < minMonths))
                   return false;
@@ -245,7 +257,7 @@
                             </p>
                         </div>
                         <div class="grid gap-y-4">
-                            <div class="grid grid-cols-3 items-center gap-4">
+                        <div class="grid grid-cols-3 items-center gap-4">
                                 <Label.Root>Filter by Type</Label.Root>
                                 <Select.Root
                                     type="single"
@@ -310,6 +322,18 @@
                                     type="number"
                                     placeholder="None"
                                     bind:value={minTotalReturnPercent}
+                                    class="col-span-2"
+                                />
+                            </div>
+                            <div class="grid grid-cols-3 items-center gap-4">
+                                <Label.Root for="min-annualized-return"
+                                    >Min Annualized Return (%)</Label.Root
+                                >
+                                <Input.Root
+                                    id="min-annualized-return"
+                                    type="number"
+                                    placeholder="None"
+                                    bind:value={minAnnualizedReturnPercent}
                                     class="col-span-2"
                                 />
                             </div>
