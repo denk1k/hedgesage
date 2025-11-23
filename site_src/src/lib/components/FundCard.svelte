@@ -10,6 +10,7 @@
     import { curveNatural } from "d3-shape";
     import Expand from "@lucide/svelte/icons/expand";
     import AllocationsDataTable from "$lib/components/AllocationsDataTable.svelte";
+    import { Skeleton } from "$lib/components/ui/skeleton/index.js";
     import { onMount, onDestroy } from "svelte";
 
     export let cik: string;
@@ -298,7 +299,14 @@
                 >
                     {#if chartVisible}
                         {#if isLoading}
-                            <p>Loading...</p>
+                            <div class="flex w-full h-full items-end gap-2 p-4">
+                                <Skeleton class="h-1/3 w-full" />
+                                <Skeleton class="h-2/3 w-full" />
+                                <Skeleton class="h-1/2 w-full" />
+                                <Skeleton class="h-3/4 w-full" />
+                                <Skeleton class="h-full w-full" />
+                                <Skeleton class="h-1/2 w-full" />
+                            </div>
                         {:else if error}
                             <div class="flex flex-col items-center gap-4">
                                 <Alert.Root variant="destructive">
