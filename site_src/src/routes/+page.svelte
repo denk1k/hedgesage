@@ -1,6 +1,5 @@
 <script lang="ts">
     import FundCard from "$lib/components/FundCard.svelte";
-    import { onMount } from "svelte";
     import * as Select from "$lib/components/ui/select/index.js";
     import * as Popover from "$lib/components/ui/popover/index.js";
     import * as Label from "$lib/components/ui/label/index.js";
@@ -10,9 +9,14 @@
     import * as InputGroup from "$lib/components/ui/input-group/index.js";
     import SearchIcon from "@lucide/svelte/icons/search";
     import FilterIcon from "@lucide/svelte/icons/filter";
+    import * as Pagination from "$lib/components/ui/pagination/index.js";
+    import { page } from "$app/stores";
+    import { goto } from "$app/navigation";
 
-    let funds: Record<string, any> | null = null;
-    let error: string | null = null;
+    export let data;
+
+    $: funds = data.funds;
+
     let metricType = "copy_scaled";
     let sortMetric = "sharpe_ratio";
     let searchQuery = "";
@@ -24,6 +28,10 @@
     let minTotalReturnPercent: number | null = 150;
     let minAnnualizedReturnPercent: number | null = 10;
     let minMonths: number | null = 120;
+
+    // Pagination
+    const itemsPerPage = 24;
+    $: currentPage = Number($page.url.searchParams.get('page')) || 1;
 
     $: maxDrawdown =
         maxDrawdownPercent !== null ? maxDrawdownPercent / 100 : null;
@@ -76,24 +84,10 @@
         return months <= 0 ? 0 : months;
     }
 
-    onMount(async () => {
-        try {
-            const response = await fetch(
-                "https://raw.githubusercontent.com/denk1k/hedgesage/refs/heads/main/top_funds.json",
-            );
-            if (!response.ok) {
-                throw new Error("Failed to fetch funds data");
-            }
-            funds = await response.json();
-        } catch (e: any) {
-            error = e.message;
-        }
-    });
-
     $: sortBy = `${sortMetric}_${metricType}`;
 
     $: filteredFunds = funds
-        ? Object.entries(funds).filter(([cik, fundData]) => {
+        ? Object.entries(funds).filter(([cik, fundData]: [string, any]) => {
               const results = fundData.backtest_results;
               if (!results) return false;
 
@@ -138,7 +132,7 @@
           })
         : [];
 
-    $: sortedFunds = filteredFunds.sort(([, a], [, b]) => {
+    $: sortedFunds = filteredFunds.sort(([, a]: [string, any], [, b]: [string, any]) => {
         const valA = a.backtest_results?.[sortBy];
         const valB = b.backtest_results?.[sortBy];
 
@@ -153,6 +147,21 @@
         if (valB != null) return 1;
         return 0;
     });
+
+    $: totalPages = Math.ceil(sortedFunds.length / itemsPerPage);
+    $: paginatedFunds = sortedFunds.slice(
+        (currentPage - 1) * itemsPerPage,
+        currentPage * itemsPerPage
+    );
+
+    function changePage(newPage: number) {
+        if (newPage >= 1 && newPage <= totalPages) {
+            const url = new URL($page.url);
+            url.searchParams.set('page', String(newPage));
+            goto(url);
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    }
 </script>
 
 <Header funds={sortedFunds} defaultAllocationStrategy={sortBy} />
@@ -321,12 +330,44 @@
 
     {#if funds}
         <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {#each sortedFunds as [cik, fundData] (cik)}
+            {#each paginatedFunds as [cik, fundData] (cik)}
                 <FundCard {cik} {fundData} {metricType} />
             {/each}
         </div>
-    {:else if error}
-        <div class="text-red">{error}</div>
+
+        <!-- Pagination Controls -->
+        {#if totalPages > 1}
+            <div class="flex justify-center mt-8">
+                <Pagination.Root count={filteredFunds.length} perPage={itemsPerPage} page={currentPage}>
+                    {#snippet children({ pages, currentPage })}
+                        <Pagination.Content>
+                            <Pagination.Item>
+                                <Pagination.PrevButton onclick={() => changePage(currentPage - 1)} />
+                            </Pagination.Item>
+                            {#each pages as page (page.key)}
+                                {#if page.type === "ellipsis"}
+                                    <Pagination.Item>
+                                        <Pagination.Ellipsis />
+                                    </Pagination.Item>
+                                {:else}
+                                    <Pagination.Item>
+                                        <Pagination.Link {page} isActive={currentPage === page.value} href="?page={page.value}" onclick={(e) => {
+                                            e.preventDefault();
+                                            changePage(page.value);
+                                        }}>
+                                            {page.value}
+                                        </Pagination.Link>
+                                    </Pagination.Item>
+                                {/if}
+                            {/each}
+                            <Pagination.Item>
+                                <Pagination.NextButton onclick={() => changePage(currentPage + 1)} />
+                            </Pagination.Item>
+                        </Pagination.Content>
+                    {/snippet}
+                </Pagination.Root>
+            </div>
+        {/if}
     {:else}
         <p>Loading funds...</p>
     {/if}

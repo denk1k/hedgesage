@@ -100,17 +100,26 @@
 
     $: if (chartVisible && !chartData && !isLoading && !error) {
         loadChartData();
+    } else if (!chartVisible && chartData) {
+        chartData = null;
     }
 
+    let abortController: AbortController | null = null;
+
     async function loadChartData() {
-        console.log("loadChartData called for CIK:", cik);
+        if (abortController) {
+            abortController.abort();
+        }
+        abortController = new AbortController();
+        const signal = abortController.signal;
+
         isLoading = true;
         error = null;
         try {
             const response = await fetch(
                 `https://raw.githubusercontent.com/denk1k/hedgesage/refs/heads/main/sec/backtests/${cik}_backtest_values.csv`,
+                { signal }
             );
-            console.log("fetch response:", response);
             if (!response.ok) {
                 throw new Error(`Chart data not available for this fund.`);
             }
@@ -136,16 +145,20 @@
                         !isNaN(d.date.valueOf()),
                 );
 
-            console.log("parsedData:", parsedData);
             if (parsedData.length === 0) {
                 throw new Error("CSV invalid");
             }
-            chartData = parsedData;
-            console.log(chartData);
+            
+            if (chartVisible) {
+                chartData = parsedData;
+            }
         } catch (e: any) {
-            error = e.message;
+            if (e.name !== 'AbortError') {
+                error = e.message;
+            }
         } finally {
             isLoading = false;
+            abortController = null;
         }
     }
 
