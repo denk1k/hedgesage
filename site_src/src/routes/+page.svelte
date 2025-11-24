@@ -169,34 +169,37 @@
 
 <main class="container mx-auto p-4">
 
-    <div class="flex items-center mb-4 gap-2">
-        <h2 class="text-xl font-semibold">Hedge funds sorted by</h2>
-        <Select.Root type="single" bind:value={metricType}>
-            <Select.Trigger class="w-[180px]">
-                {metricTypeOptions.find((o) => o.value === metricType)?.label}
-            </Select.Trigger>
-            <Select.Content>
-                {#each longMetricTypeOptions as option}
-                    <Select.Item value={option.value}
-                        >{option.label}</Select.Item
-                    >
-                {/each}
-            </Select.Content>
-        </Select.Root>
-        <Select.Root type="single" bind:value={sortMetric}>
-            <Select.Trigger class="w-[220px]">
-                {sopt.find((o) => o.value === sortMetric)?.label}
-            </Select.Trigger>
-            <Select.Content>
-                {#each sopt as option}
-                    <Select.Item value={option.value}
-                        >{option.label}</Select.Item
-                    >
-                {/each}
-            </Select.Content>
-        </Select.Root>
+    <div class="flex flex-wrap items-center mb-4 gap-2">
+        <div class="flex items-center gap-2 w-full md:w-auto">
+            <h2 class="text-xl font-semibold">Hedge funds sorted by</h2>
+            <Select.Root type="single" bind:value={metricType}>
+                <Select.Trigger class="w-[150px]">
+                    {metricTypeOptions.find((o) => o.value === metricType)?.label}
+                </Select.Trigger>
+                <Select.Content>
+                    {#each longMetricTypeOptions as option}
+                        <Select.Item value={option.value}
+                            >{option.label}</Select.Item
+                        >
+                    {/each}
+                </Select.Content>
+            </Select.Root>
+            <Select.Root type="single" bind:value={sortMetric}>
+                <Select.Trigger class="w-[150px]">
+                    {sopt.find((o) => o.value === sortMetric)?.label}
+                </Select.Trigger>
+                <Select.Content>
+                    {#each sopt as option}
+                        <Select.Item value={option.value}
+                            >{option.label}</Select.Item
+                        >
+                    {/each}
+                </Select.Content>
+            </Select.Root>
+        </div>
 
-        <div class="ml-auto flex items-center gap-4">
+        <!-- Search section with filter - second row on mobile, inline on desktop -->
+        <div class="flex items-center gap-2 w-full md:w-auto md:ml-auto">
             {#if funds}
                 <span class="text-sm text-muted-foreground">
                     Showing {sortedFunds.length} of {Object.keys(funds).length} funds
