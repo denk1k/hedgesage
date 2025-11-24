@@ -98,10 +98,22 @@
         }
     });
 
+    let debounceTimer: ReturnType<typeof setTimeout>;
+
     $: if (chartVisible && !chartData && !isLoading && !error) {
-        loadChartData();
-    } else if (!chartVisible && chartData) {
-        chartData = null;
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(() => {
+            if (chartVisible) loadChartData();
+        }, 300);
+    } else if (!chartVisible) {
+        clearTimeout(debounceTimer);
+        if (chartData) {
+            chartData = null;
+        }
+        if (abortController) {
+            abortController.abort();
+            abortController = null;
+        }
     }
 
     let abortController: AbortController | null = null;
@@ -395,6 +407,7 @@
 
 <Drawer.Root bind:open={drawerOpen}>
     <Drawer.Content>
+        {#if drawerOpen}
         <Drawer.Header>
             <Drawer.Title
                 >{@html fundData.name} - Performance Chart</Drawer.Title
@@ -454,11 +467,13 @@
                 </Chart.Container>
             {/if}
         </div>
+        {/if}
     </Drawer.Content>
 </Drawer.Root>
 
 <Drawer.Root bind:open={allocationsDrawerOpen}>
     <Drawer.Content>
+        {#if allocationsDrawerOpen}
         <div class="p-4">
             <Drawer.Header>
                 <Drawer.Title>{@html fundData.name} - Allocations</Drawer.Title>
@@ -478,5 +493,6 @@
                 {/if}
             </div>
         </div>
+        {/if}
     </Drawer.Content>
 </Drawer.Root>

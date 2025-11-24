@@ -3,6 +3,7 @@
  import GithubIcon from "@lucide/svelte/icons/github";
  import { Button } from "$lib/components/ui/button/index.js";
  import CreatePortfolioDrawer from "$lib/components/CreatePortfolioDrawer.svelte";
+ import { base } from "$app/paths";
 
  export let funds: any;
  export let defaultAllocationStrategy: string;
@@ -11,7 +12,7 @@
 <header class="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur-sm supports-[backdrop-filter]:bg-background/60">
     <div class="container mx-auto flex h-20 items-center justify-between p-4">
         <div class="flex items-center gap-6">
-            <a href="/" class="flex items-center space-x-2">
+            <a href="{base}/" class="flex items-center space-x-2">
                 <img
                     src="https://raw.githubusercontent.com/denk1k/hedgesage/refs/heads/main/logo-transparent-cropped.png"
                     alt="HedgeSage Logo"

@@ -12,6 +12,7 @@
     import * as Pagination from "$lib/components/ui/pagination/index.js";
     import { page } from "$app/stores";
     import { goto } from "$app/navigation";
+    import { browser } from "$app/environment";
 
     export let data;
 
@@ -31,7 +32,7 @@
 
     // Pagination
     const itemsPerPage = 24;
-    $: currentPage = Number($page.url.searchParams.get('page')) || 1;
+    $: currentPage = browser && $page.url.searchParams.get('page') ? Number($page.url.searchParams.get('page')) : 1;
 
     $: maxDrawdown =
         maxDrawdownPercent !== null ? maxDrawdownPercent / 100 : null;

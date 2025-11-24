@@ -1,33 +1,33 @@
 <!doctype html>
 <html lang="en" class="dark">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta
-            name="description"
-            content="Hedge fund backtesting and portfolio creation via live positions based on past performance and risk analysis."
-        />
-        <meta
-            name="keywords"
-            content="hedge, hedgesage, fund, backtesting, performance, analysis, investment, trading, portfolio, finance, sharpe, calmar, risk, algorithmic"
-        />
-        <meta name="author" content="Deniel K" />
-        <title>Hedge Fund Backtesting and Portfolio Creation | HedgeSage</title>
-        %sveltekit.head%
-    </head>
-    <body data-sveltekit-preload-data="hover">
-        <div style="display: contents">%sveltekit.body%</div>
-        <script type="module">
-            import {
-                createIcons,
-                Github,
-            } from "https://cdn.jsdelivr.net/npm/lucide@latest/+esm";
-            const init = () => createIcons({ icons: { Github } });
-            if (document.readyState === "loading") {
-                document.addEventListener("DOMContentLoaded", init);
-            } else {
-                init();
-            }
-        </script>
-    </body>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description"
+        content="Hedge fund backtesting and portfolio creation via live positions based on past performance and risk analysis." />
+    <meta name="keywords"
+        content="hedge, hedgesage, fund, backtesting, performance, analysis, investment, trading, portfolio, finance, sharpe, calmar, risk, algorithmic" />
+    <meta name="author" content="Deniel K" />
+    <title>Hedge Fund Backtesting and Portfolio Creation | HedgeSage</title>
+    <link rel="preconnect" href="https://raw.githubusercontent.com">
+    %sveltekit.head%
+</head>
+
+<body data-sveltekit-preload-data="hover">
+    <div style="display: contents">%sveltekit.body%</div>
+    <!-- <script type="module">
+        import {
+            createIcons,
+            Github,
+        } from "https://cdn.jsdelivr.net/npm/lucide@latest/+esm";
+        const init = () => createIcons({ icons: { Github } });
+        if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", init);
+        } else {
+            init();
+        }
+    </script> -->
+</body>
+
 </html>
