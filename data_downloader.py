@@ -42,19 +42,32 @@ def tickers_from_cik(cik):
 
 
 def ticker_hist_data(ticker, sdate, edate):
-    retries = 5
-    delay = 2
+    # Filter out likely bond tickers or options which often contain spaces or special formatting
+    if ' ' in ticker or any(char.isdigit() for char in ticker) and len(ticker) > 10:
+        # Simple heuristic: if it has a space, it's likely a bond/option that yfinance struggles with.
+        # Also if it's very long and has digits, it might be weird.
+        # But some valid tickers have digits (e.g. BRK-B, but yfinance uses BRK-B).
+        # Let's just filter by space for now.
+        if ' ' in ticker:
+            print(f"Skipping likely bond/option ticker: {ticker}")
+            return None
+
+    retries = 3 # Reduced from 5 to avoid long hangs on bad tickers
+    delay = 1
     for i in range(retries):
         try:
             t = yf.Ticker(ticker)
             df = t.history(start=sdate, end=edate)
 
             if df.empty:
-                ticker_info = yf.Ticker(ticker)
-                if ticker_info.history(period="1d").empty:
-                     print(f"{ticker} mb invalid or delisted.")
-                else:
-                     print(f"No data found for {ticker} in date range.")
+                # Try a shorter period to check if valid
+                try:
+                    if t.history(period="1d").empty:
+                         print(f"{ticker} mb invalid or delisted.")
+                    else:
+                         print(f"No data found for {ticker} in date range.")
+                except Exception:
+                    print(f"{ticker} check failed.")
                 return None
             
             df.reset_index(inplace=True)
@@ -64,7 +77,12 @@ def ticker_hist_data(ticker, sdate, edate):
                 df['date'] = df['date'].dt.tz_localize(None)
             return df
         except Exception as e:
-            if "Too Many Requests" in str(e) or "Rate limited" in str(e) or "429" in str(e):
+            error_str = str(e)
+            if "Expecting value" in error_str or "JSON" in error_str:
+                print(f"JSON error for {ticker}: {e}. Skipping without retry.")
+                return None
+            
+            if "Too Many Requests" in error_str or "Rate limited" in error_str or "429" in error_str:
                 if i < retries - 1:
                     print(f"Rate limited for {ticker}. Will retry in {delay} seconds...")
                     time.sleep(delay)
@@ -89,6 +107,17 @@ def get_ticker_data(ticker, req_start, req_end):
         existing_df = pd.read_csv(output_path, parse_dates=['date'])
         existing_start = existing_df['date'].min()
         existing_end = existing_df['date'].max()
+        
+        # Ensure timezone-naive comparison
+        if existing_start.tz is not None:
+            existing_start = existing_start.tz_localize(None)
+        if existing_end.tz is not None:
+            existing_end = existing_end.tz_localize(None)
+        if req_start.tz is not None:
+            req_start = req_start.tz_localize(None)
+        if req_end.tz is not None:
+            req_end = req_end.tz_localize(None)
+
         if existing_start <= req_start and existing_end >= req_end:
             print(f"Data for {ticker} is already up to date.")
             return

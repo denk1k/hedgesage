@@ -6,13 +6,16 @@ import plotly.graph_objects as go
 from fetch_hedge_fund_allocations import fetch_all_past_allocations, update_fund_data
 from data_downloader import download_data_since_first_filing
 
-def scenario(alloc_df, prices_df, initial_investment, name):
+def scenario(alloc_df, prices_df, initial_investment, name, specific_start_date=None):
     print(f"scenario {name}")
 
     prices_df = prices_df.copy()
     alloc_df = alloc_df.copy()
 
-    start_date = max(prices_df.index.min(), alloc_df.index.min()) if not alloc_df.index.empty else prices_df.index.min()
+    if specific_start_date:
+        start_date = pd.to_datetime(specific_start_date)
+    else:
+        start_date = max(prices_df.index.min(), alloc_df.index.min()) if not alloc_df.index.empty else prices_df.index.min()
     end_date = prices_df.index.max()
     
     if start_date > end_date:
@@ -135,14 +138,7 @@ def scenario(alloc_df, prices_df, initial_investment, name):
     }
     return portfolio_value, results
 
-def backtest_hedge_fund(cik: str, initial_investment: float = 1_000_000, download_data=False):
-    cik = cik.zfill(10) # make sure that ciks are uniform
-    print(f"Starting backtest for CIK: {cik}")
-    if download_data:
-        print(f"Making sure hist price data is available for {cik}")
-        download_data_since_first_filing(cik)
-        print(f"Download process complete")
-
+def prepare_allocations(cik):
     allocation_path = f'./sec/past_allocations/{cik}/*.csv'
     allocation_files = glob.glob(allocation_path)
     
@@ -152,7 +148,7 @@ def backtest_hedge_fund(cik: str, initial_investment: float = 1_000_000, downloa
         allocation_files = glob.glob(allocation_path) # Retry finding files
         if not allocation_files:
             print(f"Error: No allocation files could be found or fetched for CIK {cik}.")
-            return
+            return None, None, None
 
     # Original backtest (filing date)
     all_dfs_copy = []
@@ -190,13 +186,10 @@ def backtest_hedge_fund(cik: str, initial_investment: float = 1_000_000, downloa
     all_alloc_fund.dropna(subset=['allocation_percent', 'ticker'], inplace=True)
     alloc_df_fund = all_alloc_fund.pivot(index='date', columns='ticker', values='allocation_percent').div(100)
     alloc_df_fund.fillna(0, inplace=True)
+    
+    return allocations_cp, allocations_cp_scaled, alloc_df_fund
 
-    all_tickers = pd.Index([])
-    all_tickers = all_tickers.union(allocations_cp.columns)
-    all_tickers = all_tickers.union(allocations_cp_scaled.columns)
-    all_tickers = all_tickers.union(alloc_df_fund.columns)
-    all_tickers = all_tickers.unique().tolist()
-
+def load_prices(all_tickers):
     excluded = 0
     included = 0
     price_dfs = []
@@ -248,10 +241,33 @@ def backtest_hedge_fund(cik: str, initial_investment: float = 1_000_000, downloa
 
     if not price_dfs:
         print("Error: No price data could be loaded for any ticker in the portfolio.")
-        return
+        return None
 
     prices_df = pd.concat(price_dfs, axis=1)
     prices_df.sort_index(inplace=True)
+    return prices_df
+
+def backtest_hedge_fund(cik: str, initial_investment: float = 1_000_000, download_data=False):
+    cik = cik.zfill(10) # make sure that ciks are uniform
+    print(f"Starting backtest for CIK: {cik}")
+    if download_data:
+        print(f"Making sure hist price data is available for {cik}")
+        download_data_since_first_filing(cik)
+        print(f"Download process complete")
+
+    allocations_cp, allocations_cp_scaled, alloc_df_fund = prepare_allocations(cik)
+    if allocations_cp is None:
+        return
+
+    all_tickers = pd.Index([])
+    all_tickers = all_tickers.union(allocations_cp.columns)
+    all_tickers = all_tickers.union(allocations_cp_scaled.columns)
+    all_tickers = all_tickers.union(alloc_df_fund.columns)
+    all_tickers = all_tickers.unique().tolist()
+
+    prices_df = load_prices(all_tickers)
+    if prices_df is None:
+        return
 
     print("Starting pre-backtest data sanity check")
     prices_df_for_check = prices_df.copy()

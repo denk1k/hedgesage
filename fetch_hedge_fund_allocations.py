@@ -78,6 +78,7 @@ def get_latest_13f_filing_url(cik):
             if form == '13F-HR':
                 accession_number_raw = filings_data['filings']['recent']['accessionNumber'][i]
                 accession_number = accession_number_raw.replace('-', '')
+                report_date = filings_data['filings']['recent']['reportDate'][i]
 
                 filing_directory_url = f"https://www.sec.gov/Archives/edgar/data/{cik}/{accession_number}/"
                 dir_response = requests.get(filing_directory_url, headers=headers)
@@ -102,13 +103,13 @@ def get_latest_13f_filing_url(cik):
                     primary_document = filings_data['filings']['recent']['primaryDocument'][i]
                     xml_url = f"https://www.sec.gov/Archives/edgar/data/{cik}/{accession_number}/{primary_document}"
                 
-                return xml_url
+                return xml_url, report_date
 
     except requests.exceptions.RequestException as e:
         print(f"Error fetching filings index for CIK {cik}: {e}")
-        return None
+        return None, None
 
-    return None
+    return None, None
 
 def parse_13f_text_holdings(content):
     text = content.decode('utf-8', errors='ignore')
@@ -328,16 +329,16 @@ def get_cusip_tickers(cusips_to_find, max_retries=8, bf=1.0):
 def generate_investment_allocations(cik):
     cik = cik.zfill(10)
     print(f"--- Processing CIK: {cik} ---")
-    latest_13f_url = get_latest_13f_filing_url(cik)
+    latest_13f_url, report_date = get_latest_13f_filing_url(cik)
     if not latest_13f_url:
         print("Could not find the latest 13F filing URL.")
-        return
+        return None
 
     print(f"Found 13F info table at: {latest_13f_url}")
     holdings_13f = parse_13f_holdings(latest_13f_url)
     if holdings_13f.empty:
         print("No holdings data could be parsed from 13F filing.")
-        return
+        return None
 
     unique_cusips = holdings_13f['cusip'].unique().tolist()
     cusip_to_ticker_map = get_cusip_tickers(unique_cusips)
@@ -356,6 +357,10 @@ def generate_investment_allocations(cik):
     print(f"Report saved to: {output_path}")
     print("\nInvestment Allocations:")
     print(f_alloc.to_string())
+    
+    return report_date
+
+
 
 def get_all_13f_furls(cik):
     initial_url = f"https://data.sec.gov/submissions/CIK{cik.zfill(10)}.json"
