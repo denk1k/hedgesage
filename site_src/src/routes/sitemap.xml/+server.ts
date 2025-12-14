@@ -6,17 +6,31 @@ const ITEMS_PER_PAGE = 24;
 const BASE_URL = 'https://denk1k.github.io/hedgesage';
 const DATA_URL = 'https://raw.githubusercontent.com/denk1k/hedgesage/refs/heads/main/top_funds.json';
 
-async function getFundsData(): Promise<any[]> {
+async function getFundsData(): Promise<any> {
     try {
+        // Try local file first (during build time)
         try {
-            const fundsPath = join(process.cwd(), '../top_funds.json');
-            const data = readFileSync(fundsPath, 'utf-8');
-            console.log(`Successfully read funds data from ${fundsPath}`);
-            return JSON.parse(data);
+            // In SvelteKit build, process.cwd() is often the project root
+            const pathsToTry = [
+                join(process.cwd(), 'top_funds.json'),
+                join(process.cwd(), '../top_funds.json'),
+                join(process.cwd(), 'static/top_funds.json')
+            ];
+
+            for (const p of pathsToTry) {
+                try {
+                    const data = readFileSync(p, 'utf-8');
+                    console.log(`Successfully read funds data from ${p}`);
+                    return JSON.parse(data);
+                } catch (e) {
+                    // ignore
+                }
+            }
         } catch (fsError) {
             console.log('Local file read failed:', (fsError as Error).message);
         }
 
+        // Fallback to fetch
         console.log('Attempting to fetch from URL:', DATA_URL);
         const response = await fetch(DATA_URL);
         if (!response.ok) {
@@ -33,18 +47,19 @@ async function getFundsData(): Promise<any[]> {
 export const GET: RequestHandler = async () => {
     try {
         const fundsData = await getFundsData();
-        const fundsWithBacktest = Object.values(fundsData).filter((fund: any) => fund.backtest_results);
-        const fundsCount = fundsWithBacktest.length;
+        // Count entries with backtest results
+        const validFunds = Object.entries(fundsData).filter(([_, fund]: [string, any]) => fund.backtest_results);
+        const fundsCount = validFunds.length;
         const totalPages = Math.ceil(fundsCount / ITEMS_PER_PAGE);
 
         console.log(`Sitemap: Found ${fundsCount} funds with backtest results (out of ${Object.keys(fundsData).length} total), generating ${totalPages} pages`);
 
-        const urls = [];
+        const urls: string[] = [];
 
         // Add the first page without filters (default view)
         urls.push(`<url>
         <loc>${BASE_URL}/</loc>
-        <changefreq>weekly</changefreq>
+        <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>`);
 
@@ -64,16 +79,13 @@ export const GET: RequestHandler = async () => {
     </url>`);
         }
 
-        fundsWithBacktest.forEach((fund: any) => {
-        });
-        Object.entries(fundsData).forEach(([cik, fund]: [string, any]) => {
-            if (fund.backtest_results) {
-                urls.push(`<url>
-            <loc>${BASE_URL}/funds/${cik}</loc>
-            <changefreq>weekly</changefreq>
-            <priority>0.9</priority>
-        </url>`);
-            }
+        // Add individual fund pages
+        validFunds.forEach(([cik, fund]) => {
+            urls.push(`<url>
+        <loc>${BASE_URL}/funds/${cik}</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>`);
         });
 
         const sitemap = `<?xml version="1.0" encoding="UTF-8"?>

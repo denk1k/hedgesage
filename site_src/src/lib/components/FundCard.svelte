@@ -8,6 +8,8 @@
     import { Button, buttonVariants } from "$lib/components/ui/button";
     import { AreaChart, LineChart } from "layerchart";
     import { scaleUtc } from "d3-scale";
+    import { format } from 'd3-format';
+    import { base } from '$app/paths';
     import { curveNatural } from "d3-shape";
     import Expand from "@lucide/svelte/icons/expand";
     import AllocationsDataTable from "$lib/components/AllocationsDataTable.svelte";
@@ -284,7 +286,7 @@
              <div class="flex justify-between items-start gap-4">
                 <div>
                    <Card.Title>
-                        <a href="/funds/{cik}" class="hover:underline transition-all">{@html fundData.name}</a>
+                        <a href="{base}/funds/{cik}" class="hover:underline transition-all">{@html fundData.name}</a>
                     </Card.Title>
                 </div>
                 <span class="text-xs text-muted-foreground/60 font-mono">CIK: {cik}</span>
