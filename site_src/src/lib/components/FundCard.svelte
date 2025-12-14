@@ -4,7 +4,8 @@
     import * as Alert from "$lib/components/ui/alert/index.js";
     import * as Drawer from "$lib/components/ui/drawer/index.js";
     import * as Chart from "$lib/components/ui/chart/index.js";
-    import { Button } from "$lib/components/ui/button";
+    import * as Tooltip from "$lib/components/ui/tooltip/index";
+    import { Button, buttonVariants } from "$lib/components/ui/button";
     import { AreaChart, LineChart } from "layerchart";
     import { scaleUtc } from "d3-scale";
     import { curveNatural } from "d3-shape";
@@ -12,6 +13,7 @@
     import AllocationsDataTable from "$lib/components/AllocationsDataTable.svelte";
     import { Skeleton } from "$lib/components/ui/skeleton/index.js";
     import { onMount, onDestroy } from "svelte";
+    import { cn } from "$lib/utils";
 
     export let cik: string;
     export let fundData: any;
@@ -20,6 +22,13 @@
     let cardRef: HTMLElement;
 
     export let metricType: string = "copy";
+    let activeMetric: string = metricType; // Local state for interaction
+
+    // Sync local state when prop changes (from global filter)
+    $: if (metricType) {
+        activeMetric = metricType;
+    }
+
     let chartData: any[] | null = null;
     let isLoading = false;
     let error: string | null = null;
@@ -41,35 +50,46 @@
         copy_scaled: "_copy_scaled",
     };
 
-    const metricLabels: Record<string, string> = {
-        fund: "Fund's Original Performance",
-        copy: "Fund's Copied Performance",
-        copy_scaled: "Fund's Copied Performance (Scaled)",
+     const metrics = {
+        copy: {
+            label: 'Copied',
+            tooltip: 'Performance based on copying the fund\'s holdings, rebalanced on filing dates (Available 45 days after quarter end).',
+            suffix: '_copy'
+        },
+        copy_scaled: {
+            label: 'Copied (Scaled)',
+            tooltip: 'Performance based on copying the fund\'s holdings, scaled to 100% exposure, rebalanced on filing dates.',
+            suffix: '_copy_scaled'
+        },
+        fund: {
+            label: 'Original',
+            tooltip: 'The actual reported performance of the fund.',
+            suffix: '_fund'
+        }
     };
-    $: selectedLabel = metricLabels[metricType];
 
     $: selectedMetrics = fundData.backtest_results
         ? {
               earliest_filing_date: fundData.earliest_filing_date || null,
               total_return:
                   fundData.backtest_results[
-                      `total_return${metricSuffixes[metricType]}`
+                      `total_return${metricSuffixes[activeMetric]}`
                   ] ?? null,
               annualized_return:
                   fundData.backtest_results[
-                      `annualized_return${metricSuffixes[metricType]}`
+                      `annualized_return${metricSuffixes[activeMetric]}`
                   ] ?? null,
               sharpe_ratio:
                   fundData.backtest_results[
-                      `sharpe_ratio${metricSuffixes[metricType]}`
+                      `sharpe_ratio${metricSuffixes[activeMetric]}`
                   ] ?? null,
               max_drawdown:
                   fundData.backtest_results[
-                      `max_drawdown${metricSuffixes[metricType]}`
+                      `max_drawdown${metricSuffixes[activeMetric]}`
                   ] ?? null,
               calmar_ratio:
                   fundData.backtest_results[
-                      `calmar_ratio${metricSuffixes[metricType]}`
+                      `calmar_ratio${metricSuffixes[activeMetric]}`
                   ] ?? null,
           }
         : null;
@@ -218,9 +238,9 @@
     }
 
     const chartConfig = {
-        PortfolioValue_copy: { label: "Copy", color: "blue" },
-        PortfolioValue_copy_scaled: { label: "Copy (Scaled)", color: "yellow" },
-        PortfolioValue_fund: { label: "Fund", color: "red" },
+        PortfolioValue_copy: { label: "Copied", color: "blue" },
+        PortfolioValue_copy_scaled: { label: "Copied (Scaled)", color: "yellow" },
+        PortfolioValue_fund: { label: "Original", color: "red" },
     } satisfies Chart.ChartConfig;
 
     const metricToSeriesKey: Record<string, keyof typeof chartConfig> = {
@@ -231,9 +251,9 @@
 
     $: activeSeries = [
         {
-            key: metricToSeriesKey[metricType],
-            label: chartConfig[metricToSeriesKey[metricType]].label,
-            color: chartConfig[metricToSeriesKey[metricType]].color,
+            key: metricToSeriesKey[activeMetric],
+            label: chartConfig[metricToSeriesKey[activeMetric]].label,
+            color: chartConfig[metricToSeriesKey[activeMetric]].color,
         },
     ];
 
@@ -245,81 +265,110 @@
     ) {
         loadAllocationsData();
     }
+    
+    // Formatters
+    function formatPercent(val: any) {
+        if (val === undefined || val === null) return "N/A";
+        return `${(val * 100).toFixed(2)}%`;
+    }
+
+    function formatNumber(val: any) {
+        if (val === undefined || val === null) return "N/A";
+        return val.toFixed(2);
+    }
 </script>
 
 <div bind:this={cardRef}>
     <Card.Root>
         <Card.Header>
-            <Card.Title>
-                <span>{@html fundData.name}</span>
-            </Card.Title>
-            <Card.Description>CIK: {cik}</Card.Description>
+             <div class="flex justify-between items-start gap-4">
+                <div>
+                   <Card.Title>
+                        <a href="/funds/{cik}" class="hover:underline transition-all">{@html fundData.name}</a>
+                    </Card.Title>
+                </div>
+                <span class="text-xs text-muted-foreground/60 font-mono">CIK: {cik}</span>
+            </div>
+            
         </Card.Header>
         <Card.Content>
-            <div class="grid gap-4">
+            <div class="space-y-4">
                 {#if selectedMetrics}
-                    <div>
-                        <Select.Root type="single" bind:value={metricType}>
-                            <Select.Trigger class="w-full">
-                                {selectedLabel}
-                            </Select.Trigger>
-                            <Select.Content>
-                                <Select.Item value="fund"
-                                    >Fund's Original Performance</Select.Item
-                                >
-                                <Select.Item value="copy"
-                                    >Copied Performance (Rebalances on Filing
-                                    Dates)</Select.Item
-                                >
-                                <Select.Item value="copy_scaled"
-                                    >Copied Performance (Rebalances on Filing
-                                    Dates, Investments Scaled to 100% of
-                                    Portfolio)</Select.Item
-                                >
-                            </Select.Content>
-                        </Select.Root>
+                     <!-- Selector & Total Return -->
+                    <div class="flex justify-between items-center bg-muted/30 p-1 rounded-lg">
+                        <div class="flex flex-wrap gap-1">
+                            <Tooltip.Provider delayDuration={0}>
+                                {#each Object.entries(metrics) as [key, m]}
+                                    <Tooltip.Root>
+                                        <Tooltip.Trigger 
+                                            class={buttonVariants({ 
+                                                variant: activeMetric === key ? "secondary" : "ghost", 
+                                                size: "sm", 
+                                                className: "h-7 text-xs px-2" 
+                                            })}
+                                            onclick={() => activeMetric = key}
+                                        >
+                                            {m.label}
+                                        </Tooltip.Trigger>
+                                        <Tooltip.Content>
+                                            <p class="max-w-xs">{m.tooltip}</p>
+                                        </Tooltip.Content>
+                                    </Tooltip.Root>
+                                {/each}
+                            </Tooltip.Provider>
+                        </div>
+                        
+                        <!-- Total Return Badge -->
+                        <div class={cn(
+                            "h-7 px-2 flex items-center justify-center text-xs font-medium rounded-md border ml-2",
+                            (selectedMetrics.total_return || 0) >= 0 ? "bg-green-500/10 text-green-600 border-green-200 dark:bg-green-500/20 dark:text-green-400 dark:border-green-800" : "bg-red-500/10 text-red-600 border-red-200 dark:bg-red-500/20 dark:text-red-400 dark:border-red-800"
+                        )}>
+                             {(selectedMetrics.total_return || 0) >= 0 ? "+":""}{((selectedMetrics.total_return || 0) * 100).toFixed(0)}%
+                        </div>
                     </div>
-                    <div class="grid grid-cols-2 gap-2 text-sm">
-                        <p>Last Allocations Change:</p>
-                        <p>{meta?.practical_update_date || "N/A"}</p>
-                        <p>Earliest Filing Date:</p>
-                        <p>{selectedMetrics.earliest_filing_date || "N/A"}</p>
-                        <p>Total Return:</p>
-                        <p>
-                            {selectedMetrics.total_return !== null
-                                ? (selectedMetrics.total_return * 100).toFixed(
-                                      2,
-                                  ) + "%"
-                                : "N/A"}
-                        </p>
-                        <p>Annualized Return:</p>
-                        <p>
-                            {selectedMetrics.annualized_return !== null
-                                ? (
-                                      selectedMetrics.annualized_return * 100
-                                  ).toFixed(2) + "%"
-                                : "N/A"}
-                        </p>
-                        <p>Sharpe Ratio:</p>
-                        <p>
-                            {selectedMetrics.sharpe_ratio !== null
-                                ? selectedMetrics.sharpe_ratio.toFixed(2)
-                                : "N/A"}
-                        </p>
-                        <p>Max Drawdown:</p>
-                        <p>
-                            {selectedMetrics.max_drawdown !== null
-                                ? (selectedMetrics.max_drawdown * 100).toFixed(
-                                      2,
-                                  ) + "%"
-                                : "N/A"}
-                        </p>
-                        <p>Calmar Ratio:</p>
-                        <p>
-                            {selectedMetrics.calmar_ratio !== null
-                                ? selectedMetrics.calmar_ratio.toFixed(2)
-                                : "N/A"}
-                        </p>
+
+                    <!-- Statistics Grid -->
+                    <div class="grid grid-cols-3 gap-2">
+                         <!-- Annualized Return -->
+                        <div class={cn(
+                            "rounded-md border p-2 flex flex-col items-center justify-center text-center",
+                            (selectedMetrics.annualized_return || 0) >= 0 ? "bg-green-500/10 border-green-200 dark:border-green-800" : "bg-red-500/10 border-red-200 dark:border-red-800"
+                        )}>
+                            <span class="text-[9px] text-muted-foreground uppercase tracking-wider">Annualized</span>
+                            <span class={cn("font-bold text-sm", (selectedMetrics.annualized_return || 0) >= 0 ? "text-green-600 dark:text-green-400" : "text-red-600 dark:text-red-400")}>
+                                {formatPercent(selectedMetrics.annualized_return)}
+                            </span>
+                        </div>
+
+                        <!-- Sharpe -->
+                        <div class="rounded-md border p-2 flex flex-col items-center justify-center text-center bg-card">
+                            <span class="text-[9px] text-muted-foreground uppercase tracking-wider">Sharpe</span>
+                            <span class="font-bold text-sm">{formatNumber(selectedMetrics.sharpe_ratio)}</span>
+                        </div>
+                        
+                         <!-- Calmar -->
+                        <div class="rounded-md border p-2 flex flex-col items-center justify-center text-center bg-card">
+                            <span class="text-[9px] text-muted-foreground uppercase tracking-wider">Calmar</span>
+                            <span class="font-bold text-sm">{formatNumber(selectedMetrics.calmar_ratio)}</span>
+                        </div>
+
+                        <!-- Max Drawdown -->
+                        <div class="rounded-md border p-2 flex flex-col items-center justify-center text-center bg-card">
+                            <span class="text-[9px] text-muted-foreground uppercase tracking-wider">Max Drawdown</span>
+                            <span class="font-bold text-sm text-red-600 dark:text-red-400">{formatPercent(selectedMetrics.max_drawdown)}</span>
+                        </div>
+
+                        <!-- Active Allocations -->
+                         <div class="rounded-md border p-2 flex flex-col items-center justify-center text-center bg-card">
+                            <span class="text-[9px] text-muted-foreground uppercase tracking-wider">Allocations</span>
+                            <span class="font-bold text-sm whitespace-nowrap">{meta?.practical_update_date || "N/A"}</span>
+                        </div>
+
+                         <!-- Earliest Filing -->
+                         <div class="rounded-md border p-2 flex flex-col items-center justify-center text-center bg-card">
+                            <span class="text-[9px] text-muted-foreground uppercase tracking-wider">Earliest Filing</span>
+                            <span class="font-bold text-sm whitespace-nowrap">{selectedMetrics.earliest_filing_date || "N/A"}</span>
+                        </div>
                     </div>
                 {/if}
                 <div
@@ -354,7 +403,7 @@
                             >
                                 <Expand class="h-3 w-3" />
                             </Button>
-                            {#key metricType}
+                            {#key activeMetric}
                                 <Chart.Container
                                     config={chartConfig}
                                     class="aspect-auto h-full w-full"
@@ -401,7 +450,7 @@
                     {/if}
                 </div>
                 <Button onclick={() => (allocationsDrawerOpen = true)}
-                    >View Allocations</Button
+                    class="w-full" variant="outline">View Allocations</Button
                 >
             </div>
         </Card.Content>

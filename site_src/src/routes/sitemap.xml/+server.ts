@@ -64,6 +64,18 @@ export const GET: RequestHandler = async () => {
     </url>`);
         }
 
+        fundsWithBacktest.forEach((fund: any) => {
+        });
+        Object.entries(fundsData).forEach(([cik, fund]: [string, any]) => {
+            if (fund.backtest_results) {
+                urls.push(`<url>
+            <loc>${BASE_URL}/funds/${cik}</loc>
+            <changefreq>weekly</changefreq>
+            <priority>0.9</priority>
+        </url>`);
+            }
+        });
+
         const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls.join('')}

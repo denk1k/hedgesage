@@ -359,7 +359,7 @@
                                 />
                             </div>
                             <div class="pt-2">
-                                <Button variant="outline" class="w-full" on:click={clearFilters}>
+                                <Button variant="outline" class="w-full" onclick={clearFilters}>
                                     Clear Filters
                                 </Button>
                             </div>

@@ -1,6 +1,6 @@
 <script lang="ts">
   import * as Drawer from "$lib/components/ui/drawer/index.js";
-  import { Button } from "$lib/components/ui/button/index.js";
+  import { Button, buttonVariants } from "$lib/components/ui/button/index.js";
   import * as Select from "$lib/components/ui/select/index.js";
   import { Checkbox } from "$lib/components/ui/checkbox/index.js";
   import { Label } from "$lib/components/ui/label/index.js";
@@ -10,10 +10,19 @@
 
   let selectedFunds: Record<string, boolean> = {};
   $: if (funds) {
-    for (const [cik] of funds) {
-      if (!(cik in selectedFunds)) {
-        selectedFunds[cik] = false;
-      }
+    if (Array.isArray(funds)) {
+        for (const item of funds) {
+            if (Array.isArray(item)) {
+                const [cik] = item;
+                if (!(cik in selectedFunds)) {
+                    selectedFunds[cik] = false;
+                }
+            } else {
+                console.error("Fund item is not array:", item);
+            }
+        }
+    } else {
+        console.error("Funds is not an array:", funds);
     }
     selectedFunds = selectedFunds;
   }
@@ -150,9 +159,7 @@
 </script>
 
 <Drawer.Root>
-  <Drawer.Trigger asChild>
-    <Button variant="outline">Create a portfolio</Button>
-  </Drawer.Trigger>
+  <Drawer.Trigger class={buttonVariants({ variant: "outline" })}>Create a portfolio</Drawer.Trigger>
   <Drawer.Content class="h-[90vh]">
     <div class="p-4 h-full flex flex-col">
       <Drawer.Header>
