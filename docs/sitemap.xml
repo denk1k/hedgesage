@@ -1,127 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-    <url>
+<url>
         <loc>https://denk1k.github.io/hedgesage/</loc>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
-    </url>
-    <url>
+    </url><url>
         <loc>https://denk1k.github.io/hedgesage/?filters=clear</loc>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-    </url>
-    <url>
+    </url><url>
         <loc>https://denk1k.github.io/hedgesage/?page=2&amp;filters=clear</loc>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-    </url>
-    <url>
+    </url><url>
         <loc>https://denk1k.github.io/hedgesage/?page=3&amp;filters=clear</loc>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-    </url>
-    <url>
+    </url><url>
         <loc>https://denk1k.github.io/hedgesage/?page=4&amp;filters=clear</loc>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-    </url>
-    <url>
+    </url><url>
         <loc>https://denk1k.github.io/hedgesage/?page=5&amp;filters=clear</loc>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-    </url>
-    <url>
+    </url><url>
         <loc>https://denk1k.github.io/hedgesage/?page=6&amp;filters=clear</loc>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-    </url>
-    <url>
+    </url><url>
         <loc>https://denk1k.github.io/hedgesage/?page=7&amp;filters=clear</loc>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-    </url>
-    <url>
+    </url><url>
         <loc>https://denk1k.github.io/hedgesage/?page=8&amp;filters=clear</loc>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-    </url>
-    <url>
+    </url><url>
         <loc>https://denk1k.github.io/hedgesage/?page=9&amp;filters=clear</loc>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-    </url>
-    <url>
+    </url><url>
         <loc>https://denk1k.github.io/hedgesage/?page=10&amp;filters=clear</loc>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-    </url>
-    <url>
+    </url><url>
         <loc>https://denk1k.github.io/hedgesage/?page=11&amp;filters=clear</loc>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-    </url>
-    <url>
+    </url><url>
         <loc>https://denk1k.github.io/hedgesage/?page=12&amp;filters=clear</loc>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-    </url>
-    <url>
+    </url><url>
         <loc>https://denk1k.github.io/hedgesage/?page=13&amp;filters=clear</loc>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-    </url>
-    <url>
+    </url><url>
         <loc>https://denk1k.github.io/hedgesage/?page=14&amp;filters=clear</loc>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-    </url>
-    <url>
+    </url><url>
         <loc>https://denk1k.github.io/hedgesage/?page=15&amp;filters=clear</loc>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-    </url>
-    <url>
+    </url><url>
         <loc>https://denk1k.github.io/hedgesage/?page=16&amp;filters=clear</loc>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-    </url>
-    <url>
+    </url><url>
         <loc>https://denk1k.github.io/hedgesage/?page=17&amp;filters=clear</loc>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-    </url>
-    <url>
+    </url><url>
         <loc>https://denk1k.github.io/hedgesage/?page=18&amp;filters=clear</loc>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-    </url>
-    <url>
+    </url><url>
         <loc>https://denk1k.github.io/hedgesage/?page=19&amp;filters=clear</loc>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-    </url>
-    <url>
+    </url><url>
         <loc>https://denk1k.github.io/hedgesage/?page=20&amp;filters=clear</loc>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-    </url>
-    <url>
+    </url><url>
         <loc>https://denk1k.github.io/hedgesage/?page=21&amp;filters=clear</loc>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-    </url>
-    <url>
+    </url><url>
         <loc>https://denk1k.github.io/hedgesage/?page=22&amp;filters=clear</loc>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-    </url>
-    <url>
+    </url><url>
         <loc>https://denk1k.github.io/hedgesage/?page=23&amp;filters=clear</loc>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-    </url>
-    <url>
+    </url><url>
         <loc>https://denk1k.github.io/hedgesage/?page=24&amp;filters=clear</loc>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>

@@ -42,16 +42,14 @@ export const GET: RequestHandler = async () => {
         const urls = [];
 
         // Add the first page without filters (default view)
-        urls.push(`
-    <url>
+        urls.push(`<url>
         <loc>${BASE_URL}/</loc>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>`);
 
         // first page with filters=clear to show all funds
-        urls.push(`
-    <url>
+        urls.push(`<url>
         <loc>${BASE_URL}/?filters=clear</loc>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -59,8 +57,7 @@ export const GET: RequestHandler = async () => {
 
         // paginated pages with filters=clear
         for (let page = 2; page <= totalPages; page++) {
-            urls.push(`
-    <url>
+            urls.push(`<url>
         <loc>${BASE_URL}/?page=${page}&amp;filters=clear</loc>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -70,7 +67,7 @@ export const GET: RequestHandler = async () => {
         const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls.join('')}
-</urlset>`;
+</urlset>`.trim();
 
         console.log(`Sitemap: Generated ${urls.length} URLs`);
 
