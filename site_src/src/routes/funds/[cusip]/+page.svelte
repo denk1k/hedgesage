@@ -248,6 +248,10 @@
 
 </script>
 
+<svelte:head>
+    <title>{fundData.name} | HedgeSage</title>
+</svelte:head>
+
 <div class="min-h-screen bg-background">
     <!-- Header -->
     <Header funds={Object.entries(data.funds)} defaultAllocationStrategy="sharpe_ratio_copy" /> 
