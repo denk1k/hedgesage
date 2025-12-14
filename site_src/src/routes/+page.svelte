@@ -30,9 +30,28 @@
     let minAnnualizedReturnPercent: number | null = 10;
     let minMonths: number | null = 120;
 
+    // Check for filters=clear URL parameter
+    $: filtersCleared = browser && $page.url.searchParams.get('filters') === 'clear';
+
     // Pagination
     const itemsPerPage = 24;
     $: currentPage = browser && $page.url.searchParams.get('page') ? Number($page.url.searchParams.get('page')) : 1;
+
+    // Clear filters function
+    function clearFilters() {
+        minSharpe = null;
+        minCalmar = null;
+        maxDrawdownPercent = null;
+        minTotalReturnPercent = null;
+        minAnnualizedReturnPercent = null;
+        minMonths = null;
+        searchQuery = "";
+    }
+
+    // React to filtersCleared change
+    $: if (filtersCleared) {
+        clearFilters();
+    }
 
     $: maxDrawdown =
         maxDrawdownPercent !== null ? maxDrawdownPercent / 100 : null;
@@ -107,26 +126,30 @@
                   if (!nameMatch && !cikMatch) return false;
               }
 
-              if (minSharpe !== null && (sharpe === null || sharpe < minSharpe))
+              // Only apply filters if they have a non-null value
+              if (minSharpe !== null && minSharpe !== '' && (sharpe === null || sharpe < minSharpe))
                   return false;
-              if (minCalmar !== null && (calmar === null || calmar < minCalmar))
+              if (minCalmar !== null && minCalmar !== '' && (calmar === null || calmar < minCalmar))
                   return false;
               if (
                   maxDrawdown !== null &&
+                  maxDrawdownPercent !== null && maxDrawdownPercent !== '' &&
                   (drawdown === null || drawdown < maxDrawdown)
               )
                   return false;
               if (
                   minTotalReturn !== null &&
+                  minTotalReturnPercent !== null && minTotalReturnPercent !== '' &&
                   (totalReturn === null || totalReturn < minTotalReturn)
               )
                   return false;
               if (
                   minAnnualizedReturn !== null &&
+                  minAnnualizedReturnPercent !== null && minAnnualizedReturnPercent !== '' &&
                   (annualizedReturn === null ||
                       annualizedReturn < minAnnualizedReturn))
                   return false;
-              if (minMonths !== null && (months === null || months < minMonths))
+              if (minMonths !== null && minMonths !== '' && (months === null || months < minMonths))
                   return false;
 
               return true;
@@ -165,6 +188,15 @@
     }
 </script>
 
+<svelte:head>
+    {#if currentPage > 1}
+        <link rel="prev" href="https://denk1k.github.io/hedgesage/?page={currentPage - 1}" />
+    {/if}
+    {#if currentPage < totalPages}
+        <link rel="next" href="https://denk1k.github.io/hedgesage/?page={currentPage + 1}" />
+    {/if}
+</svelte:head>
+
 <Header funds={sortedFunds} defaultAllocationStrategy={sortBy} />
 
 <main class="container mx-auto p-4">
@@ -201,8 +233,9 @@
         <!-- Search section with filter - second row on mobile, inline on desktop -->
         <div class="flex items-center gap-2 w-full md:w-auto md:ml-auto">
             {#if funds}
+                {@const totalFundsWithBacktest = Object.values(funds).filter((f: any) => f.backtest_results).length}
                 <span class="text-sm text-muted-foreground">
-                    Showing {sortedFunds.length} of {Object.keys(funds).length} funds
+                    Showing {sortedFunds.length} of {totalFundsWithBacktest} funds
                 </span>
             {/if}
             <div class="w-[200px]">
@@ -324,6 +357,11 @@
                                     bind:value={minMonths}
                                     class="col-span-2"
                                 />
+                            </div>
+                            <div class="pt-2">
+                                <Button variant="outline" class="w-full" on:click={clearFilters}>
+                                    Clear Filters
+                                </Button>
                             </div>
                         </div>
                     </div>
