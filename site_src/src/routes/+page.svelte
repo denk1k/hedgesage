@@ -373,7 +373,7 @@
     {#if funds}
         <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {#each paginatedFunds as [cik, fundData] (cik)}
-                <FundCard {cik} {fundData} {metricType} />
+                <FundCard {cik} {fundData} {metricType} meta={data.allocationsMeta?.[cik]} />
             {/each}
         </div>
 

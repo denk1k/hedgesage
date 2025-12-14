@@ -15,6 +15,7 @@
 
     export let cik: string;
     export let fundData: any;
+    export let meta: any = null;
     let chartVisible = false;
     let cardRef: HTMLElement;
 
@@ -279,6 +280,8 @@
                         </Select.Root>
                     </div>
                     <div class="grid grid-cols-2 gap-2 text-sm">
+                        <p>Last Allocations Change:</p>
+                        <p>{meta?.practical_update_date || "N/A"}</p>
                         <p>Earliest Filing Date:</p>
                         <p>{selectedMetrics.earliest_filing_date || "N/A"}</p>
                         <p>Total Return:</p>
@@ -477,10 +480,11 @@
         <div class="p-4">
             <Drawer.Header>
                 <Drawer.Title>{@html fundData.name} - Allocations</Drawer.Title>
-                <Drawer.Description
-                    >This page shows the current allocations for the hedge fund.
-                    Last updated: .</Drawer.Description
-                >
+                <Drawer.Description>
+                    This page shows the current allocations for the hedge fund.<br />
+                    Last updated: {meta?.technical_update_date || "N/A"}<br />
+                    Last change in allocations: {meta?.practical_update_date || "N/A"}
+                </Drawer.Description>
             </Drawer.Header>
             <div class="h-[90vh] overflow-auto">
                 {#if isAllocationsLoading}
