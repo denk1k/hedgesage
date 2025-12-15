@@ -51,29 +51,33 @@ export const GET: RequestHandler = async () => {
         const validFunds = Object.entries(fundsData).filter(([_, fund]: [string, any]) => fund.backtest_results);
         const fundsCount = validFunds.length;
         const totalPages = Math.ceil(fundsCount / ITEMS_PER_PAGE);
+        const today = new Date().toISOString().split('T')[0];
 
         console.log(`Sitemap: Found ${fundsCount} funds with backtest results (out of ${Object.keys(fundsData).length} total), generating ${totalPages} pages`);
 
         const urls: string[] = [];
 
         // Add the first page without filters (default view)
-        urls.push(`<url>
+        urls.push(`    <url>
         <loc>${BASE_URL}/</loc>
+        <lastmod>${today}</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>`);
 
         // first page with filters=clear to show all funds
-        urls.push(`<url>
+        urls.push(`    <url>
         <loc>${BASE_URL}/?filters=clear</loc>
+        <lastmod>${today}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>`);
 
         // paginated pages with filters=clear
         for (let page = 2; page <= totalPages; page++) {
-            urls.push(`<url>
+            urls.push(`    <url>
         <loc>${BASE_URL}/?page=${page}&amp;filters=clear</loc>
+        <lastmod>${today}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>`);
@@ -81,8 +85,9 @@ export const GET: RequestHandler = async () => {
 
         // Add individual fund pages
         validFunds.forEach(([cik, fund]) => {
-            urls.push(`<url>
+            urls.push(`    <url>
         <loc>${BASE_URL}/funds/${cik}</loc>
+        <lastmod>${today}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>`);
@@ -90,7 +95,7 @@ export const GET: RequestHandler = async () => {
 
         const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urls.join('')}
+${urls.join('\n')}
 </urlset>`.trim();
 
         console.log(`Sitemap: Generated ${urls.length} URLs`);
@@ -104,10 +109,12 @@ ${urls.join('')}
     } catch (error) {
         console.error('Error generating sitemap:', error);
         // minimal sitemap with just the base URL
+        const today = new Date().toISOString().split('T')[0];
         const fallbackSitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>${BASE_URL}/</loc>
+        <lastmod>${today}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>

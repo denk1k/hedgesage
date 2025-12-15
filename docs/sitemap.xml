@@ -1,2391 +1,3584 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/?filters=clear</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/?page=2&amp;filters=clear</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/?page=3&amp;filters=clear</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/?page=4&amp;filters=clear</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/?page=5&amp;filters=clear</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/?page=6&amp;filters=clear</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/?page=7&amp;filters=clear</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/?page=8&amp;filters=clear</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/?page=9&amp;filters=clear</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/?page=10&amp;filters=clear</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/?page=11&amp;filters=clear</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/?page=12&amp;filters=clear</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/?page=13&amp;filters=clear</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/?page=14&amp;filters=clear</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/?page=15&amp;filters=clear</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/?page=16&amp;filters=clear</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/?page=17&amp;filters=clear</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/?page=18&amp;filters=clear</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/?page=19&amp;filters=clear</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/?page=20&amp;filters=clear</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/?page=21&amp;filters=clear</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/?page=22&amp;filters=clear</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/?page=23&amp;filters=clear</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/?page=24&amp;filters=clear</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001275228</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001656456</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001113000</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001050464</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001040508</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001387322</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001055980</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001647251</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001177719</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001142031</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001581811</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000914976</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000900973</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001179475</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000905567</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000846222</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001105467</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001426749</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001377581</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001418814</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001331997</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001320168</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001082327</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001050442</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001104329</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001216093</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001172779</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001014315</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001089755</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001269950</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001033475</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001129919</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001214639</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000945631</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000743127</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001317588</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001167212</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001315269</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001110806</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001034541</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001046192</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000312348</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001018331</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001055966</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001362255</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001322924</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001177244</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001009006</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001086762</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001128286</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000894300</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001040273</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001085227</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001358706</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001054554</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001553733</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000872080</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000053417</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000700529</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000881432</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001316617</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001109147</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001177206</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001230765</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001162170</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001350290</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000814375</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001119376</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001410833</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001274173</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001121330</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000872163</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001044936</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001114928</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001161927</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001145255</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001036248</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001141455</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001720792</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000924166</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000813917</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000019475</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001218210</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000276101</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001351950</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001050477</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001103804</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001274196</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001166620</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000937522</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001009254</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001040762</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000062039</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001067324</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001279936</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001037389</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001317784</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001175954</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001215208</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000928047</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000763212</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001009262</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001006364</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001423296</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001422848</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000810384</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000883511</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000884414</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001092903</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000872162</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001035912</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001173889</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000748054</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001389875</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001079736</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001251567</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001389223</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001140436</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000944234</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001301540</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001290668</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001094749</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000314969</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001286534</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001672594</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001165408</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001319998</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001015083</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001351991</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001345929</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000948669</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000944804</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001070134</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001104883</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000859804</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000714142</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001056053</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001179232</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001016972</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000860857</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001352122</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001418421</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000764532</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001695658</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000883677</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001104366</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001167026</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001140601</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001009005</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000762152</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000869179</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000903949</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000707179</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000863748</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000799003</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000014661</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000728083</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001016150</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000820478</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001313792</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000791191</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000860645</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001120048</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000007195</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000884566</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001217541</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001056549</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000836372</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001013234</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000733020</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000351173</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001120926</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000919538</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001366838</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001524408</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001278793</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001123778</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001168889</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001275880</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000938592</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000869367</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000936753</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001108893</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001299910</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001165805</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000909151</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001209324</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001080201</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001162781</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000764112</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001207017</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001353570</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001167557</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001021117</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001329883</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001015086</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001134283</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001353318</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001427119</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000850529</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001006438</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001134621</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000889232</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001112520</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001218199</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001410830</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001056581</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001106500</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001058854</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001454502</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001009207</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001452689</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001837309</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001548836</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001401388</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001301050</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001313978</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001026710</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001088875</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001385702</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001080374</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000050863</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000902464</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001135730</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001535839</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001107310</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001135121</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001276918</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001446194</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001387818</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001279030</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001061165</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000943719</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001051359</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001020066</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001316507</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001105838</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001453620</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001167483</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001112325</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001449434</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001998597</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001731029</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001230239</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000316011</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001218710</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001569395</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001278387</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001505961</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001332342</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001455258</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001301396</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001511291</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001456670</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001056527</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001082917</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001041885</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001033225</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001455452</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001559706</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000877338</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000860561</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001596452</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001323645</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001110646</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001034524</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001406484</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001017918</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000914208</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001353312</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001691827</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001039765</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001104186</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000003520</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001056807</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001387508</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001214822</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001454424</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000089014</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001441689</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001103887</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001445893</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001455176</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001276470</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000778963</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000080255</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000040417</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001352272</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001088950</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001034886</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001010873</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001651960</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001484043</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001566887</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000102909</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0002012383</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000093751</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001006249</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000315066</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000895421</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000019617</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001214717</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000070858</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000913414</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001374170</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000886982</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000073124</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001422849</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001418660</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001562230</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000884546</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001610520</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001423053</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001000275</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000902219</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001390777</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001595888</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000861177</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000072971</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001695320</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000312069</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000354204</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000820027</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000764068</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000038777</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001871926</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001224696</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001407543</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000932859</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001114446</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000912938</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001109448</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001403438</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000720005</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001330387</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000948046</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001067983</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000020430</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001452861</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000927971</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001859606</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001273087</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000831001</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001126328</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000052388</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000887793</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001084208</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000200217</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000812295</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001488542</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001166588</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001305227</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001582202</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000873630</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001475365</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001897612</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000919079</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000713676</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001040188</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000939222</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000050916</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001164508</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001141802</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001317808</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001086364</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000815917</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001465109</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001046017</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000944388</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001466546</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001125816</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001348883</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001086619</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001540235</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000318989</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001283718</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001115418</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001608046</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001364615</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000315032</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001034182</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000926171</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000720672</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001068837</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001694217</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000927337</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001085635</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001729829</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001993888</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001642575</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001948780</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001386060</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001081019</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000946431</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001318757</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000869178</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000350894</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001325091</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001632341</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000932540</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001677044</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001462284</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001533421</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001535847</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001758720</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001388391</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001992825</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001555170</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001641866</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001710537</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000312272</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000036104</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001723397</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001851815</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001666741</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000049205</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001633516</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001040197</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001462245</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001692234</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001454027</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000012600</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0002010235</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000740906</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000923093</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000901541</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001475597</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001749744</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001419186</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001313360</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000810121</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001690010</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001373442</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001179392</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001603465</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001389958</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001082339</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001731061</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001632972</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001456048</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001795705</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000948905</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001828301</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000810265</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001298088</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001902501</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001705339</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0002040686</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001764754</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000085338</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001586767</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000919192</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001344551</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000937615</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001076598</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001455267</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001830819</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001889539</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0002010393</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001529735</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001432354</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001909846</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000842775</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000701059</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001480532</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001502287</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000924223</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000860176</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000919489</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001383838</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001080171</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001388551</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000943712</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001632813</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001635236</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001586986</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001537530</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001633603</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001511881</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001047859</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000852933</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001107314</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001619844</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001609074</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001080386</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001599814</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001550660</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000844150</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001791786</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001133939</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001387921</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001409765</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001081198</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0002059321</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001409888</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001583672</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001595880</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000067088</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001620220</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001535588</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001134152</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001532262</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001570284</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001512173</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001616034</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001611519</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001469026</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001527570</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001566030</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001539041</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001573575</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001536411</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000884423</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001326389</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001354821</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000086312</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001126735</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000924171</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001418427</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000315014</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001519964</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001352662</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001543170</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000911270</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001525234</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001631014</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001590531</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001548882</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001520354</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001598245</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001542161</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001439805</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001389544</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001054074</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001442641</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001692252</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001543568</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001478735</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0000945625</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001599383</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001540880</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001597823</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001504169</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001877822</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001579254</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001634255</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001138532</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001542927</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001607636</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001598843</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001655006</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001388167</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001398825</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001086477</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001017284</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001308555</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001638555</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001121914</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001468395</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001633362</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001592746</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001594492</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001512022</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001065349</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001166564</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001418773</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001411530</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001554179</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001508512</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001137774</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001375534</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url><url>
+    </url>
+    <url>
         <loc>https://denk1k.github.io/hedgesage/funds/0001040190</loc>
+        <lastmod>2025-12-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
