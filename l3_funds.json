@@ -1,0 +1,26 @@
+[
+    "0000316011": {
+        "name": "LILLY ENDOWMENT INC",
+        "earliest_filing_date": "1999-03-31",
+        "backtest_results": {
+            "final_portfolio_value_copy": 27025362.541912813,
+            "total_return_copy": 26.025362541912813,
+            "annualized_return_copy": 0.2630670516688063,
+            "sharpe_ratio_copy": 1.0021642186535578,
+            "max_drawdown_copy": -0.34475005209937243,
+            "calmar_ratio_copy": 0.7630660244047724,
+            "final_portfolio_value_copy_scaled": 27025362.541912813,
+            "total_return_copy_scaled": 26.025362541912813,
+            "annualized_return_copy_scaled": 0.2630670516688063,
+            "sharpe_ratio_copy_scaled": 1.0021642186535578,
+            "max_drawdown_copy_scaled": -0.34475005209937243,
+            "calmar_ratio_copy_scaled": 0.7630660244047724,
+            "final_portfolio_value_fund": 27399809.4697555,
+            "total_return_fund": 26.3998094697555,
+            "annualized_return_fund": 0.26326777418367797,
+            "sharpe_ratio_fund": 1.0038826095290911,
+            "max_drawdown_fund": -0.3447500520993724,
+            "calmar_ratio_fund": 0.7636482506108293
+        }
+    }
+]
