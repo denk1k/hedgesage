@@ -1,18 +1,23 @@
 '''
 runner_do_point_in_time_backtests.py
 
-Builds a 'Hedge Fund Investment ETF': a point-in-time simulated portfolio that, at
-every allocation-refresh window, selects the funds passing the same filter as the
-website (site_src/src/routes/+page.svelte) and allocates capital to them in
-proportion to each fund's Sharpe ratio (sharpe_i / sum(sharpe_j)).
+Builds a 'Hedge Fund Investment ETF': a point-in-time simulated portfolio that
+rebalances on the QUARTERLY 13F filing calendar (~45 days after each quarter end:
+mid-Feb, mid-May, mid-Aug, mid-Nov, each snapped forward to the first available
+trading day). At every quarterly window it screens every fund through the same
+filter as the website (site_src/src/routes/+page.svelte), keeps the TOP_N_FUNDS
+funds by Sharpe ratio, and allocates capital to them in proportion to each fund's
+Sharpe ratio (sharpe_i / sum(sharpe_j)).
 
 It does NOT re-run any per-fund backtest. It overlays the already-computed 'Copied'
 portfolio-value series (PortfolioValue_copy) from
 ./sec/backtests/{cik}_backtest_values.csv, holding a fixed number of 'units' of each
-fund's curve through each interval and re-weighting at the next window.
+fund's curve through each ~3-month interval (so each fund's gains/losses compound
+within the interval) and re-weighting at the next quarterly window.
 
-The ETF timeline starts at the first refresh window once at least one fund has at
-least MIN_MONTHS_BEFORE_START months of copied data (default 24 = 2 years).
+The ETF timeline starts at the first quarterly window where at least
+MIN_QUALIFYING_FUNDS_AT_START funds pass the full filter (incl. the 120-month
+track-record requirement), applied point-in-time with no look-ahead.
 
 Does NOT touch runner_do_backtests.py or runner_incremental_backtests.py.
 '''
@@ -24,8 +29,6 @@ import numpy as np
 import pandas as pd
 import plotly.graph_objects as go
 from tqdm import tqdm
-
-from backtester import prepare_allocations
 
 # --- Config (all customizable) ---
 MIN_MONTHS_BEFORE_START = 24
@@ -197,7 +200,6 @@ def main(quiet=False, status=None):
     copy_series = {}
     fund_names = {}
     lifetime_stats = {}
-    rebalance_dates = set()
 
     print('--- Loading copied backtests and rebalance dates ---')
     fund_items = list(top_funds.items())
@@ -214,16 +216,6 @@ def main(quiet=False, status=None):
         copy_series[cik] = s
         fund_names[cik] = info.get('name', cik)
         lifetime_stats[cik] = info.get('backtest_results') or {}
-        try:
-            allocations_cp, _, _ = prepare_allocations(cik)
-        except Exception as e:
-            print(f'prepare_allocations failed for {cik}: {e}')
-            allocations_cp = None
-        if allocations_cp is not None and not allocations_cp.empty:
-            idx = allocations_cp.index
-            idx = idx.tz_localize('UTC') if idx.tz is None else idx.tz_convert('UTC')
-            for d in idx:
-                rebalance_dates.add(pd.Timestamp(d))
 
     if not copy_series:
         print('No copied backtests found. Run runner_do_backtests.py first.')
@@ -234,12 +226,34 @@ def main(quiet=False, status=None):
         global_index = global_index.union(s.index)
     global_index = global_index.sort_values()
 
-    # Find the ETF start: the first rebalance window at which at least
+    # Rebalance on the QUARTERLY 13F filing calendar, NOT the union of every
+    # fund's individual filing dates. The old union collapsed to ~every business
+    # day (median 1-day gap), so each interval spanned a single date: the overlay
+    # reset the portfolio value to the prior value every day and never
+    # accumulated intra-interval gains (662/758 windows were flat, ~7% total
+    # return). 13F filings are due ~45 days after each quarter end: roughly
+    # mid-Feb, mid-May, mid-Aug, mid-Nov. Each candidate date is snapped forward
+    # to the first available trading day in the global index.
+    candidate_dates = []
+    for yr in range(global_index[0].year, global_index[-1].year + 1):
+        for mo in (2, 5, 8, 11):
+            candidate_dates.append(pd.Timestamp(year=yr, month=mo, day=15, tz='UTC'))
+    all_windows = []
+    for cd in sorted(candidate_dates):
+        pos = global_index.searchsorted(cd, side='left')
+        if pos >= len(global_index):
+            continue
+        snapped = global_index[pos]
+        if all_windows and snapped == all_windows[-1]:
+            continue
+        all_windows.append(snapped)
+    all_windows = sorted(set(all_windows))
+
+    # Find the ETF start: the first quarterly rebalance window at which at least
     # MIN_QUALIFYING_FUNDS_AT_START funds pass the full point-in-time filter
     # (including the 120-month track-record requirement). Earlier windows are
     # dropped entirely, so the timeline no longer starts back in 2002/2016 with
     # one barely-eligible fund.
-    all_windows = sorted(rebalance_dates)
     status(f'PIT: searching for start window (>= {MIN_QUALIFYING_FUNDS_AT_START} qualifying funds)...')
     start = None
     for w in all_windows:
@@ -351,7 +365,9 @@ def main(quiet=False, status=None):
 
     meta = {
         'config': {
+            'rebalance_schedule': 'quarterly_13f_filing_calendar',
             'min_qualifying_funds_at_start': MIN_QUALIFYING_FUNDS_AT_START,
+            'top_n_funds': TOP_N_FUNDS,
             'initial_investment': INITIAL_INVESTMENT,
             'filter_metric': FILTER_METRIC,
             'point_in_time_stats': POINT_IN_TIME_STATS,
