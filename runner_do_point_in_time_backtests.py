@@ -17,6 +17,7 @@ least MIN_MONTHS_BEFORE_START months of copied data (default 24 = 2 years).
 Does NOT touch runner_do_backtests.py or runner_incremental_backtests.py.
 '''
 
+import argparse
 import json
 import os
 import numpy as np
@@ -30,6 +31,9 @@ from backtester import prepare_allocations
 MIN_MONTHS_BEFORE_START = 24
 INITIAL_INVESTMENT = 1_000_000
 
+# How often (in items) to emit a status line when running with --quiet.
+PROGRESS_EVERY = 100
+
 FILTER_METRIC = 'copy'
 PORTFOLIO_VALUE_COL = f'PortfolioValue_{FILTER_METRIC}'
 
@@ -37,15 +41,24 @@ PORTFOLIO_VALUE_COL = f'PortfolioValue_{FILTER_METRIC}'
 # lookahead). Set False to use lifetime backtest_results from top_funds.json.
 POINT_IN_TIME_STATS = True
 
-# Selection filter, mirroring +page.svelte defaults. NOTE: the site applies
-# MIN_MONTHS=120 on lifetime data; point-in-time we need a smaller as-of
-# threshold or nothing is eligible early on, so this defaults to the start gate.
+# Selection filter, mirroring +page.svelte defaults EXACTLY, including the full
+# MIN_MONTHS=120 (10-year) track-record requirement. This is applied
+# point-in-time to every fund at every rebalance window (no look-ahead): a fund
+# only qualifies once it has at least 120 months of copied history as of that
+# window.
 MIN_SHARPE = 0.5
 MIN_CALMAR = 0.3
 MAX_DRAWDOWN = -0.40
 MIN_TOTAL_RETURN = 1.5
 MIN_ANNUALIZED_RETURN = 0.10
-MIN_MONTHS = 24
+MIN_MONTHS = 120
+
+# The ETF timeline does not begin until the first rebalance window at which at
+# least this many funds pass the full filter above. Earlier windows (where too
+# few funds have a 120-month point-in-time track record) are skipped entirely,
+# so the backtest no longer starts back in 2002/2016 with one barely-eligible
+# fund.
+MIN_QUALIFYING_FUNDS_AT_START = 10
 
 TOP_FUNDS_PATH = 'top_funds.json'
 BACKTESTS_DIR = './sec/backtests'
@@ -129,7 +142,44 @@ def load_copy_series(cik):
     return s if len(s) > 1 else None
 
 
-def main():
+def select_funds(copy_series, lifetime_stats, w_start):
+    '''Point-in-time fund selection as of w_start.
+
+    Returns a list of (cik, sharpe_ratio) tuples for every fund that passes the
+    full filter (MIN_SHARPE/MIN_CALMAR/MAX_DRAWDOWN/MIN_TOTAL_RETURN/
+    MIN_ANNUALIZED_RETURN/MIN_MONTHS) using only the copied series data
+    available up to and including w_start. No look-ahead.
+    '''
+    selected = []
+    for cik, s in copy_series.items():
+        s_pit = s[s.index <= w_start]
+        if len(s_pit) < 2:
+            continue
+        months = months_between(s_pit.index[0], w_start)
+        if POINT_IN_TIME_STATS:
+            stats = compute_stats(s_pit)
+        else:
+            lt = lifetime_stats.get(cik, {})
+            stats = {
+                'sharpe_ratio': lt.get(f'sharpe_ratio_{FILTER_METRIC}'),
+                'calmar_ratio': lt.get(f'calmar_ratio_{FILTER_METRIC}'),
+                'max_drawdown': lt.get(f'max_drawdown_{FILTER_METRIC}'),
+                'total_return': lt.get(f'total_return_{FILTER_METRIC}'),
+                'annualized_return': lt.get(f'annualized_return_{FILTER_METRIC}'),
+            } if lt else None
+        if stats and stats.get('sharpe_ratio') and stats['sharpe_ratio'] > 0 and passes_filter(stats, months):
+            selected.append((cik, stats['sharpe_ratio']))
+    return selected
+
+
+def main(quiet=False, status=None):
+    # status: optional real-console printer passed by runner_do_backtests so
+    # heartbeats stay visible even though this build runs inside that script's
+    # quiet stdout/stderr redirect. Falls back to plain print() standalone.
+    if status is None:
+        def status(msg):
+            print(msg, flush=True)
+
     with open(TOP_FUNDS_PATH, 'r') as f:
         top_funds = json.load(f)
 
@@ -139,7 +189,14 @@ def main():
     rebalance_dates = set()
 
     print('--- Loading copied backtests and rebalance dates ---')
-    for cik, info in tqdm(list(top_funds.items()), desc='Loading funds'):
+    fund_items = list(top_funds.items())
+    n_funds = len(fund_items)
+    load_step = max(1, n_funds // 100)
+    status(f'PIT stage 1/2: loading {n_funds} funds...')
+    fund_iter = fund_items if quiet else tqdm(fund_items, desc='Loading funds')
+    for fund_i, (cik, info) in enumerate(fund_iter, 1):
+        if fund_i % load_step == 0 or fund_i == n_funds:
+            status(f'  PIT loading funds: {fund_i}/{n_funds} processed')
         s = load_copy_series(cik)
         if s is None:
             continue
@@ -166,12 +223,24 @@ def main():
         global_index = global_index.union(s.index)
     global_index = global_index.sort_values()
 
-    start_threshold = min(s.index[0] + pd.DateOffset(months=MIN_MONTHS_BEFORE_START) for s in copy_series.values())
-    windows = sorted(w for w in rebalance_dates if w >= start_threshold)
-    if not windows:
-        print('No rebalance windows after the start threshold.')
+    # Find the ETF start: the first rebalance window at which at least
+    # MIN_QUALIFYING_FUNDS_AT_START funds pass the full point-in-time filter
+    # (including the 120-month track-record requirement). Earlier windows are
+    # dropped entirely, so the timeline no longer starts back in 2002/2016 with
+    # one barely-eligible fund.
+    all_windows = sorted(rebalance_dates)
+    status(f'PIT: searching for start window (>= {MIN_QUALIFYING_FUNDS_AT_START} qualifying funds)...')
+    start = None
+    for w in all_windows:
+        n_qualify = len(select_funds(copy_series, lifetime_stats, w))
+        if n_qualify >= MIN_QUALIFYING_FUNDS_AT_START:
+            start = w
+            break
+    if start is None:
+        print(f'No rebalance window has at least {MIN_QUALIFYING_FUNDS_AT_START} qualifying funds.')
         return
-    start = windows[0]
+    windows = [w for w in all_windows if w >= start]
+    status(f'PIT: ETF starts {start.date()} ({MIN_QUALIFYING_FUNDS_AT_START}+ funds qualify)')
 
     etf_index = global_index[global_index >= start]
     etf_values = pd.Series(index=etf_index, dtype=float)
@@ -181,32 +250,25 @@ def main():
     window_records = []
 
     print('--- Simulating point-in-time ETF ---')
-    for k, w_start in enumerate(tqdm(windows, desc='Rebalances')):
+    n_windows = len(windows)
+    rebal_step = max(1, n_windows // 100)
+    status(f'PIT stage 2/2: simulating {n_windows} rebalance windows...')
+    window_iter = windows if quiet else tqdm(windows, desc='Rebalances')
+    for k, w_start in enumerate(window_iter):
+        # k must stay 0-based: it indexes windows[k + 1] below. Report k + 1
+        # for the human-readable heartbeat count only.
+        if (k + 1) % rebal_step == 0 or (k + 1) == n_windows:
+            status(f'  PIT rebalances: {k + 1}/{n_windows} processed')
         w_end = windows[k + 1] if k + 1 < len(windows) else (etf_index[-1] + pd.Timedelta(days=1))
         interval_dates = etf_index[(etf_index >= w_start) & (etf_index < w_end)]
         if len(interval_dates) == 0:
             continue
 
         start_value = etf_value
-        selected = []
-        for cik, s in copy_series.items():
-            s_pit = s[s.index <= w_start]
-            if len(s_pit) < 2:
-                continue
-            months = months_between(s_pit.index[0], w_start)
-            if POINT_IN_TIME_STATS:
-                stats = compute_stats(s_pit)
-            else:
-                lt = lifetime_stats.get(cik, {})
-                stats = {
-                    'sharpe_ratio': lt.get(f'sharpe_ratio_{FILTER_METRIC}'),
-                    'calmar_ratio': lt.get(f'calmar_ratio_{FILTER_METRIC}'),
-                    'max_drawdown': lt.get(f'max_drawdown_{FILTER_METRIC}'),
-                    'total_return': lt.get(f'total_return_{FILTER_METRIC}'),
-                    'annualized_return': lt.get(f'annualized_return_{FILTER_METRIC}'),
-                } if lt else None
-            if stats and stats.get('sharpe_ratio') and stats['sharpe_ratio'] > 0 and passes_filter(stats, months):
-                selected.append((cik, stats['sharpe_ratio']))
+        # Use the same point-in-time selection helper that drives the start-date
+        # search, so the filter (incl. the 120-month track record) is applied
+        # identically at every window with no duplicated/divergent logic.
+        selected = select_funds(copy_series, lifetime_stats, w_start)
 
         if selected:
             total_sharpe = sum(sh for _, sh in selected)
@@ -259,7 +321,7 @@ def main():
 
     meta = {
         'config': {
-            'min_months_before_start': MIN_MONTHS_BEFORE_START,
+            'min_qualifying_funds_at_start': MIN_QUALIFYING_FUNDS_AT_START,
             'initial_investment': INITIAL_INVESTMENT,
             'filter_metric': FILTER_METRIC,
             'point_in_time_stats': POINT_IN_TIME_STATS,
@@ -285,12 +347,31 @@ def main():
     if WRITE_HTML:
         fig = go.Figure()
         fig.add_trace(go.Scatter(x=etf_values.index, y=etf_values.values, mode='lines', name='Hedge Fund Investment ETF'))
-        for rec in window_records:
-            fig.add_vline(x=pd.to_datetime(rec['date']), line_width=1, line_dash='dot', line_color='rgba(120,120,120,0.35)')
-        fig.update_layout(title='Hedge Fund Investment ETF (point-in-time, Sharpe-weighted)', xaxis_title='Date', yaxis_title='Portfolio Value (USD)', template='plotly_white')
+        # Build all rebalance markers as a single shapes list. Calling
+        # fig.add_vline() in a loop re-validates the whole (growing) figure on
+        # every call, which is O(n^2) and effectively hangs for thousands of
+        # rebalance windows. Setting them all at once via update_layout is O(n).
+        rebalance_shapes = [
+            dict(
+                type='line', xref='x', yref='paper',
+                x0=d, x1=d, y0=0, y1=1,
+                line=dict(width=1, dash='dot', color='rgba(120,120,120,0.35)'),
+            )
+            for d in (pd.to_datetime(rec['date']) for rec in window_records)
+        ]
+        fig.update_layout(title='Hedge Fund Investment ETF (point-in-time, Sharpe-weighted)', xaxis_title='Date', yaxis_title='Portfolio Value (USD)', template='plotly_white', shapes=rebalance_shapes)
         fig.write_html(OUTPUT_HTML)
         print(f'Saved ETF chart to {OUTPUT_HTML}')
 
 
 if __name__ == '__main__':
-    main()
+    parser = argparse.ArgumentParser(
+        description='Build the point-in-time Hedge Fund Investment ETF.'
+    )
+    parser.add_argument(
+        '--quiet', '-q', action='store_true',
+        help='Suppress live tqdm progress bars; print a status line every '
+             'PROGRESS_EVERY items instead.'
+    )
+    args = parser.parse_args()
+    main(quiet=args.quiet)
