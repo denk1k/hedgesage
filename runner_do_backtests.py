@@ -52,3 +52,7 @@ if __name__ == "__main__":
         name = info["name"]
         print(f"Generating backtest for: {name}")
         backtest_hedge_fund(cik, download_data=False)
+
+    print("All backtests done. Building point-in-time Hedge Fund Investment ETF.")
+    from runner_do_point_in_time_backtests import main as build_pit_etf
+    build_pit_etf()

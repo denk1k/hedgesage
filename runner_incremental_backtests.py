@@ -19,6 +19,27 @@ def load_allocations_meta():
             return json.load(f)
     return {}
 
+def last_rebalance_on_index(alloc_df, pv_index):
+    # Re-derive the trading days on which THIS strategy actually rebalanced,
+    # exactly as scenario() sees them: reindex the allocations onto the existing
+    # backtest's trading calendar with forward-fill, then flag every day whose
+    # target weights differ from the prior day. The newest such day is the most
+    # recent point at which the portfolio was at *target* weights, which is the
+    # only date we can splice from without corrupting already-validated history
+    # (the CSV stores portfolio values, not share counts, so drifted weights
+    # cannot be reconstructed after the fact).
+    if alloc_df is None or alloc_df.empty or len(pv_index) == 0:
+        return None
+    a = alloc_df.reindex(pv_index, method='ffill').fillna(0)
+    if a.empty:
+        return None
+    changed = (a != a.shift()).any(axis=1)
+    changed.iloc[0] = True
+    rebal_dates = a.index[changed]
+    if len(rebal_dates) == 0:
+        return None
+    return rebal_dates.max()
+
 def run_incremental_backtests():
     with open("top_funds.json", "r") as f:
         top_funds = json.load(f)
@@ -31,6 +52,11 @@ def run_incremental_backtests():
     print("--- Phase 1: Identifying required updates ---")
     
     for cik, info in top_funds.items():
+        # Normalize CIK to 10 digits to match backtest_hedge_fund (backtester.py:251),
+        # which zero-pads before building every path (allocations, backtest CSV) and
+        # before update_fund_data. Without this the incremental runner reads/writes
+        # mismatched filenames and keys, so the existing-backtest check fails silently.
+        cik = cik.zfill(10)
         name = info["name"]
         
         # 1. Determine Last Rebalance Date
@@ -89,7 +115,10 @@ def run_incremental_backtests():
             all_tickers = all_tickers.union(alloc_df_fund.columns)
             all_tickers = all_tickers.unique().tolist()
             
-            # Update requirements
+            # Update requirements. Use the EARLIEST possible per-strategy splice
+            # date so the batch download always covers every strategy's window.
+            # Individual strategies may splice from a later rebalance day, but
+            # never earlier than actual_start_date.
             for ticker in all_tickers:
                 if ticker not in ticker_requirements:
                     ticker_requirements[ticker] = actual_start_date
@@ -133,6 +162,16 @@ def run_incremental_backtests():
 
     print("\n--- Phase 3: Running Backtests ---")
     
+    # Load price history ONCE for the union of all tickers and reuse it per
+    # fund. Previously load_prices() was called inside the loop, re-reading the
+    # full price history from disk for every fund (and re-reading shared tickers
+    # repeatedly), which is what made this script lag out.
+    master_tickers = sorted({t for fd in funds_to_process for t in fd['all_tickers']})
+    prices_master = load_prices(master_tickers)
+    if prices_master is None:
+        print("Failed to load any price data for the queued funds.")
+        return
+
     for fund_data in funds_to_process:
         cik = fund_data['cik']
         name = fund_data['name']
@@ -145,57 +184,114 @@ def run_incremental_backtests():
         
         print(f"Updating {name} ({cik})...")
         
-        # Get initial investments
-        initial_investments = {}
-        for col in existing_pv_df.columns:
-            initial_investments[col] = existing_pv_df.loc[actual_start_date, col]
-            
-        prices_df = load_prices(all_tickers)
-        if prices_df is None:
-            print(f"Failed to load prices for {name}.")
+        # Select this fund's tickers from the pre-loaded master price frame
+        # instead of re-reading every CSV from disk per fund (the lag source).
+        available_tickers = [t for t in all_tickers if t in prices_master.columns]
+        if not available_tickers:
+            print(f"No price data available for {name}.")
             continue
-            
+        prices_df = prices_master[available_tickers].copy()
+
+        # Mirror the data sanity checks from backtest_hedge_fund so incremental
+        # results aren't corrupted by extreme/zero price data.
+        prices_df_for_check = prices_df.copy()
+        prices_df_for_check.replace(0, np.nan, inplace=True)
+        daily_returns = prices_df_for_check.pct_change()
+        extreme_threshold = 20.0
+        anomalous_tickers = daily_returns.columns[(daily_returns > extreme_threshold).any()].tolist()
+        if anomalous_tickers:
+            print(f"Removing extreme-volatility tickers from {name}: {anomalous_tickers}")
+            prices_df.drop(columns=anomalous_tickers, inplace=True)
+
+        prices_df.replace(0, np.nan, inplace=True)
+        prices_df.bfill(inplace=True)
+        prices_df.ffill(inplace=True)
+
         prices_df = prices_df[prices_df.index >= actual_start_date]
-        
-        new_results = {}
-        
-        if 'PortfolioValue_copy' in initial_investments:
-            pv, res = scenario(allocations_cp, prices_df, initial_investments['PortfolioValue_copy'], "copy", specific_start_date=actual_start_date)
-            if pv is not None:
-                new_results['PortfolioValue_copy'] = pv
 
-        if 'PortfolioValue_copy_scaled' in initial_investments:
-            pv, res = scenario(allocations_cp_scaled, prices_df, initial_investments['PortfolioValue_copy_scaled'], "copy_scaled", specific_start_date=actual_start_date)
-            if pv is not None:
-                new_results['PortfolioValue_copy_scaled'] = pv
+        # Splice each strategy from its OWN last rebalance date. Previously all
+        # three strategies were restarted at the single fund-report-based
+        # actual_start_date; for the filing-date "copy"/"copy_scaled" series that
+        # date is usually NOT a rebalance day, so scenario()'s mandatory day-0
+        # rebalance reset weights to target mid-stream and silently rewrote
+        # correct historical values. Starting each strategy from a real
+        # rebalance day makes the regenerated overlap reproduce the original run
+        # exactly and only extends it with the new dates.
+        scenario_specs = [
+            ('PortfolioValue_copy', allocations_cp, 'copy'),
+            ('PortfolioValue_copy_scaled', allocations_cp_scaled, 'copy_scaled'),
+            ('PortfolioValue_fund', alloc_df_fund, 'fund'),
+        ]
 
-        if 'PortfolioValue_fund' in initial_investments:
-            pv, res = scenario(alloc_df_fund, prices_df, initial_investments['PortfolioValue_fund'], "fund", specific_start_date=actual_start_date)
-            if pv is not None:
-                new_results['PortfolioValue_fund'] = pv
-        
-        if not new_results:
+        final_columns = {}
+        for col, alloc_df, label in scenario_specs:
+            if col not in existing_pv_df.columns:
+                continue
+
+            scen_start = last_rebalance_on_index(alloc_df, existing_pv_df.index)
+            if scen_start is None:
+                scen_start = actual_start_date
+
+            # initial_investment = the portfolio value carried into that
+            # rebalance. Guard against duplicate timestamps in the CSV, which
+            # would make .loc return a Series and turn scenario()'s
+            # initial_investment * talloc into corrupting DataFrame math.
+            init_value = existing_pv_df.loc[scen_start, col]
+            if isinstance(init_value, pd.Series):
+                init_value = init_value.iloc[-1]
+
+            pv, _res = scenario(
+                alloc_df,
+                prices_df,
+                init_value,
+                label,
+                specific_start_date=scen_start,
+            )
+
+            if pv is None:
+                # Could not regenerate this strategy this run; keep its existing
+                # series intact rather than dropping the column entirely (which
+                # would also leave its metrics stale in top_funds.json).
+                final_columns[col] = existing_pv_df[col]
+                continue
+
+            if pv.index.tz is None:
+                pv.index = pv.index.tz_localize('UTC')
+            else:
+                pv.index = pv.index.tz_convert('UTC')
+
+            # Keep the validated history before the rebalance, then append the
+            # freshly recomputed values from the rebalance onward.
+            history = existing_pv_df.loc[existing_pv_df.index < scen_start, col]
+            final_columns[col] = pd.concat([history, pv])
+
+        if not final_columns:
             print(f"No new results generated for {name}.")
             continue
-            
-        new_pv_df = pd.concat(new_results.values(), axis=1)
-        new_pv_df.columns = new_results.keys()
-        
-        if new_pv_df.index.tz is None:
-            new_pv_df.index = new_pv_df.index.tz_localize('UTC')
-        else:
-            new_pv_df.index = new_pv_df.index.tz_convert('UTC')
-            
-        final_pv_df = existing_pv_df[existing_pv_df.index < actual_start_date].copy()
-        final_pv_df = pd.concat([final_pv_df, new_pv_df])
-        
+
+        final_pv_df = pd.concat(final_columns.values(), axis=1)
+        final_pv_df.columns = list(final_columns.keys())
+        final_pv_df.sort_index(inplace=True)
+        final_pv_df = final_pv_df[~final_pv_df.index.duplicated(keep='last')]
+
         backtest_csv_path = f"./sec/backtests/{cik}_backtest_values.csv"
         final_pv_df.to_csv(backtest_csv_path)
         
         all_results_stats = {}
         for col in final_pv_df.columns:
-            series = final_pv_df[col]
-            portfolio_daily_returns = series.pct_change().fillna(0)
+            # Compute metrics on the strategy's OWN unpadded series. The concat
+            # above aligns columns on the UNION of dates, so a strategy that
+            # starts later than another (copy/copy_scaled start after the
+            # earlier-starting fund) carries leading NaN rows. scenario()
+            # computes its stats on the standalone series BEFORE any concat, so
+            # to reproduce it exactly we must drop those padding NaNs here.
+            # Otherwise pct_change().fillna(0) injects extra zero-return days
+            # that dilute mean/std (shifting Sharpe), and series.iloc[0] is a
+            # NaN that silently corrupts total_return.
+            series = final_pv_df[col].dropna()
+            portfolio_daily_returns = series.pct_change()
+            portfolio_daily_returns.replace([np.inf, -np.inf], np.nan, inplace=True)
+            portfolio_daily_returns.fillna(0, inplace=True)
             std_dev = portfolio_daily_returns.std()
             sharpe_ratio = (portfolio_daily_returns.mean() / std_dev) * np.sqrt(252) if std_dev > 0 else 0.0
             
@@ -239,3 +335,6 @@ def run_incremental_backtests():
 
 if __name__ == "__main__":
     run_incremental_backtests()
+
+    from runner_do_point_in_time_backtests import main as build_pit_etf
+    build_pit_etf()

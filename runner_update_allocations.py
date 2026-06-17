@@ -30,8 +30,6 @@ if __name__ == "__main__":
         # Check if allocations actually changed
         # We can check the modification time of the latest allocation file or return status from generate_investment_allocations
         # For now, let's assume generate_investment_allocations returns True if new data was found/saved
-        
-        # Actually, let's modify generate_investment_allocations to return the latest report date
         latest_report_date = generate_investment_allocations(cik)
         
         if cik not in allocations_meta:
@@ -40,7 +38,7 @@ if __name__ == "__main__":
         allocations_meta[cik]['technical_update_date'] = technical_update_date
         
         if latest_report_date:
-             # If we have a report date, check if it's new compared to what we have stored
+             # If we have a report date, check if it's new compared to what is stored
              prev_practical_date = allocations_meta[cik].get('practical_update_date')
              if prev_practical_date != latest_report_date:
                  allocations_meta[cik]['practical_update_date'] = latest_report_date
