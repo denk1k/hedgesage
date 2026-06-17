@@ -50,20 +50,29 @@ class _RingBuffer(io.TextIOBase):
         return self._newline.join(lines)
 
 
+def _heartbeat_step(total):
+    # Emit roughly 100 progress lines across a stage: one every n/100 items
+    # (and at least every item for small n). This is the "every 100/n"
+    # cadence requested so the console always shows the run is alive.
+    return max(1, total // 100)
+
+
 def run_all_backtests(quiet=True):
     """Download fresh data and backtest every fund.
 
     quiet=True (default): all the noisy per-ticker / per-scenario output is
-    redirected into a bounded ring buffer and stays hidden. Only low-volume
-    progress headers go to the real stderr. If anything raises, the captured
-    tail is flushed so the lead-up to the error is visible, followed by the
-    traceback. This keeps the console (and the agent context) clean until
-    something actually goes wrong.
+    redirected into a bounded ring buffer and stays hidden. Even in quiet
+    mode each stage (ticker gathering, price download, per-fund backtests,
+    and the point-in-time ETF build) emits a heartbeat every n/100 items to
+    the real console so you can be sure it's still doing something. If
+    anything raises, the captured tail is flushed so the lead-up to the error
+    is visible, followed by the traceback.
     """
     real_stderr = sys.stderr
     buffer = _RingBuffer()
 
     def status(msg):
+        # Always writes to the true console, bypassing the quiet redirect.
         print(msg, file=real_stderr, flush=True)
 
     stdout_sink = contextlib.redirect_stdout(buffer) if quiet else contextlib.nullcontext()
@@ -77,7 +86,12 @@ def run_all_backtests(quiet=True):
             all_tickers = set()
             earliest_start = pd.to_datetime('2100-01-01')
 
-            for cik, info in top_funds.items():
+            # --- Stage 1/3: gather tickers per fund ---
+            fund_items = list(top_funds.items())
+            n_funds = len(fund_items)
+            fund_step = _heartbeat_step(n_funds)
+            status(f"Stage 1/3: gathering tickers for {n_funds} funds...")
+            for fi, (cik, info) in enumerate(fund_items, 1):
                 name = info["name"]
                 print(f"Getting tickers for {name} ({cik})")
                 tickers, first_filing_date = tickers_from_cik(cik)
@@ -87,6 +101,8 @@ def run_all_backtests(quiet=True):
                     filing_date = pd.to_datetime(first_filing_date)
                     if filing_date < earliest_start:
                         earliest_start = filing_date
+                if fi % fund_step == 0 or fi == n_funds:
+                    status(f"  tickers gathered: {fi}/{n_funds} funds")
 
             if not all_tickers:
                 print("Nothing to download.")
@@ -100,35 +116,44 @@ def run_all_backtests(quiet=True):
                 output_dir = './data/historical'
                 os.makedirs(output_dir, exist_ok=True)
 
-                status(f"Downloading price data for {len(all_tickers)} tickers...")
+                # --- Stage 2/3: download price data ---
+                n_tickers = len(all_tickers)
+                tick_step = _heartbeat_step(n_tickers)
+                status(f"Stage 2/3: downloading price data for {n_tickers} tickers...")
                 with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
                     future_to_ticker = {
                         executor.submit(get_ticker_data, ticker, required_start, required_end): ticker
                         for ticker in all_tickers
                     }
-                    for future in tqdm(
-                        concurrent.futures.as_completed(future_to_ticker),
-                        total=len(all_tickers),
-                        desc="Getting all ticker data",
-                        file=real_stderr,
-                    ):
+                    done = 0
+                    for future in concurrent.futures.as_completed(future_to_ticker):
                         try:
                             future.result()
                         except Exception as exc:
                             print(f'downloader had an exception: {exc}')
+                        done += 1
+                        if done % tick_step == 0 or done == n_tickers:
+                            status(f"  fetched: {done}/{n_tickers} tickers")
 
             print("All data downloaded. Starting backtests.")
-            total = len(top_funds)
-            for i, (cik, info) in enumerate(top_funds.items(), 1):
+            # --- Stage 3/3: per-fund backtests ---
+            bt_step = _heartbeat_step(n_funds)
+            status(f"Stage 3/3: backtesting {n_funds} funds...")
+            for i, (cik, info) in enumerate(fund_items, 1):
                 name = info["name"]
-                status(f"[{i}/{total}] Backtesting {name} ({cik})")
                 print(f"Generating backtest for: {name}")
                 backtest_hedge_fund(cik, download_data=False)
+                if i % bt_step == 0 or i == n_funds:
+                    status(f"  backtested: {i}/{n_funds} funds (latest: {name})")
 
             print("All backtests done. Building point-in-time Hedge Fund Investment ETF.")
             status("Building point-in-time Hedge Fund Investment ETF...")
+            # Pass the real-console status printer so the PIT build's own
+            # n/100 heartbeats stay visible even though it runs inside the
+            # quiet stdout/stderr redirect (otherwise they'd be swallowed by
+            # the ring buffer).
             from runner_do_point_in_time_backtests import main as build_pit_etf
-            build_pit_etf()
+            build_pit_etf(quiet=quiet, status=status)
 
         status("All backtests completed successfully.")
     except Exception:
