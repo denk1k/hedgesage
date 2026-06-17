@@ -60,6 +60,11 @@ MIN_MONTHS = 120
 # fund.
 MIN_QUALIFYING_FUNDS_AT_START = 10
 
+# At each rebalance window the ETF invests in at most this many funds: the top
+# funds ranked by Sharpe ratio. Sharpe-weighting is then applied within this
+# capped set, so the ETF never holds more than TOP_N_FUNDS positions at once.
+TOP_N_FUNDS = 10
+
 TOP_FUNDS_PATH = 'top_funds.json'
 BACKTESTS_DIR = './sec/backtests'
 OUTPUT_VALUES_CSV = './sec/pit_etf_backtest_values.csv'
@@ -169,7 +174,13 @@ def select_funds(copy_series, lifetime_stats, w_start):
             } if lt else None
         if stats and stats.get('sharpe_ratio') and stats['sharpe_ratio'] > 0 and passes_filter(stats, months):
             selected.append((cik, stats['sharpe_ratio']))
-    return selected
+    # Cap to the top TOP_N_FUNDS funds ranked by Sharpe ratio (descending) so
+    # the ETF never holds more than TOP_N_FUNDS positions at once. Sharpe-
+    # weighting downstream is then applied within this capped set. The start
+    # gate still works: a window only clears MIN_QUALIFYING_FUNDS_AT_START once
+    # that many funds actually pass the filter.
+    selected.sort(key=lambda x: x[1], reverse=True)
+    return selected[:TOP_N_FUNDS]
 
 
 def main(quiet=False, status=None):
@@ -270,6 +281,7 @@ def main(quiet=False, status=None):
         # identically at every window with no duplicated/divergent logic.
         selected = select_funds(copy_series, lifetime_stats, w_start)
 
+        fund_contribs = {}
         if selected:
             total_sharpe = sum(sh for _, sh in selected)
             weights = {cik: sh / total_sharpe for cik, sh in selected}
@@ -279,8 +291,22 @@ def main(quiet=False, status=None):
                 if not base or base <= 0:
                     continue
                 units = (start_value * w) / base
-                contrib = aligned[cik].reindex(interval_dates).ffill() * units
+                aligned_interval = aligned[cik].reindex(interval_dates).ffill()
+                contrib = aligned_interval * units
                 interval_value = interval_value.add(contrib.fillna(0.0), fill_value=0.0)
+                # Per-fund interval contribution: the dollar amount allocated to
+                # this fund at the window start vs. what it grew/shrank to by the
+                # window end, plus the fund's own copied-series return over the
+                # interval. Lets the UI show how much each fund contributed.
+                end_price = aligned_interval.iloc[-1]
+                contrib_start = float(start_value * w)
+                contrib_end = float(contrib.iloc[-1]) if pd.notna(contrib.iloc[-1]) else contrib_start
+                fund_return = (float(end_price) / base - 1.0) if (pd.notna(end_price) and base > 0) else None
+                fund_contribs[cik] = {
+                    'value_start': round(contrib_start, 2),
+                    'value_end': round(contrib_end, 2),
+                    'fund_return': round(fund_return, 6) if fund_return is not None else None,
+                }
             etf_values.loc[interval_dates] = interval_value.values
             etf_value = float(interval_value.iloc[-1])
         else:
@@ -298,6 +324,10 @@ def main(quiet=False, status=None):
                     'name': fund_names.get(cik, cik),
                     'weight': round(sh / sum(s2 for _, s2 in selected), 6),
                     'sharpe': round(sh, 4),
+                    # Per-fund interval contribution (value_start/value_end/
+                    # fund_return) so the UI can give each fund its own row
+                    # showing how its allocated dollars changed over the window.
+                    **(fund_contribs.get(cik) or {}),
                 }
                 for cik, sh in sorted(selected, key=lambda x: x[1], reverse=True)
             ],
