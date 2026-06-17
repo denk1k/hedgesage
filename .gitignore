@@ -1,0 +1,4 @@
+.code_snippets/
+.env
+data/historical/
+# historical data excluded because it's too large for GH actions
