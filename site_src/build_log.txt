@@ -1,0 +1,59 @@
+
+> site-src@0.0.1 build
+> vite build
+
+vite v7.1.3 building SSR bundle for production...
+transforming...
+"getFilteredRowModel" and "getPaginationRowModel" are imported from external module "@tanstack/table-core" but never used in "src/lib/components/ui/data-table/data-table.svelte.ts" and "src/lib/components/AllocationsDataTable.svelte".
+"format" is imported from external module "d3-format" but never used in "src/lib/components/FundCard.svelte".
+"timeMonth" is imported from external module "d3-time" but never used in "node_modules/layerchart/dist/utils/ticks.js", "node_modules/layerchart/dist/components/MonthPath.svelte" and "node_modules/layerchart/dist/components/Calendar.svelte".
+✓ 1198 modules transformed.
+rendering chunks...
+vite v7.1.3 building for production...
+transforming...
+✓ 2420 modules transformed.
+rendering chunks...
+computing gzip size...
+.svelte-kit/output/client/_app/version.json                             0.03 kB │ gzip:   0.05 kB
+.svelte-kit/output/client/.vite/manifest.json                           4.18 kB │ gzip:   0.75 kB
+.svelte-kit/output/client/_app/immutable/assets/favicon.JNi5DMz4.svg   10.03 kB │ gzip:   4.31 kB
+.svelte-kit/output/client/_app/immutable/assets/Header.BbOLOpNw.css     5.63 kB │ gzip:   1.12 kB
+.svelte-kit/output/client/_app/immutable/assets/0.CPmQNgwN.css         70.82 kB │ gzip:  12.19 kB
+.svelte-kit/output/client/_app/immutable/chunks/DsnmJJEf.js             0.07 kB │ gzip:   0.08 kB
+.svelte-kit/output/client/_app/immutable/entry/start.Db9hZBrM.js        0.08 kB │ gzip:   0.09 kB
+.svelte-kit/output/client/_app/immutable/nodes/0.O9QNDWLi.js            0.40 kB │ gzip:   0.29 kB
+.svelte-kit/output/client/_app/immutable/chunks/BFjCiTRA.js             0.52 kB │ gzip:   0.33 kB
+.svelte-kit/output/client/_app/immutable/nodes/1.Bf4bV88e.js            0.55 kB │ gzip:   0.35 kB
+.svelte-kit/output/client/_app/immutable/chunks/DXA33nBX.js             3.56 kB │ gzip:   1.86 kB
+.svelte-kit/output/client/_app/immutable/chunks/B_ndfEKU.js             4.12 kB │ gzip:   1.88 kB
+.svelte-kit/output/client/_app/immutable/entry/app.B0flCQwc.js          5.33 kB │ gzip:   2.51 kB
+.svelte-kit/output/client/_app/immutable/chunks/I3l0tAKa.js             6.19 kB │ gzip:   2.88 kB
+.svelte-kit/output/client/_app/immutable/chunks/Dy7c7wm1.js            25.92 kB │ gzip:  10.34 kB
+.svelte-kit/output/client/_app/immutable/chunks/CoMq1bQI.js            31.64 kB │ gzip:  12.41 kB
+.svelte-kit/output/client/_app/immutable/nodes/3.C0lkQI3B.js           32.57 kB │ gzip:  12.31 kB
+.svelte-kit/output/client/_app/immutable/nodes/2.C-tkM7-Z.js           66.69 kB │ gzip:  16.97 kB
+.svelte-kit/output/client/_app/immutable/chunks/pgZ2A8IG.js           659.83 kB │ gzip: 208.77 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 6.00s
+Successfully read funds data from /Users/danikelk/PycharmProjects/hedgesage/top_funds.json
+Sitemap: Found 572 funds with backtest results (out of 670 total), generating 24 pages
+Sitemap: Generated 597 URLs
+
+node:internal/event_target:1101
+  process.nextTick(() => { throw err; });
+                           ^
+Error: 404 / does not begin with `base`, which is configured in `paths.base` and can be imported from `$app/paths` - see https://svelte.dev/docs/kit/configuration#paths for more info (linked from /hedgesage/funds/0001275228)
+To suppress or handle this error, implement `handleHttpError` in https://svelte.dev/docs/kit/configuration#prerender
+    at file:///Users/danikelk/PycharmProjects/hedgesage/site_src/node_modules/@sveltejs/kit/src/core/config/options.js:220:13
+    at file:///Users/danikelk/PycharmProjects/hedgesage/site_src/node_modules/@sveltejs/kit/src/core/postbuild/prerender.js:74:25
+    at visit (file:///Users/danikelk/PycharmProjects/hedgesage/site_src/node_modules/@sveltejs/kit/src/core/postbuild/prerender.js:240:4)
+    at Object.fn (file:///Users/danikelk/PycharmProjects/hedgesage/site_src/node_modules/@sveltejs/kit/src/core/postbuild/prerender.js:229:22)
+    at dequeue (file:///Users/danikelk/PycharmProjects/hedgesage/site_src/node_modules/@sveltejs/kit/src/core/postbuild/queue.js:41:42)
+    at file:///Users/danikelk/PycharmProjects/hedgesage/site_src/node_modules/@sveltejs/kit/src/core/postbuild/queue.js:50:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+Node.js v22.14.0
