@@ -85,7 +85,7 @@ def scenario(alloc_df, prices_df, initial_investment, name, specific_start_date=
         
         if pd.isna(total_portfolio_value) or total_portfolio_value <= 0:
              portfolio_values.iloc[i] = portfolio_values.iloc[i-1]
-             current_shares.values[:] = 0
+             current_shares.iloc[:] = 0
              cash = 0
         else:
             portfolio_values.iloc[i] = total_portfolio_value
@@ -272,7 +272,7 @@ def backtest_hedge_fund(cik: str, initial_investment: float = 1_000_000, downloa
     print("Starting pre-backtest data sanity check")
     prices_df_for_check = prices_df.copy()
     prices_df_for_check.replace(0, np.nan, inplace=True) # no division by zero errors
-    daily_returns = prices_df_for_check.pct_change()
+    daily_returns = prices_df_for_check.ffill().pct_change(fill_method=None)
 
     extreme_threshold = 20.0 # I put this in, because when I did backtests for renaissance, some of the tickers caused the backtest to be completely cooked
 

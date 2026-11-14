@@ -196,7 +196,7 @@ def run_incremental_backtests():
         # results aren't corrupted by extreme/zero price data.
         prices_df_for_check = prices_df.copy()
         prices_df_for_check.replace(0, np.nan, inplace=True)
-        daily_returns = prices_df_for_check.pct_change()
+        daily_returns = prices_df_for_check.ffill().pct_change(fill_method=None)
         extreme_threshold = 20.0
         anomalous_tickers = daily_returns.columns[(daily_returns > extreme_threshold).any()].tolist()
         if anomalous_tickers:
